@@ -1,0 +1,2 @@
+[console_scripts]
+inference = yolo.inference_node:main

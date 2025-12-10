@@ -1,0 +1,40 @@
+[0.028s] Invoking command in '/home/mrmnavjet/IRC2026/ircWS/build/planner': CMAKE_PREFIX_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/stack:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/opt/ros/humble LD_LIBRARY_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /usr/bin/cmake --build /home/mrmnavjet/IRC2026/ircWS/build/planner -- -j6 -l6
+[0.123s] [ 20%] Built target shared_state
+[0.175s] [ 70%] Built target relay
+[0.175s] [ 70%] [32mBuilding CXX object CMakeFiles/stack_node.dir/src/stack.cpp.o[0m
+[0.175s] [ 90%] Built target imu_conversion_node
+[0.175s] [ 90%] Built target motorcontroller
+[38.138s] [100%] [32m[1mLinking CXX executable stack_node[0m
+[40.396s] [100%] Built target stack_node
+[40.425s] Invoked command in '/home/mrmnavjet/IRC2026/ircWS/build/planner' returned '0': CMAKE_PREFIX_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/stack:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/opt/ros/humble LD_LIBRARY_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /usr/bin/cmake --build /home/mrmnavjet/IRC2026/ircWS/build/planner -- -j6 -l6
+[40.431s] Invoking command in '/home/mrmnavjet/IRC2026/ircWS/build/planner': CMAKE_PREFIX_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/stack:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/opt/ros/humble LD_LIBRARY_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /usr/bin/cmake --install /home/mrmnavjet/IRC2026/ircWS/build/planner
+[40.451s] -- Install configuration: ""
+[40.452s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/libshared_state.a
+[40.452s] -- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/stack_node
+[40.476s] -- Set runtime path of "/home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/stack_node" to ""
+[40.477s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/relay
+[40.477s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/imu_conversion_node
+[40.478s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/motorcontroller
+[40.478s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner
+[40.478s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack
+[40.479s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/shared_state.hpp
+[40.479s] -- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/stack.hpp
+[40.479s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner//launch
+[40.480s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner//launch/testing.launch.py
+[40.480s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/mode_switch.py
+[40.480s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/package_run_dependencies/planner
+[40.481s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/parent_prefix_path/planner
+[40.481s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/ament_prefix_path.sh
+[40.481s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/ament_prefix_path.dsv
+[40.481s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/path.sh
+[40.481s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/path.dsv
+[40.482s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.bash
+[40.482s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.sh
+[40.482s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.zsh
+[40.482s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.dsv
+[40.483s] -- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/package.dsv
+[40.486s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/packages/planner
+[40.487s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/cmake/plannerConfig.cmake
+[40.487s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/cmake/plannerConfig-version.cmake
+[40.487s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/package.xml
+[40.488s] Invoked command in '/home/mrmnavjet/IRC2026/ircWS/build/planner' returned '0': CMAKE_PREFIX_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/stack:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/opt/ros/humble LD_LIBRARY_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /usr/bin/cmake --install /home/mrmnavjet/IRC2026/ircWS/build/planner

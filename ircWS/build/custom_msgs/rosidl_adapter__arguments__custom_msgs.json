@@ -1,0 +1,7 @@
+{
+  "package_name": "custom_msgs",
+  "non_idl_tuples": [
+    "/home/mrmnavjet/IRC2026/ircWS/src/custom_msgs:msg/MarkerTag.msg",
+    "/home/mrmnavjet/IRC2026/ircWS/src/custom_msgs:msg/ImuData.msg"
+  ]
+}
