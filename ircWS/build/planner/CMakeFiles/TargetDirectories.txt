@@ -2,7 +2,7 @@
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/planner_uninstall.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/shared_state.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/stack_node.dir
-/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/relay.dir
+/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/relay_node.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/imu_conversion_node.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/motorcontroller.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/test.dir

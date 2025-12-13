@@ -224,17 +224,17 @@ stack_node/fast:
 .PHONY : stack_node/fast
 
 #=============================================================================
-# Target rules for targets named relay
+# Target rules for targets named relay_node
 
 # Build rule for target.
-relay: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 relay
-.PHONY : relay
+relay_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 relay_node
+.PHONY : relay_node
 
 # fast build rule for target.
-relay/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/build
-.PHONY : relay/fast
+relay_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay_node.dir/build.make CMakeFiles/relay_node.dir/build
+.PHONY : relay_node/fast
 
 #=============================================================================
 # Target rules for targets named imu_conversion_node
@@ -310,29 +310,29 @@ src/motorcontroller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.s
 .PHONY : src/motorcontroller.cpp.s
 
-src/relay.o: src/relay.cpp.o
-.PHONY : src/relay.o
+src/relay_node.o: src/relay_node.cpp.o
+.PHONY : src/relay_node.o
 
 # target to build an object file
-src/relay.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/src/relay.cpp.o
-.PHONY : src/relay.cpp.o
+src/relay_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay_node.dir/build.make CMakeFiles/relay_node.dir/src/relay_node.cpp.o
+.PHONY : src/relay_node.cpp.o
 
-src/relay.i: src/relay.cpp.i
-.PHONY : src/relay.i
+src/relay_node.i: src/relay_node.cpp.i
+.PHONY : src/relay_node.i
 
 # target to preprocess a source file
-src/relay.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/src/relay.cpp.i
-.PHONY : src/relay.cpp.i
+src/relay_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay_node.dir/build.make CMakeFiles/relay_node.dir/src/relay_node.cpp.i
+.PHONY : src/relay_node.cpp.i
 
-src/relay.s: src/relay.cpp.s
-.PHONY : src/relay.s
+src/relay_node.s: src/relay_node.cpp.s
+.PHONY : src/relay_node.s
 
 # target to generate assembly for a file
-src/relay.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/src/relay.cpp.s
-.PHONY : src/relay.cpp.s
+src/relay_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay_node.dir/build.make CMakeFiles/relay_node.dir/src/relay_node.cpp.s
+.PHONY : src/relay_node.cpp.s
 
 src/shared_state.o: src/shared_state.cpp.o
 .PHONY : src/shared_state.o
@@ -399,7 +399,7 @@ help:
 	@echo "... uninstall"
 	@echo "... imu_conversion_node"
 	@echo "... motorcontroller"
-	@echo "... relay"
+	@echo "... relay_node"
 	@echo "... shared_state"
 	@echo "... stack_node"
 	@echo "... src/imu_conversion.o"
@@ -408,9 +408,9 @@ help:
 	@echo "... src/motorcontroller.o"
 	@echo "... src/motorcontroller.i"
 	@echo "... src/motorcontroller.s"
-	@echo "... src/relay.o"
-	@echo "... src/relay.i"
-	@echo "... src/relay.s"
+	@echo "... src/relay_node.o"
+	@echo "... src/relay_node.i"
+	@echo "... src/relay_node.s"
 	@echo "... src/shared_state.o"
 	@echo "... src/shared_state.i"
 	@echo "... src/shared_state.s"

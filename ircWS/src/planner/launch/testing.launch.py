@@ -19,7 +19,7 @@ def generate_launch_description():
 
     relay_node = Node(
         package='planner',
-        executable='relay',
+        executable='relay_node',
         name='relay_node',
         output='screen'
     )

@@ -13,4 +13,6 @@ test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 yolo/__init__.py
+yolo/cone_v1.engine
+yolo/inference_engine.py
 yolo/inference_node.py

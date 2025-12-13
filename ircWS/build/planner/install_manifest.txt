@@ -1,6 +1,6 @@
 /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/libshared_state.a
 /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/stack_node
-/home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/relay
+/home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/relay_node
 /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/imu_conversion_node
 /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/motorcontroller
 /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/shared_state.hpp

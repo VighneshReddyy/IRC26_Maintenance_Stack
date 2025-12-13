@@ -12,12 +12,13 @@ class ModeToggle(Node):
     def __init__(self):
         super().__init__("keyboard_toggle_node")
 
-        # Service client for toggling autonomous/manual mode
+        self.current_mode = False
+        self.last_mode = False
+
         self.cli = self.create_client(Trigger, "/toggle_autonomous")
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Waiting for /toggle_autonomous service...")
 
-        # Subscriber to receive actual mode from stack
         self.subscription = self.create_subscription(
             Bool,
             "/autonomous_mode_state",
@@ -25,15 +26,20 @@ class ModeToggle(Node):
             10
         )
 
-        self.current_mode = False
         self.get_logger().info("Press Z to toggle mode. Press Q to quit.")
-
         self.settings = termios.tcgetattr(sys.stdin)
 
     def mode_callback(self, msg):
+        self.last_mode = self.current_mode
         self.current_mode = msg.data
-        mode_str = "AUTONOMOUS" if self.current_mode else "MANUAL"
-        self.get_logger().info(f"Mode updated: {mode_str}")
+
+        prev = "AUTONOMOUS" if self.last_mode else "MANUAL"
+        new = "AUTONOMOUS" if self.current_mode else "MANUAL"
+
+        if self.last_mode != self.current_mode:
+            self.get_logger().info(f"Mode changed: {prev} → {new}")
+        else:
+            self.get_logger().info(f"Mode reaffirmed: {new}")
 
     def read_key(self):
         tty.setraw(sys.stdin.fileno())
@@ -46,12 +52,15 @@ class ModeToggle(Node):
             key = self.read_key().lower()
 
             if key == "z":
+                self.last_mode = self.current_mode
                 req = Trigger.Request()
                 future = self.cli.call_async(req)
                 rclpy.spin_until_future_complete(self, future)
 
                 if future.result():
-                    self.get_logger().info(future.result().message)
+                    self.get_logger().info(
+                        f"Toggle requested. Waiting for updated mode..."
+                    )
 
             elif key == "q":
                 self.get_logger().info("Exiting keyboard control")

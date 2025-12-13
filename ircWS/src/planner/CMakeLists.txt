@@ -18,9 +18,11 @@ find_package(tf2_geometry_msgs REQUIRED)
 
 include_directories(
   include
-  /opt/ros/humble/include
 )
 
+# -------------------------------------------------------
+# Shared State Library
+# -------------------------------------------------------
 add_library(shared_state src/shared_state.cpp)
 ament_target_dependencies(shared_state
   rclcpp
@@ -28,6 +30,9 @@ ament_target_dependencies(shared_state
   custom_msgs
 )
 
+# -------------------------------------------------------
+# Stack Node
+# -------------------------------------------------------
 add_executable(stack_node src/stack.cpp)
 ament_target_dependencies(stack_node
   rclcpp
@@ -42,15 +47,21 @@ ament_target_dependencies(stack_node
 )
 target_link_libraries(stack_node shared_state)
 
-add_executable(relay src/relay.cpp)
-ament_target_dependencies(relay
+# -------------------------------------------------------
+# Relay Node (your UDP bridge)
+# -------------------------------------------------------
+add_executable(relay_node src/relay_node.cpp)
+ament_target_dependencies(relay_node
   rclcpp
   geometry_msgs
   std_msgs
   std_srvs
 )
-target_link_libraries(relay shared_state)
+target_link_libraries(relay_node shared_state)
 
+# -------------------------------------------------------
+# IMU Conversion Node
+# -------------------------------------------------------
 add_executable(imu_conversion_node src/imu_conversion.cpp)
 ament_target_dependencies(imu_conversion_node
   rclcpp
@@ -62,6 +73,9 @@ ament_target_dependencies(imu_conversion_node
 )
 target_link_libraries(imu_conversion_node shared_state)
 
+# -------------------------------------------------------
+# Motor Controller Node
+# -------------------------------------------------------
 add_executable(motorcontroller src/motorcontroller.cpp)
 ament_target_dependencies(motorcontroller
   rclcpp
@@ -70,24 +84,37 @@ ament_target_dependencies(motorcontroller
 )
 target_link_libraries(motorcontroller shared_state)
 
+# -------------------------------------------------------
+# Install Targets
+# -------------------------------------------------------
 install(TARGETS
   shared_state
   stack_node
-  relay
+  relay_node
   imu_conversion_node
   motorcontroller
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY include/
+# -------------------------------------------------------
+# Install Headers
+# -------------------------------------------------------
+install(
+  DIRECTORY include/
   DESTINATION include/${PROJECT_NAME}
 )
 
+# -------------------------------------------------------
+# Install Launch Files
+# -------------------------------------------------------
 install(
   DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}/
 )
 
+# -------------------------------------------------------
+# Install Python Scripts
+# -------------------------------------------------------
 install(PROGRAMS
   src/mode_switch.py
   DESTINATION lib/${PROJECT_NAME}

@@ -1,7 +1,7 @@
 Metadata-Version: 2.4
 Name: yolo
 Version: 0.1.0
-Summary: YOLO inference node with ZED depth and cone color classification.
+Summary: TensorRT YOLOv8 cone detection node for Jetson Orin (ROS 2 Humble)
 Maintainer: vighneshreddy
 Maintainer-email: example@email.com
 License: MIT

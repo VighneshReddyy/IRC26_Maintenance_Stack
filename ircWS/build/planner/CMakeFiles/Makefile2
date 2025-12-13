@@ -65,7 +65,7 @@ CMAKE_BINARY_DIR = /home/mrmnavjet/IRC2026/ircWS/build/planner
 # The main recursive "all" target.
 all: CMakeFiles/shared_state.dir/all
 all: CMakeFiles/stack_node.dir/all
-all: CMakeFiles/relay.dir/all
+all: CMakeFiles/relay_node.dir/all
 all: CMakeFiles/imu_conversion_node.dir/all
 all: CMakeFiles/motorcontroller.dir/all
 .PHONY : all
@@ -79,7 +79,7 @@ clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/planner_uninstall.dir/clean
 clean: CMakeFiles/shared_state.dir/clean
 clean: CMakeFiles/stack_node.dir/clean
-clean: CMakeFiles/relay.dir/clean
+clean: CMakeFiles/relay_node.dir/clean
 clean: CMakeFiles/imu_conversion_node.dir/clean
 clean: CMakeFiles/motorcontroller.dir/clean
 .PHONY : clean
@@ -189,30 +189,30 @@ CMakeFiles/stack_node.dir/clean:
 .PHONY : CMakeFiles/stack_node.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/relay.dir
+# Target rules for target CMakeFiles/relay_node.dir
 
 # All Build rule for target.
-CMakeFiles/relay.dir/all: CMakeFiles/shared_state.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=5,6 "Built target relay"
-.PHONY : CMakeFiles/relay.dir/all
+CMakeFiles/relay_node.dir/all: CMakeFiles/shared_state.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay_node.dir/build.make CMakeFiles/relay_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay_node.dir/build.make CMakeFiles/relay_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=5,6 "Built target relay_node"
+.PHONY : CMakeFiles/relay_node.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/relay.dir/rule: cmake_check_build_system
+CMakeFiles/relay_node.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/relay.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/relay_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles 0
-.PHONY : CMakeFiles/relay.dir/rule
+.PHONY : CMakeFiles/relay_node.dir/rule
 
 # Convenience name for target.
-relay: CMakeFiles/relay.dir/rule
-.PHONY : relay
+relay_node: CMakeFiles/relay_node.dir/rule
+.PHONY : relay_node
 
 # clean rule for target.
-CMakeFiles/relay.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/clean
-.PHONY : CMakeFiles/relay.dir/clean
+CMakeFiles/relay_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay_node.dir/build.make CMakeFiles/relay_node.dir/clean
+.PHONY : CMakeFiles/relay_node.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/imu_conversion_node.dir

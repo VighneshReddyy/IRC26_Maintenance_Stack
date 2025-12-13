@@ -998,7 +998,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/planner_uninstall.dir/DependInfo.cmake"
   "CMakeFiles/shared_state.dir/DependInfo.cmake"
   "CMakeFiles/stack_node.dir/DependInfo.cmake"
-  "CMakeFiles/relay.dir/DependInfo.cmake"
+  "CMakeFiles/relay_node.dir/DependInfo.cmake"
   "CMakeFiles/imu_conversion_node.dir/DependInfo.cmake"
   "CMakeFiles/motorcontroller.dir/DependInfo.cmake"
   )
