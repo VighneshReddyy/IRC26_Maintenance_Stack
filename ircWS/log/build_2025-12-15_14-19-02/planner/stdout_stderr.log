@@ -1,0 +1,70 @@
+[35m[1mConsolidate compiler generated dependencies of target irc_planner_node[0m
+[ 16%] Built target shared_state
+[ 25%] [32mBuilding CXX object CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.o[0m
+[ 41%] Built target stack_node
+[ 58%] Built target relay_node
+[ 75%] Built target imu_conversion_node
+[ 91%] Built target motorcontroller
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner_node.cpp:2[m[K:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K In member function ‘[01m[Kvoid planner::SensorCallback::coneCallback(custom_msgs::msg::MarkerTag_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:532:40:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kcustom_msgs::msg::MarkerTag_<std::allocator<void> >::_id_type[m[K’ {aka ‘[01m[Klong int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  532 |         RCLCPP_INFO(this->get_logger(),[01;35m[K"[MARKER] detected id=%d x=%.2f y=%.2f (target=%d)"[m[K,[32m[Kcone->id[m[K, cone->x, cone->y, target_cone_id_);
+      |                                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K [32m[K~~~~~~~~[m[K
+      |                                                                                                  [32m[K|[m[K
+      |                                                                                                  [32m[Kcustom_msgs::msg::MarkerTag_<std::allocator<void> >::_id_type {aka long int}[m[K
+In file included from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner_node.cpp:3[m[K:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:532:63:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  532 |         RCLCPP_INFO(this->get_logger(),"[MARKER] detected id=[01;36m[K%d[m[K x=%.2f y=%.2f (target=%d)",cone->id, cone->x, cone->y, target_cone_id_);
+      |                                                              [01;36m[K~^[m[K
+      |                                                               [01;36m[K|[m[K
+      |                                                               [01;36m[Kint[m[K
+      |                                                              [32m[K%ld[m[K
+In file included from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner_node.cpp:3[m[K:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K In member function ‘[01m[Kvoid planner::SensorCallback::callSearchPattern(planner::SearchPatternType)[m[K’:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:669:62:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksearch_pattern_type[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  669 |     void SensorCallback::callSearchPattern([01;35m[KSearchPatternType search_pattern_type[m[K)
+      |                                            [01;35m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable irc_planner_node[0m
+[100%] Built target irc_planner_node
+-- Install configuration: ""
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/libshared_state.a
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/stack_node
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/relay_node
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/imu_conversion_node
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/motorcontroller
+-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/irc_planner_node
+-- Set runtime path of "/home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/irc_planner_node" to ""
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/shared_state.hpp
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/stack.hpp
+-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/irc_planner.hpp
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch/testing.launch.py
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/mode_switch.py
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/package_run_dependencies/planner
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/parent_prefix_path/planner
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/ament_prefix_path.sh
+-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/path.sh
+-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/path.dsv
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.bash
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.sh
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.zsh
+-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.dsv
+-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/package.dsv
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/packages/planner
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/cmake/plannerConfig.cmake
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/cmake/plannerConfig-version.cmake
+-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/package.xml

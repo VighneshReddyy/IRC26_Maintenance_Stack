@@ -1,0 +1,27 @@
+[1.905s] Invoking command in '/home/mrmnavjet/IRC2026/ircWS/src/gps': PYTHONPATH=/home/mrmnavjet/IRC2026/ircWS/build/gps/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gps build --build-base /home/mrmnavjet/IRC2026/ircWS/build/gps/build install --record /home/mrmnavjet/IRC2026/ircWS/build/gps/install.log --single-version-externally-managed install_data
+[2.508s] running egg_info
+[2.549s] writing ../../build/gps/gps.egg-info/PKG-INFO
+[2.550s] writing dependency_links to ../../build/gps/gps.egg-info/dependency_links.txt
+[2.550s] writing entry points to ../../build/gps/gps.egg-info/entry_points.txt
+[2.551s] writing requirements to ../../build/gps/gps.egg-info/requires.txt
+[2.551s] writing top-level names to ../../build/gps/gps.egg-info/top_level.txt
+[2.636s] reading manifest file '../../build/gps/gps.egg-info/SOURCES.txt'
+[2.639s] writing manifest file '../../build/gps/gps.egg-info/SOURCES.txt'
+[2.639s] running build
+[2.639s] running build_py
+[2.640s] copying gps/gps_rtk.py -> /home/mrmnavjet/IRC2026/ircWS/build/gps/build/lib/gps
+[2.640s] copying gps/__init__.py -> /home/mrmnavjet/IRC2026/ircWS/build/gps/build/lib/gps
+[2.641s] copying gps/gps_rtcm.py -> /home/mrmnavjet/IRC2026/ircWS/build/gps/build/lib/gps
+[2.641s] running install
+[2.650s] running install_lib
+[2.693s] running install_data
+[2.693s] copying resource/gps -> /home/mrmnavjet/IRC2026/ircWS/install/gps/share/ament_index/resource_index/packages
+[2.694s] copying package.xml -> /home/mrmnavjet/IRC2026/ircWS/install/gps/share/gps
+[2.694s] running install_egg_info
+[2.738s] removing '/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages/gps-0.0.1-py3.10.egg-info' (and everything under it)
+[2.739s] Copying ../../build/gps/gps.egg-info to /home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages/gps-0.0.1-py3.10.egg-info
+[2.741s] running install_scripts
+[3.079s] Installing gps_rtcm script to /home/mrmnavjet/IRC2026/ircWS/install/gps/lib/gps
+[3.079s] Installing gps_rtk script to /home/mrmnavjet/IRC2026/ircWS/install/gps/lib/gps
+[3.080s] writing list of installed files to '/home/mrmnavjet/IRC2026/ircWS/build/gps/install.log'
+[3.170s] Invoked command in '/home/mrmnavjet/IRC2026/ircWS/src/gps' returned '0': PYTHONPATH=/home/mrmnavjet/IRC2026/ircWS/build/gps/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gps build --build-base /home/mrmnavjet/IRC2026/ircWS/build/gps/build install --record /home/mrmnavjet/IRC2026/ircWS/build/gps/install.log --single-version-externally-managed install_data

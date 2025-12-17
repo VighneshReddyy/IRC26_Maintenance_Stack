@@ -1,0 +1,67 @@
+In file included from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner_node.cpp:3[m[K:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:232:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcloud[m[K’ does not name a type
+  232 |     [01;31m[Kcloud[m[K = std::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K In constructor ‘[01m[Kplanner::SensorCallback::SensorCallback()[m[K’:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:122:3:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kplanner::SensorCallback[m[K’ does not have any field named ‘[01m[Knav_done[m[K’
+  122 |   [01;31m[Knav_done[m[K(false),
+      |   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:244:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kplanner::SensorCallback::goal_location[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  244 |     Coordinates [01;35m[Kgoal_location[m[K;
+      |                 [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:241:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint planner::SensorCallback::nav_mode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  241 |     int [01;35m[Knav_mode[m[K = -1;        // 0 = GPS, 1 = Cone
+      |         [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:111:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  111 |     [01;35m[KSensorCallback[m[K(): Node("planner_node"),
+      |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K In member function ‘[01m[Kvoid planner::SensorCallback::pclCallback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:550:25:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_done[m[K’ was not declared in this scope; did you mean ‘[01m[Knav_mode[m[K’?
+  550 |     if (!rover_state || [01;31m[Knav_done[m[K)
+      |                         [01;31m[K^~~~~~~~[m[K
+      |                         [32m[Knav_mode[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K In member function ‘[01m[Kvoid planner::SensorCallback::stackRun()[m[K’:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:662:25:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_done[m[K’ was not declared in this scope; did you mean ‘[01m[Knav_mode[m[K’?
+  662 |     if (!rover_state || [01;31m[Knav_done[m[K)
+      |                         [01;31m[K^~~~~~~~[m[K
+      |                         [32m[Knav_mode[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K At global scope:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:878:16:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ at top level
+  878 |     auto now = [01;31m[Kthis[m[K->get_clock()->now();
+      |                [01;31m[K^~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:881:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+  881 |     [01;31m[Kif[m[K (CurrState != kSearchPattern)
+      |     [01;31m[K^~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:887:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+  887 |     [01;31m[Kif[m[K (obstacle_detect || cone_detect)
+      |     [01;31m[K^~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:900:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+  900 |     [01;31m[Kif[m[K (!search_init)
+      |     [01;31m[K^~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:915:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kswitch[m[K’
+  915 |     [01;31m[Kswitch[m[K (FollowPattern)
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:1036:15:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K([m[K’ token
+ 1036 |     publishVel[01;31m[K([m[Kcmd);
+      |               [01;31m[K^[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K In member function ‘[01m[Kvoid planner::SensorCallback::obstacleAvoidance()[m[K’:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:1043:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kobstacle_mutex[m[K’ was not declared in this scope; did you mean ‘[01m[Kobstacle_detect[m[K’?
+ 1043 |     std::lock_guard<std::mutex> lock([01;31m[Kobstacle_mutex[m[K);
+      |                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                      [32m[Kobstacle_detect[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K At global scope:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:875:19:[m[K [01;35m[Kwarning: [m[K‘[01m[Kplanner::time_offset[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  875 |     static double [01;35m[Ktime_offset[m[K = 3.0;
+      |                   [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:874:16:[m[K [01;35m[Kwarning: [m[K‘[01m[Kplanner::offset_counter[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  874 |     static int [01;35m[Koffset_counter[m[K = 0;
+      |                [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:873:19:[m[K [01;35m[Kwarning: [m[K‘[01m[Kplanner::dest_heading[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  873 |     static double [01;35m[Kdest_heading[m[K = 0.0;
+      |                   [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:871:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kplanner::search_init[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  871 |     static bool [01;35m[Ksearch_init[m[K = false;
+      |                 [01;35m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/irc_planner_node.dir/build.make:76: CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/irc_planner_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

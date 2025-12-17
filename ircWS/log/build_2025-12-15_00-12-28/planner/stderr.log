@@ -1,0 +1,8 @@
+In file included from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner_node.cpp:3[m[K:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K In constructor ‘[01m[Kplanner::SensorCallback::SensorCallback()[m[K’:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:69:123:[m[K [01;31m[Kerror: [m[K‘[01m[KstateCallback[m[K’ is not a member of ‘[01m[Kplanner::SensorCallback[m[K’
+   69 |             auto_sub_ = create_subscription<std_msgs::msg::Bool>("/autonomous_mode_state", 10, std::bind(&SensorCallback::[01;31m[KstateCallback[m[K, this, std::placeholders::_1));
+      |                                                                                                                           [01;31m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/irc_planner_node.dir/build.make:76: CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/irc_planner_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

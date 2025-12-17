@@ -5,6 +5,7 @@
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/relay_node.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/imu_conversion_node.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/motorcontroller.dir
+/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/irc_planner_node.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/test.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/edit_cache.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/rebuild_cache.dir

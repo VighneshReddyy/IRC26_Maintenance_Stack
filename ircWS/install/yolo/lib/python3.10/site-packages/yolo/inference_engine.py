@@ -178,7 +178,7 @@ class InferenceEngine(Node):
 
         all_detections = []
         for det in output.T:
-            if det[4] < 0.40:
+            if det[4] < 0.70:
                 continue
             cx = int(det[0] * scale_x)
             cy = int(det[1] * scale_y)

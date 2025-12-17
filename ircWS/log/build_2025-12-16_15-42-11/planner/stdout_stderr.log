@@ -1,0 +1,23 @@
+[35m[1mConsolidate compiler generated dependencies of target irc_planner_node[0m
+[ 16%] Built target shared_state
+[ 33%] Built target relay_node
+[ 58%] Built target stack_node
+[ 66%] Built target imu_conversion_node
+[ 83%] Built target motorcontroller
+[ 91%] [32mBuilding CXX object CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.o[0m
+In file included from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner_node.cpp:3[m[K:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:1240:13:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kbool planner::SensorCallback::getGPSStatus()[m[K’
+ 1240 | inline bool [01;31m[KSensorCallback[m[K::getGPSStatus()
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:1230:13:[m[K [01;36m[Knote: [m[K‘[01m[Kbool planner::SensorCallback::getGPSStatus()[m[K’ previously defined here
+ 1230 | inline bool [01;36m[KSensorCallback[m[K::getGPSStatus()
+      |             [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:1245:13:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kvoid planner::SensorCallback::setGPSStatus(bool)[m[K’
+ 1245 | inline void [01;31m[KSensorCallback[m[K::setGPSStatus(bool status)
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:1235:13:[m[K [01;36m[Knote: [m[K‘[01m[Kvoid planner::SensorCallback::setGPSStatus(bool)[m[K’ previously defined here
+ 1235 | inline void [01;36m[KSensorCallback[m[K::setGPSStatus(bool status)
+      |             [01;36m[K^~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/irc_planner_node.dir/build.make:76: CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/irc_planner_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

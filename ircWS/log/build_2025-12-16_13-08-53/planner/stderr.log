@@ -1,0 +1,5 @@
+In file included from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner_node.cpp:3[m[K:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K In member function ‘[01m[Kvoid planner::SensorCallback::runSearchPattern()[m[K’:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:198:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Koffset_counter[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  198 |         static int [01;35m[Koffset_counter[m[K = 0;
+      |                    [01;35m[K^~~~~~~~~~~~~~[m[K

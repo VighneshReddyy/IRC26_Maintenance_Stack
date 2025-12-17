@@ -262,6 +262,19 @@ motorcontroller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/build
 .PHONY : motorcontroller/fast
 
+#=============================================================================
+# Target rules for targets named irc_planner_node
+
+# Build rule for target.
+irc_planner_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 irc_planner_node
+.PHONY : irc_planner_node
+
+# fast build rule for target.
+irc_planner_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/build
+.PHONY : irc_planner_node/fast
+
 src/imu_conversion.o: src/imu_conversion.cpp.o
 .PHONY : src/imu_conversion.o
 
@@ -285,6 +298,30 @@ src/imu_conversion.s: src/imu_conversion.cpp.s
 src/imu_conversion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_conversion_node.dir/build.make CMakeFiles/imu_conversion_node.dir/src/imu_conversion.cpp.s
 .PHONY : src/imu_conversion.cpp.s
+
+src/irc_planner_node.o: src/irc_planner_node.cpp.o
+.PHONY : src/irc_planner_node.o
+
+# target to build an object file
+src/irc_planner_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.o
+.PHONY : src/irc_planner_node.cpp.o
+
+src/irc_planner_node.i: src/irc_planner_node.cpp.i
+.PHONY : src/irc_planner_node.i
+
+# target to preprocess a source file
+src/irc_planner_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.i
+.PHONY : src/irc_planner_node.cpp.i
+
+src/irc_planner_node.s: src/irc_planner_node.cpp.s
+.PHONY : src/irc_planner_node.s
+
+# target to generate assembly for a file
+src/irc_planner_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.s
+.PHONY : src/irc_planner_node.cpp.s
 
 src/motorcontroller.o: src/motorcontroller.cpp.o
 .PHONY : src/motorcontroller.o
@@ -398,6 +435,7 @@ help:
 	@echo "... planner_uninstall"
 	@echo "... uninstall"
 	@echo "... imu_conversion_node"
+	@echo "... irc_planner_node"
 	@echo "... motorcontroller"
 	@echo "... relay_node"
 	@echo "... shared_state"
@@ -405,6 +443,9 @@ help:
 	@echo "... src/imu_conversion.o"
 	@echo "... src/imu_conversion.i"
 	@echo "... src/imu_conversion.s"
+	@echo "... src/irc_planner_node.o"
+	@echo "... src/irc_planner_node.i"
+	@echo "... src/irc_planner_node.s"
 	@echo "... src/motorcontroller.o"
 	@echo "... src/motorcontroller.i"
 	@echo "... src/motorcontroller.s"

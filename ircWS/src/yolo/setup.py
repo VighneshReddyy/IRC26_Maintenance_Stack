@@ -12,10 +12,7 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages',
          ['resource/' + package_name]),
-
         ('share/' + package_name, ['package.xml']),
-
-        # Install TensorRT engine inside package share directory
         (os.path.join('share', package_name), ['yolo/cone_v1.engine']),
     ],
 
@@ -26,8 +23,6 @@ setup(
     maintainer_email='example@email.com',
     description='TensorRT YOLOv8 cone detection node for Jetson Orin (ROS 2 Humble)',
     license='MIT',
-
-    tests_require=['pytest'],
 
     entry_points={
         'console_scripts': [

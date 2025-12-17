@@ -1,0 +1,15 @@
+[ 16%] Built target shared_state
+[35m[1mConsolidate compiler generated dependencies of target irc_planner_node[0m
+[ 33%] Built target relay_node
+[ 50%] Built target stack_node
+[ 66%] Built target motorcontroller
+[ 75%] [32mBuilding CXX object CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.o[0m
+[ 91%] Built target imu_conversion_node
+In file included from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner_node.cpp:3[m[K:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:15:10:[m[K [01;31m[Kfatal error: [m[Kstd_srvs/srv/trigger.hpp: No such file or directory
+   15 | #include [01;31m[K"std_srvs/srv/trigger.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/irc_planner_node.dir/build.make:76: CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/irc_planner_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
