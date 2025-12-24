@@ -1,0 +1,4 @@
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:[m[K In member function ‘[01m[Kvoid planner::SensorCallback::callSearchPattern()[m[K’:
+[01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:626:11:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KkOffsetTurn[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+  626 |     switch[01;35m[K([m[KFollowPattern)
+      |           [01;35m[K^[m[K

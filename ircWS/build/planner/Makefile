@@ -211,17 +211,17 @@ shared_state/fast:
 .PHONY : shared_state/fast
 
 #=============================================================================
-# Target rules for targets named stack_node
+# Target rules for targets named planner_node
 
 # Build rule for target.
-stack_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack_node
-.PHONY : stack_node
+planner_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 planner_node
+.PHONY : planner_node
 
 # fast build rule for target.
-stack_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack_node.dir/build.make CMakeFiles/stack_node.dir/build
-.PHONY : stack_node/fast
+planner_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/build
+.PHONY : planner_node/fast
 
 #=============================================================================
 # Target rules for targets named relay_node
@@ -263,17 +263,17 @@ motorcontroller/fast:
 .PHONY : motorcontroller/fast
 
 #=============================================================================
-# Target rules for targets named irc_planner_node
+# Target rules for targets named local_obstacle_filter_node
 
 # Build rule for target.
-irc_planner_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 irc_planner_node
-.PHONY : irc_planner_node
+local_obstacle_filter_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 local_obstacle_filter_node
+.PHONY : local_obstacle_filter_node
 
 # fast build rule for target.
-irc_planner_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/build
-.PHONY : irc_planner_node/fast
+local_obstacle_filter_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/build
+.PHONY : local_obstacle_filter_node/fast
 
 src/imu_conversion.o: src/imu_conversion.cpp.o
 .PHONY : src/imu_conversion.o
@@ -299,29 +299,77 @@ src/imu_conversion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_conversion_node.dir/build.make CMakeFiles/imu_conversion_node.dir/src/imu_conversion.cpp.s
 .PHONY : src/imu_conversion.cpp.s
 
-src/irc_planner_node.o: src/irc_planner_node.cpp.o
-.PHONY : src/irc_planner_node.o
+src/irc_planner.o: src/irc_planner.cpp.o
+.PHONY : src/irc_planner.o
 
 # target to build an object file
-src/irc_planner_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.o
-.PHONY : src/irc_planner_node.cpp.o
+src/irc_planner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/src/irc_planner.cpp.o
+.PHONY : src/irc_planner.cpp.o
 
-src/irc_planner_node.i: src/irc_planner_node.cpp.i
-.PHONY : src/irc_planner_node.i
+src/irc_planner.i: src/irc_planner.cpp.i
+.PHONY : src/irc_planner.i
 
 # target to preprocess a source file
-src/irc_planner_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.i
-.PHONY : src/irc_planner_node.cpp.i
+src/irc_planner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/src/irc_planner.cpp.i
+.PHONY : src/irc_planner.cpp.i
 
-src/irc_planner_node.s: src/irc_planner_node.cpp.s
-.PHONY : src/irc_planner_node.s
+src/irc_planner.s: src/irc_planner.cpp.s
+.PHONY : src/irc_planner.s
 
 # target to generate assembly for a file
-src/irc_planner_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/src/irc_planner_node.cpp.s
-.PHONY : src/irc_planner_node.cpp.s
+src/irc_planner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/src/irc_planner.cpp.s
+.PHONY : src/irc_planner.cpp.s
+
+src/local_obstacle_filter.o: src/local_obstacle_filter.cpp.o
+.PHONY : src/local_obstacle_filter.o
+
+# target to build an object file
+src/local_obstacle_filter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/src/local_obstacle_filter.cpp.o
+.PHONY : src/local_obstacle_filter.cpp.o
+
+src/local_obstacle_filter.i: src/local_obstacle_filter.cpp.i
+.PHONY : src/local_obstacle_filter.i
+
+# target to preprocess a source file
+src/local_obstacle_filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/src/local_obstacle_filter.cpp.i
+.PHONY : src/local_obstacle_filter.cpp.i
+
+src/local_obstacle_filter.s: src/local_obstacle_filter.cpp.s
+.PHONY : src/local_obstacle_filter.s
+
+# target to generate assembly for a file
+src/local_obstacle_filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/src/local_obstacle_filter.cpp.s
+.PHONY : src/local_obstacle_filter.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 src/motorcontroller.o: src/motorcontroller.cpp.o
 .PHONY : src/motorcontroller.o
@@ -395,30 +443,6 @@ src/shared_state.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shared_state.dir/build.make CMakeFiles/shared_state.dir/src/shared_state.cpp.s
 .PHONY : src/shared_state.cpp.s
 
-src/stack.o: src/stack.cpp.o
-.PHONY : src/stack.o
-
-# target to build an object file
-src/stack.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack_node.dir/build.make CMakeFiles/stack_node.dir/src/stack.cpp.o
-.PHONY : src/stack.cpp.o
-
-src/stack.i: src/stack.cpp.i
-.PHONY : src/stack.i
-
-# target to preprocess a source file
-src/stack.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack_node.dir/build.make CMakeFiles/stack_node.dir/src/stack.cpp.i
-.PHONY : src/stack.cpp.i
-
-src/stack.s: src/stack.cpp.s
-.PHONY : src/stack.s
-
-# target to generate assembly for a file
-src/stack.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack_node.dir/build.make CMakeFiles/stack_node.dir/src/stack.cpp.s
-.PHONY : src/stack.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -435,17 +459,23 @@ help:
 	@echo "... planner_uninstall"
 	@echo "... uninstall"
 	@echo "... imu_conversion_node"
-	@echo "... irc_planner_node"
+	@echo "... local_obstacle_filter_node"
 	@echo "... motorcontroller"
+	@echo "... planner_node"
 	@echo "... relay_node"
 	@echo "... shared_state"
-	@echo "... stack_node"
 	@echo "... src/imu_conversion.o"
 	@echo "... src/imu_conversion.i"
 	@echo "... src/imu_conversion.s"
-	@echo "... src/irc_planner_node.o"
-	@echo "... src/irc_planner_node.i"
-	@echo "... src/irc_planner_node.s"
+	@echo "... src/irc_planner.o"
+	@echo "... src/irc_planner.i"
+	@echo "... src/irc_planner.s"
+	@echo "... src/local_obstacle_filter.o"
+	@echo "... src/local_obstacle_filter.i"
+	@echo "... src/local_obstacle_filter.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 	@echo "... src/motorcontroller.o"
 	@echo "... src/motorcontroller.i"
 	@echo "... src/motorcontroller.s"
@@ -455,9 +485,6 @@ help:
 	@echo "... src/shared_state.o"
 	@echo "... src/shared_state.i"
 	@echo "... src/shared_state.s"
-	@echo "... src/stack.o"
-	@echo "... src/stack.i"
-	@echo "... src/stack.s"
 .PHONY : help
 
 

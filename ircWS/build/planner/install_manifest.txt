@@ -1,11 +1,10 @@
 /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/libshared_state.a
-/home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/stack_node
+/home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/planner_node
 /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/relay_node
 /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/imu_conversion_node
 /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/motorcontroller
-/home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/irc_planner_node
+/home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/local_obstacle_filter_node
 /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/shared_state.hpp
-/home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/stack.hpp
 /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/irc_planner.hpp
 /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch/testing.launch.py
 /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/mode_switch.py

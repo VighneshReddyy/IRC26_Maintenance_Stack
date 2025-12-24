@@ -4,7 +4,10 @@
   "template_dir": "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource",
   "idl_tuples": [
     "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs:msg/MarkerTag.idl",
-    "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs:msg/ImuData.idl"
+    "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs:msg/ImuData.idl",
+    "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs:msg/GuiCommand.idl",
+    "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs:msg/PlannerStatus.idl",
+    "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs:msg/GpsDetails.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -86,6 +89,9 @@
     "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
     "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs/msg/MarkerTag.idl",
     "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs/msg/ImuData.idl",
+    "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs/msg/GuiCommand.idl",
+    "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs/msg/PlannerStatus.idl",
+    "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_adapter/custom_msgs/msg/GpsDetails.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

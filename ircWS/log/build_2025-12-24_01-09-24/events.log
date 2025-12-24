@@ -1,0 +1,1059 @@
+[0.000000] (-) TimerEvent: {}
+[0.000993] (custom_msgs) JobQueued: {'identifier': 'custom_msgs', 'dependencies': OrderedDict()}
+[0.001363] (gps) JobQueued: {'identifier': 'gps', 'dependencies': OrderedDict()}
+[0.001479] (planner) JobQueued: {'identifier': 'planner', 'dependencies': OrderedDict([('custom_msgs', '/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs')])}
+[0.001597] (yolo) JobQueued: {'identifier': 'yolo', 'dependencies': OrderedDict([('custom_msgs', '/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs')])}
+[0.001674] (custom_msgs) JobStarted: {'identifier': 'custom_msgs'}
+[0.017296] (gps) JobStarted: {'identifier': 'gps'}
+[0.033802] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'cmake'}
+[0.035157] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'build'}
+[0.036941] (custom_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs', '--', '-j6', '-l6'], 'cwd': '/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mrmnavjet'), ('SSH_CLIENT', '10.181.216.129 49484 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/test/ERC2025/install/robot_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/mrmnavjet'), ('OLDPWD', '/home/mrmnavjet/IRC2026/ircWS/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/mrmnavjet/IRC2026/ircWS/install:/home/mrmnavjet/zed_ros_ws/install:/home/mrmnavjet/test/ERC2025/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mrmnavjet'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '26'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mrmnavjet/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.181.216.129 49484 10.181.216.151 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/leo_nodes/lib/python3.10/site-packages:/home/mrmnavjet/test/ERC2025/install/robot_interface/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/gps/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble')]), 'shell': False}
+[0.099026] (-) TimerEvent: {}
+[0.159855] (custom_msgs) StdoutLine: {'line': b'[  1%] Built target custom_msgs__cpp\n'}
+[0.170904] (custom_msgs) StdoutLine: {'line': b'[ 12%] Built target custom_msgs__rosidl_generator_c\n'}
+[0.199171] (-) TimerEvent: {}
+[0.236709] (custom_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_custom_msgs\n'}
+[0.247680] (custom_msgs) StdoutLine: {'line': b'[ 23%] Built target custom_msgs__rosidl_typesupport_cpp\n'}
+[0.271233] (custom_msgs) StdoutLine: {'line': b'[ 36%] Built target custom_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.272057] (custom_msgs) StdoutLine: {'line': b'[ 46%] Built target custom_msgs__rosidl_typesupport_introspection_c\n'}
+[0.295192] (custom_msgs) StdoutLine: {'line': b'[ 57%] Built target custom_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.299326] (-) TimerEvent: {}
+[0.305636] (custom_msgs) StdoutLine: {'line': b'[ 68%] Built target custom_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.306337] (custom_msgs) StdoutLine: {'line': b'[ 79%] Built target custom_msgs__rosidl_typesupport_c\n'}
+[0.371383] (custom_msgs) StdoutLine: {'line': b'[ 79%] Built target custom_msgs\n'}
+[0.399487] (-) TimerEvent: {}
+[0.432914] (custom_msgs) StdoutLine: {'line': b'[ 80%] Built target custom_msgs__py\n'}
+[0.499624] (-) TimerEvent: {}
+[0.526312] (custom_msgs) StdoutLine: {'line': b'[ 90%] Built target custom_msgs__rosidl_generator_py\n'}
+[0.599793] (-) TimerEvent: {}
+[0.601781] (custom_msgs) StdoutLine: {'line': b'[ 93%] Built target custom_msgs__rosidl_typesupport_c__pyext\n'}
+[0.615124] (custom_msgs) StdoutLine: {'line': b'[ 96%] Built target custom_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.621245] (custom_msgs) StdoutLine: {'line': b'[100%] Built target custom_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.699946] (-) TimerEvent: {}
+[0.800613] (-) TimerEvent: {}
+[0.842005] (custom_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.887107] (custom_msgs) StdoutLine: {'line': b'writing custom_msgs.egg-info/PKG-INFO\n'}
+[0.888210] (custom_msgs) StdoutLine: {'line': b'writing dependency_links to custom_msgs.egg-info/dependency_links.txt\n'}
+[0.888917] (custom_msgs) StdoutLine: {'line': b'writing top-level names to custom_msgs.egg-info/top_level.txt\n'}
+[0.900779] (-) TimerEvent: {}
+[1.002638] (-) TimerEvent: {}
+[1.021722] (custom_msgs) StdoutLine: {'line': b"reading manifest file 'custom_msgs.egg-info/SOURCES.txt'\n"}
+[1.024230] (custom_msgs) StdoutLine: {'line': b"writing manifest file 'custom_msgs.egg-info/SOURCES.txt'\n"}
+[1.102798] (-) TimerEvent: {}
+[1.125550] (custom_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_custom_msgs_egg\n'}
+[1.154037] (custom_msgs) CommandEnded: {'returncode': 0}
+[1.155744] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'install'}
+[1.176880] (custom_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs'], 'cwd': '/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mrmnavjet'), ('SSH_CLIENT', '10.181.216.129 49484 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/test/ERC2025/install/robot_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/mrmnavjet'), ('OLDPWD', '/home/mrmnavjet/IRC2026/ircWS/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/mrmnavjet/IRC2026/ircWS/install:/home/mrmnavjet/zed_ros_ws/install:/home/mrmnavjet/test/ERC2025/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mrmnavjet'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '26'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mrmnavjet/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.181.216.129 49484 10.181.216.151 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/leo_nodes/lib/python3.10/site-packages:/home/mrmnavjet/test/ERC2025/install/robot_interface/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/gps/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble')]), 'shell': False}
+[1.201602] (custom_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.202562] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/ament_index/resource_index/rosidl_interfaces/custom_msgs\n'}
+[1.202769] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[1.202928] (-) TimerEvent: {}
+[1.203645] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[1.204533] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.204839] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/gps_details.h\n'}
+[1.205071] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/marker_tag.h\n'}
+[1.205549] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/gui_command.h\n'}
+[1.205730] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[1.205874] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__functions.c\n'}
+[1.206054] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__functions.h\n'}
+[1.206185] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__type_support.h\n'}
+[1.206313] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__type_support.h\n'}
+[1.206480] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__type_support.h\n'}
+[1.206608] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__functions.h\n'}
+[1.206750] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__functions.h\n'}
+[1.206871] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__functions.c\n'}
+[1.206992] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__functions.h\n'}
+[1.207109] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__functions.h\n'}
+[1.207229] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__functions.c\n'}
+[1.207346] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__struct.h\n'}
+[1.207464] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__functions.c\n'}
+[1.207579] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__struct.h\n'}
+[1.207697] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__functions.c\n'}
+[1.207847] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__type_support.h\n'}
+[1.207965] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__struct.h\n'}
+[1.208086] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__type_support.h\n'}
+[1.208200] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__struct.h\n'}
+[1.208314] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__struct.h\n'}
+[1.208428] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/planner_status.h\n'}
+[1.208543] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/imu_data.h\n'}
+[1.208656] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/environment/library_path.sh\n'}
+[1.208769] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/environment/library_path.dsv\n'}
+[1.208880] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_c.so\n'}
+[1.208992] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[1.209105] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[1.209219] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[1.209330] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__rosidl_typesupport_fastrtps_c.h\n'}
+[1.209473] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__rosidl_typesupport_fastrtps_c.h\n'}
+[1.209595] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__rosidl_typesupport_fastrtps_c.h\n'}
+[1.209713] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__rosidl_typesupport_fastrtps_c.h\n'}
+[1.209831] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__rosidl_typesupport_fastrtps_c.h\n'}
+[1.210033] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.210763] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[1.210916] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[1.211119] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[1.211254] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[1.211632] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__rosidl_typesupport_introspection_c.h\n'}
+[1.211772] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__type_support.c\n'}
+[1.211899] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__rosidl_typesupport_introspection_c.h\n'}
+[1.212020] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__rosidl_typesupport_introspection_c.h\n'}
+[1.212334] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__rosidl_typesupport_introspection_c.h\n'}
+[1.212547] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__type_support.c\n'}
+[1.212817] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__type_support.c\n'}
+[1.213175] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__type_support.c\n'}
+[1.213755] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__rosidl_typesupport_introspection_c.h\n'}
+[1.214146] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__type_support.c\n'}
+[1.214303] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.214442] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_c.so\n'}
+[1.215046] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_c.so\n'}
+[1.215200] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[1.215329] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[1.215450] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/planner_status.hpp\n'}
+[1.215567] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/imu_data.hpp\n'}
+[1.215682] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/marker_tag.hpp\n'}
+[1.215797] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[1.215912] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__builder.hpp\n'}
+[1.216028] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__struct.hpp\n'}
+[1.216143] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__type_support.hpp\n'}
+[1.216257] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__builder.hpp\n'}
+[1.216579] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__traits.hpp\n'}
+[1.216723] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__struct.hpp\n'}
+[1.216872] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__type_support.hpp\n'}
+[1.216997] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__struct.hpp\n'}
+[1.217114] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__struct.hpp\n'}
+[1.217230] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__type_support.hpp\n'}
+[1.217601] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__type_support.hpp\n'}
+[1.217753] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__traits.hpp\n'}
+[1.217877] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__type_support.hpp\n'}
+[1.218034] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__traits.hpp\n'}
+[1.218156] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__builder.hpp\n'}
+[1.218273] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__struct.hpp\n'}
+[1.218419] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__traits.hpp\n'}
+[1.218535] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__builder.hpp\n'}
+[1.218650] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__traits.hpp\n'}
+[1.218763] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__builder.hpp\n'}
+[1.218874] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/gps_details.hpp\n'}
+[1.219022] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/gui_command.hpp\n'}
+[1.219136] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.219252] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[1.219364] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[1.219478] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[1.219590] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.219705] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.219819] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.219935] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/dds_fastrtps\n'}
+[1.220049] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.220162] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.220275] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.220388] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.220500] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[1.220628] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[1.220744] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[1.220858] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.220972] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.221099] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.221214] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__type_support.cpp\n'}
+[1.221327] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/imu_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.221440] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/planner_status__type_support.cpp\n'}
+[1.221552] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gui_command__type_support.cpp\n'}
+[1.221664] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.221778] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/marker_tag__type_support.cpp\n'}
+[1.221892] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/gps_details__type_support.cpp\n'}
+[1.222047] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[1.222168] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_cpp.so\n'}
+[1.222281] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/environment/pythonpath.sh\n'}
+[1.222395] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/environment/pythonpath.dsv\n'}
+[1.222508] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs-0.0.1-py3.10.egg-info\n'}
+[1.222651] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs-0.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[1.222771] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs-0.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[1.222886] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs-0.0.1-py3.10.egg-info/PKG-INFO\n'}
+[1.223000] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs-0.0.1-py3.10.egg-info/top_level.txt\n'}
+[1.223113] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs\n'}
+[1.223226] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[1.223338] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/__init__.py\n'}
+[1.223451] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.223580] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.223692] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.223806] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.223930] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.224047] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg\n'}
+[1.224158] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_imu_data.py\n'}
+[1.224270] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_gui_command_s.c\n'}
+[1.224381] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_gps_details.py\n'}
+[1.224494] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/__init__.py\n'}
+[1.224603] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_gps_details_s.c\n'}
+[1.224714] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_imu_data_s.c\n'}
+[1.224823] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_marker_tag.py\n'}
+[1.224930] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_planner_status.py\n'}
+[1.225038] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_gui_command.py\n'}
+[1.225149] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_marker_tag_s.c\n'}
+[1.225260] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_planner_status_s.c\n'}
+[1.225371] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/libcustom_msgs__rosidl_generator_py.so\n'}
+[1.291230] (custom_msgs) StdoutLine: {'line': b"Listing '/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs'...\n"}
+[1.291784] (custom_msgs) StdoutLine: {'line': b"Listing '/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg'...\n"}
+[1.303210] (-) TimerEvent: {}
+[1.305357] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.306046] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.306494] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.306882] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_py.so\n'}
+[1.307158] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/msg/MarkerTag.idl\n'}
+[1.307953] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/msg/ImuData.idl\n'}
+[1.308289] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/msg/GuiCommand.idl\n'}
+[1.308706] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/msg/PlannerStatus.idl\n'}
+[1.309028] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/msg/GpsDetails.idl\n'}
+[1.309180] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/msg/MarkerTag.msg\n'}
+[1.309358] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/msg/ImuData.msg\n'}
+[1.311770] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/msg/GuiCommand.msg\n'}
+[1.313835] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/msg/PlannerStatus.msg\n'}
+[1.314302] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/msg/GpsDetails.msg\n'}
+[1.314785] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/ament_index/resource_index/package_run_dependencies/custom_msgs\n'}
+[1.314955] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/ament_index/resource_index/parent_prefix_path/custom_msgs\n'}
+[1.315089] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.sh\n'}
+[1.315216] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.dsv\n'}
+[1.315389] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/environment/path.sh\n'}
+[1.315510] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/environment/path.dsv\n'}
+[1.315907] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/local_setup.bash\n'}
+[1.316109] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/local_setup.sh\n'}
+[1.316241] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/local_setup.zsh\n'}
+[1.316362] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/local_setup.dsv\n'}
+[1.316481] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/package.dsv\n'}
+[1.316599] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/ament_index/resource_index/packages/custom_msgs\n'}
+[1.316717] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport.cmake\n'}
+[1.319990] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.320495] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.320973] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.321376] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.322983] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.326857] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport.cmake\n'}
+[1.327506] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.327924] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cppExport.cmake\n'}
+[1.328925] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.329561] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.329972] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.332439] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.333061] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[1.333351] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.333618] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport.cmake\n'}
+[1.334101] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.334927] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[1.335543] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.336103] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.336391] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.336665] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.337103] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.337758] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.338360] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig.cmake\n'}
+[1.338862] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig-version.cmake\n'}
+[1.339453] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/share/custom_msgs/package.xml\n'}
+[1.339994] (custom_msgs) CommandEnded: {'returncode': 0}
+[1.424131] (-) TimerEvent: {}
+[1.465196] (custom_msgs) JobEnded: {'identifier': 'custom_msgs', 'rc': 0}
+[1.468582] (planner) JobStarted: {'identifier': 'planner'}
+[1.482522] (yolo) JobStarted: {'identifier': 'yolo'}
+[1.502679] (planner) JobProgress: {'identifier': 'planner', 'progress': 'cmake'}
+[1.504799] (planner) JobProgress: {'identifier': 'planner', 'progress': 'build'}
+[1.506277] (planner) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mrmnavjet/IRC2026/ircWS/build/planner', '--', '-j6', '-l6'], 'cwd': '/home/mrmnavjet/IRC2026/ircWS/build/planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mrmnavjet'), ('SSH_CLIENT', '10.181.216.129 49484 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/home/mrmnavjet/test/ERC2025/install/robot_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/mrmnavjet'), ('OLDPWD', '/home/mrmnavjet/IRC2026/ircWS/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/mrmnavjet/IRC2026/ircWS/install:/home/mrmnavjet/zed_ros_ws/install:/home/mrmnavjet/test/ERC2025/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mrmnavjet'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '26'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mrmnavjet/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/mrmnavjet/IRC2026/ircWS/build/planner'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.181.216.129 49484 10.181.216.151 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/leo_nodes/lib/python3.10/site-packages:/home/mrmnavjet/test/ERC2025/install/robot_interface/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/gps/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble')]), 'shell': False}
+[1.524304] (-) TimerEvent: {}
+[1.624965] (-) TimerEvent: {}
+[1.666497] (planner) StdoutLine: {'line': b'[ 15%] Built target shared_state\n'}
+[1.708130] (planner) StdoutLine: {'line': b'[ 30%] Built target local_obstacle_filter_node\n'}
+[1.717564] (planner) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target planner_node\x1b[0m\n'}
+[1.725127] (-) TimerEvent: {}
+[1.778198] (planner) StdoutLine: {'line': b'[ 46%] Built target relay_node\n'}
+[1.787231] (planner) StdoutLine: {'line': b'[ 61%] Built target motorcontroller\n'}
+[1.790329] (planner) StdoutLine: {'line': b'[ 76%] Built target imu_conversion_node\n'}
+[1.806982] (planner) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/planner_node.dir/src/irc_planner.cpp.o\x1b[0m\n'}
+[1.825298] (-) TimerEvent: {}
+[1.926321] (-) TimerEvent: {}
+[2.027684] (-) TimerEvent: {}
+[2.128388] (-) TimerEvent: {}
+[2.229182] (-) TimerEvent: {}
+[2.256617] (gps) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/gps', 'build', '--build-base', '/home/mrmnavjet/IRC2026/ircWS/build/gps/build', 'install', '--record', '/home/mrmnavjet/IRC2026/ircWS/build/gps/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/mrmnavjet/IRC2026/ircWS/src/gps', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'mrmnavjet', 'SSH_CLIENT': '10.181.216.129 49484 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/test/ERC2025/install/robot_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:', 'MOTD_SHOWN': 'pam', 'HOME': '/home/mrmnavjet', 'OLDPWD': '/home/mrmnavjet/IRC2026/ircWS/src', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/mrmnavjet/IRC2026/ircWS/install:/home/mrmnavjet/zed_ros_ws/install:/home/mrmnavjet/test/ERC2025/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'mrmnavjet', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '26', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/mrmnavjet/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/mrmnavjet/IRC2026/ircWS/build/gps', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.181.216.129 49484 10.181.216.151 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mrmnavjet/IRC2026/ircWS/build/gps/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/leo_nodes/lib/python3.10/site-packages:/home/mrmnavjet/test/ERC2025/install/robot_interface/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/gps/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover'}, 'shell': False}
+[2.329345] (-) TimerEvent: {}
+[2.430995] (-) TimerEvent: {}
+[2.533001] (-) TimerEvent: {}
+[2.634274] (-) TimerEvent: {}
+[2.735095] (-) TimerEvent: {}
+[2.835922] (-) TimerEvent: {}
+[2.933114] (gps) StdoutLine: {'line': b'running egg_info\n'}
+[2.968737] (-) TimerEvent: {}
+[2.975841] (gps) StdoutLine: {'line': b'writing ../../build/gps/gps.egg-info/PKG-INFO\n'}
+[2.977197] (gps) StdoutLine: {'line': b'writing dependency_links to ../../build/gps/gps.egg-info/dependency_links.txt\n'}
+[2.977683] (gps) StdoutLine: {'line': b'writing entry points to ../../build/gps/gps.egg-info/entry_points.txt\n'}
+[2.978170] (gps) StdoutLine: {'line': b'writing requirements to ../../build/gps/gps.egg-info/requires.txt\n'}
+[2.978465] (gps) StdoutLine: {'line': b'writing top-level names to ../../build/gps/gps.egg-info/top_level.txt\n'}
+[3.068334] (gps) StdoutLine: {'line': b"reading manifest file '../../build/gps/gps.egg-info/SOURCES.txt'\n"}
+[3.068853] (-) TimerEvent: {}
+[3.071446] (gps) StdoutLine: {'line': b"writing manifest file '../../build/gps/gps.egg-info/SOURCES.txt'\n"}
+[3.072225] (gps) StdoutLine: {'line': b'running build\n'}
+[3.072458] (gps) StdoutLine: {'line': b'running build_py\n'}
+[3.072757] (gps) StdoutLine: {'line': b'copying gps/gps_rtk.py -> /home/mrmnavjet/IRC2026/ircWS/build/gps/build/lib/gps\n'}
+[3.073265] (gps) StdoutLine: {'line': b'copying gps/__init__.py -> /home/mrmnavjet/IRC2026/ircWS/build/gps/build/lib/gps\n'}
+[3.074814] (gps) StdoutLine: {'line': b'copying gps/gps_rtcm.py -> /home/mrmnavjet/IRC2026/ircWS/build/gps/build/lib/gps\n'}
+[3.075138] (gps) StdoutLine: {'line': b'running install\n'}
+[3.083657] (gps) StdoutLine: {'line': b'running install_lib\n'}
+[3.130322] (gps) StdoutLine: {'line': b'running install_data\n'}
+[3.131748] (gps) StdoutLine: {'line': b'copying resource/gps -> /home/mrmnavjet/IRC2026/ircWS/install/gps/share/ament_index/resource_index/packages\n'}
+[3.132150] (gps) StdoutLine: {'line': b'copying package.xml -> /home/mrmnavjet/IRC2026/ircWS/install/gps/share/gps\n'}
+[3.132367] (gps) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.169029] (-) TimerEvent: {}
+[3.179916] (gps) StdoutLine: {'line': b"removing '/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages/gps-0.0.1-py3.10.egg-info' (and everything under it)\n"}
+[3.180668] (gps) StdoutLine: {'line': b'Copying ../../build/gps/gps.egg-info to /home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages/gps-0.0.1-py3.10.egg-info\n'}
+[3.183167] (gps) StdoutLine: {'line': b'running install_scripts\n'}
+[3.269191] (-) TimerEvent: {}
+[3.372046] (-) TimerEvent: {}
+[3.472749] (-) TimerEvent: {}
+[3.535297] (gps) StdoutLine: {'line': b'Installing gps_rtcm script to /home/mrmnavjet/IRC2026/ircWS/install/gps/lib/gps\n'}
+[3.535930] (gps) StdoutLine: {'line': b'Installing gps_rtk script to /home/mrmnavjet/IRC2026/ircWS/install/gps/lib/gps\n'}
+[3.536907] (gps) StdoutLine: {'line': b"writing list of installed files to '/home/mrmnavjet/IRC2026/ircWS/build/gps/install.log'\n"}
+[3.572903] (-) TimerEvent: {}
+[3.642610] (gps) CommandEnded: {'returncode': 0}
+[3.657269] (gps) JobEnded: {'identifier': 'gps', 'rc': 0}
+[3.674311] (-) TimerEvent: {}
+[3.775027] (-) TimerEvent: {}
+[3.839038] (yolo) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/yolo', 'build', '--build-base', '/home/mrmnavjet/IRC2026/ircWS/build/yolo/build', 'install', '--record', '/home/mrmnavjet/IRC2026/ircWS/build/yolo/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/mrmnavjet/IRC2026/ircWS/src/yolo', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'mrmnavjet', 'SSH_CLIENT': '10.181.216.129 49484 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/home/mrmnavjet/test/ERC2025/install/robot_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64', 'MOTD_SHOWN': 'pam', 'HOME': '/home/mrmnavjet', 'OLDPWD': '/home/mrmnavjet/IRC2026/ircWS/src', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/mrmnavjet/IRC2026/ircWS/install:/home/mrmnavjet/zed_ros_ws/install:/home/mrmnavjet/test/ERC2025/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'mrmnavjet', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '26', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/mrmnavjet/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/mrmnavjet/IRC2026/ircWS/build/yolo', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.181.216.129 49484 10.181.216.151 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mrmnavjet/IRC2026/ircWS/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/leo_nodes/lib/python3.10/site-packages:/home/mrmnavjet/test/ERC2025/install/robot_interface/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/gps/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover'}, 'shell': False}
+[3.875156] (-) TimerEvent: {}
+[3.975989] (-) TimerEvent: {}
+[4.076833] (-) TimerEvent: {}
+[4.177777] (-) TimerEvent: {}
+[4.278669] (-) TimerEvent: {}
+[4.379563] (-) TimerEvent: {}
+[4.480620] (-) TimerEvent: {}
+[4.492977] (yolo) StdoutLine: {'line': b'running egg_info\n'}
+[4.535502] (yolo) StdoutLine: {'line': b'writing ../../build/yolo/yolo.egg-info/PKG-INFO\n'}
+[4.536558] (yolo) StdoutLine: {'line': b'writing dependency_links to ../../build/yolo/yolo.egg-info/dependency_links.txt\n'}
+[4.537104] (yolo) StdoutLine: {'line': b'writing entry points to ../../build/yolo/yolo.egg-info/entry_points.txt\n'}
+[4.537563] (yolo) StdoutLine: {'line': b'writing requirements to ../../build/yolo/yolo.egg-info/requires.txt\n'}
+[4.538022] (yolo) StdoutLine: {'line': b'writing top-level names to ../../build/yolo/yolo.egg-info/top_level.txt\n'}
+[4.580794] (-) TimerEvent: {}
+[4.627770] (yolo) StdoutLine: {'line': b"reading manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'\n"}
+[4.633779] (yolo) StdoutLine: {'line': b"writing manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'\n"}
+[4.634358] (yolo) StdoutLine: {'line': b'running build\n'}
+[4.634623] (yolo) StdoutLine: {'line': b'running build_py\n'}
+[4.634816] (yolo) StdoutLine: {'line': b'copying yolo/view.py -> /home/mrmnavjet/IRC2026/ircWS/build/yolo/build/lib/yolo\n'}
+[4.635088] (yolo) StdoutLine: {'line': b'copying yolo/test.py -> /home/mrmnavjet/IRC2026/ircWS/build/yolo/build/lib/yolo\n'}
+[4.635246] (yolo) StdoutLine: {'line': b'copying yolo/__init__.py -> /home/mrmnavjet/IRC2026/ircWS/build/yolo/build/lib/yolo\n'}
+[4.635420] (yolo) StdoutLine: {'line': b'copying yolo/inference_engine.py -> /home/mrmnavjet/IRC2026/ircWS/build/yolo/build/lib/yolo\n'}
+[4.635622] (yolo) StdoutLine: {'line': b'copying yolo/ok2.py -> /home/mrmnavjet/IRC2026/ircWS/build/yolo/build/lib/yolo\n'}
+[4.635871] (yolo) StdoutLine: {'line': b'copying yolo/damn.py -> /home/mrmnavjet/IRC2026/ircWS/build/yolo/build/lib/yolo\n'}
+[4.636296] (yolo) StdoutLine: {'line': b'copying yolo/inference_node.py -> /home/mrmnavjet/IRC2026/ircWS/build/yolo/build/lib/yolo\n'}
+[4.636752] (yolo) StdoutLine: {'line': b'copying yolo/infer.py -> /home/mrmnavjet/IRC2026/ircWS/build/yolo/build/lib/yolo\n'}
+[4.637704] (yolo) StdoutLine: {'line': b'running install\n'}
+[4.646690] (yolo) StdoutLine: {'line': b'running install_lib\n'}
+[4.680965] (-) TimerEvent: {}
+[4.692025] (yolo) StdoutLine: {'line': b'running install_data\n'}
+[4.692797] (yolo) StdoutLine: {'line': b'copying resource/yolo -> /home/mrmnavjet/IRC2026/ircWS/install/yolo/share/ament_index/resource_index/packages\n'}
+[4.693465] (yolo) StdoutLine: {'line': b'copying package.xml -> /home/mrmnavjet/IRC2026/ircWS/install/yolo/share/yolo\n'}
+[4.693839] (yolo) StdoutLine: {'line': b'copying yolo/cone_v1.engine -> /home/mrmnavjet/IRC2026/ircWS/install/yolo/share/yolo\n'}
+[4.750181] (yolo) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.781097] (-) TimerEvent: {}
+[4.796343] (yolo) StdoutLine: {'line': b"removing '/home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/python3.10/site-packages/yolo-0.1.0-py3.10.egg-info' (and everything under it)\n"}
+[4.797049] (yolo) StdoutLine: {'line': b'Copying ../../build/yolo/yolo.egg-info to /home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/python3.10/site-packages/yolo-0.1.0-py3.10.egg-info\n'}
+[4.799208] (yolo) StdoutLine: {'line': b'running install_scripts\n'}
+[4.881263] (-) TimerEvent: {}
+[4.983358] (-) TimerEvent: {}
+[5.084711] (-) TimerEvent: {}
+[5.149230] (yolo) StdoutLine: {'line': b'Installing inference script to /home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/yolo\n'}
+[5.149857] (yolo) StdoutLine: {'line': b'Installing inference_engine script to /home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/yolo\n'}
+[5.150795] (yolo) StdoutLine: {'line': b"writing list of installed files to '/home/mrmnavjet/IRC2026/ircWS/build/yolo/install.log'\n"}
+[5.184852] (-) TimerEvent: {}
+[5.258106] (yolo) CommandEnded: {'returncode': 0}
+[5.278886] (yolo) JobEnded: {'identifier': 'yolo', 'rc': 0}
+[5.285034] (-) TimerEvent: {}
+[5.386271] (-) TimerEvent: {}
+[5.486985] (-) TimerEvent: {}
+[5.587691] (-) TimerEvent: {}
+[5.688457] (-) TimerEvent: {}
+[5.789205] (-) TimerEvent: {}
+[5.890088] (-) TimerEvent: {}
+[5.990837] (-) TimerEvent: {}
+[6.092223] (-) TimerEvent: {}
+[6.192931] (-) TimerEvent: {}
+[6.293624] (-) TimerEvent: {}
+[6.394359] (-) TimerEvent: {}
+[6.495398] (-) TimerEvent: {}
+[6.596190] (-) TimerEvent: {}
+[6.696966] (-) TimerEvent: {}
+[6.797695] (-) TimerEvent: {}
+[6.898666] (-) TimerEvent: {}
+[6.999537] (-) TimerEvent: {}
+[7.100234] (-) TimerEvent: {}
+[7.201051] (-) TimerEvent: {}
+[7.301888] (-) TimerEvent: {}
+[7.402933] (-) TimerEvent: {}
+[7.504328] (-) TimerEvent: {}
+[7.605620] (-) TimerEvent: {}
+[7.707903] (-) TimerEvent: {}
+[7.809182] (-) TimerEvent: {}
+[7.909826] (-) TimerEvent: {}
+[8.010510] (-) TimerEvent: {}
+[8.111194] (-) TimerEvent: {}
+[8.211875] (-) TimerEvent: {}
+[8.312539] (-) TimerEvent: {}
+[8.413172] (-) TimerEvent: {}
+[8.513815] (-) TimerEvent: {}
+[8.614544] (-) TimerEvent: {}
+[8.715304] (-) TimerEvent: {}
+[8.815985] (-) TimerEvent: {}
+[8.916652] (-) TimerEvent: {}
+[9.017837] (-) TimerEvent: {}
+[9.118670] (-) TimerEvent: {}
+[9.219343] (-) TimerEvent: {}
+[9.320439] (-) TimerEvent: {}
+[9.421117] (-) TimerEvent: {}
+[9.521828] (-) TimerEvent: {}
+[9.623427] (-) TimerEvent: {}
+[9.724465] (-) TimerEvent: {}
+[9.825618] (-) TimerEvent: {}
+[9.926531] (-) TimerEvent: {}
+[10.027619] (-) TimerEvent: {}
+[10.128318] (-) TimerEvent: {}
+[10.228984] (-) TimerEvent: {}
+[10.329696] (-) TimerEvent: {}
+[10.430610] (-) TimerEvent: {}
+[10.531317] (-) TimerEvent: {}
+[10.631938] (-) TimerEvent: {}
+[10.732569] (-) TimerEvent: {}
+[10.833216] (-) TimerEvent: {}
+[10.933861] (-) TimerEvent: {}
+[11.034581] (-) TimerEvent: {}
+[11.135239] (-) TimerEvent: {}
+[11.235920] (-) TimerEvent: {}
+[11.336889] (-) TimerEvent: {}
+[11.438120] (-) TimerEvent: {}
+[11.539487] (-) TimerEvent: {}
+[11.640627] (-) TimerEvent: {}
+[11.741732] (-) TimerEvent: {}
+[11.842434] (-) TimerEvent: {}
+[11.943112] (-) TimerEvent: {}
+[12.043942] (-) TimerEvent: {}
+[12.144611] (-) TimerEvent: {}
+[12.245247] (-) TimerEvent: {}
+[12.346002] (-) TimerEvent: {}
+[12.446665] (-) TimerEvent: {}
+[12.547852] (-) TimerEvent: {}
+[12.648653] (-) TimerEvent: {}
+[12.749688] (-) TimerEvent: {}
+[12.850398] (-) TimerEvent: {}
+[12.951129] (-) TimerEvent: {}
+[13.051850] (-) TimerEvent: {}
+[13.152530] (-) TimerEvent: {}
+[13.253307] (-) TimerEvent: {}
+[13.354019] (-) TimerEvent: {}
+[13.454748] (-) TimerEvent: {}
+[13.555425] (-) TimerEvent: {}
+[13.656083] (-) TimerEvent: {}
+[13.757286] (-) TimerEvent: {}
+[13.858007] (-) TimerEvent: {}
+[13.958764] (-) TimerEvent: {}
+[14.059457] (-) TimerEvent: {}
+[14.160172] (-) TimerEvent: {}
+[14.260848] (-) TimerEvent: {}
+[14.361496] (-) TimerEvent: {}
+[14.462260] (-) TimerEvent: {}
+[14.562976] (-) TimerEvent: {}
+[14.663668] (-) TimerEvent: {}
+[14.764374] (-) TimerEvent: {}
+[14.865074] (-) TimerEvent: {}
+[14.965793] (-) TimerEvent: {}
+[15.066633] (-) TimerEvent: {}
+[15.167419] (-) TimerEvent: {}
+[15.268583] (-) TimerEvent: {}
+[15.369304] (-) TimerEvent: {}
+[15.470105] (-) TimerEvent: {}
+[15.570811] (-) TimerEvent: {}
+[15.643475] (planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:1\x1b[m\x1b[K:\n'}
+[15.644156] (planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kplanner::SensorCallback::SensorCallback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[15.644340] (planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:131:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kplanner::SensorCallback::nav_select_done_\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[15.644501] (planner) StderrLine: {'line': b'  131 |     bool \x1b[01;35m\x1b[Knav_select_done_\x1b[m\x1b[K;\n'}
+[15.644638] (planner) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.644765] (planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:111:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kplanner::State planner::SensorCallback::CurrState\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[15.644901] (planner) StderrLine: {'line': b'  111 |     State \x1b[01;35m\x1b[KCurrState\x1b[m\x1b[K;\n'}
+[15.645022] (planner) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[15.645153] (planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:12:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[15.645279] (planner) StderrLine: {'line': b'   12 | \x1b[01;35m\x1b[KSensorCallback\x1b[m\x1b[K::SensorCallback()\n'}
+[15.645395] (planner) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.645508] (planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:1\x1b[m\x1b[K:\n'}
+[15.645622] (planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:130:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kplanner::SensorCallback::target_cone_id_\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[15.645742] (planner) StderrLine: {'line': b'  130 |     int \x1b[01;35m\x1b[Ktarget_cone_id_\x1b[m\x1b[K;\n'}
+[15.645852] (planner) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.645990] (planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:117:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kbool planner::SensorCallback::gps_goal_set\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[15.646121] (planner) StderrLine: {'line': b'  117 |     bool \x1b[01;35m\x1b[Kgps_goal_set\x1b[m\x1b[K;\n'}
+[15.646234] (planner) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.646343] (planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:12:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[15.646481] (planner) StderrLine: {'line': b'   12 | \x1b[01;35m\x1b[KSensorCallback\x1b[m\x1b[K::SensorCallback()\n'}
+[15.646614] (planner) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.646726] (planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:1\x1b[m\x1b[K:\n'}
+[15.646838] (planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:146:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kplanner::SensorCallback::last_gps_time_\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[15.646954] (planner) StderrLine: {'line': b'  146 |     rclcpp::Time \x1b[01;35m\x1b[Klast_gps_time_\x1b[m\x1b[K;\n'}
+[15.647061] (planner) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.647171] (planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:126:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Time planner::SensorCallback::delivery_start_time_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[15.647287] (planner) StderrLine: {'line': b'  126 |     rclcpp::Time \x1b[01;35m\x1b[Kdelivery_start_time_\x1b[m\x1b[K;\n'}
+[15.647398] (planner) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.647506] (planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:12:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[15.647640] (planner) StderrLine: {'line': b'   12 | \x1b[01;35m\x1b[KSensorCallback\x1b[m\x1b[K::SensorCallback()\n'}
+[15.647750] (planner) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.671017] (-) TimerEvent: {}
+[15.771774] (-) TimerEvent: {}
+[15.872806] (-) TimerEvent: {}
+[15.974054] (-) TimerEvent: {}
+[16.074766] (-) TimerEvent: {}
+[16.175488] (-) TimerEvent: {}
+[16.276236] (-) TimerEvent: {}
+[16.377058] (-) TimerEvent: {}
+[16.477833] (-) TimerEvent: {}
+[16.578673] (-) TimerEvent: {}
+[16.679436] (-) TimerEvent: {}
+[16.780240] (-) TimerEvent: {}
+[16.881073] (-) TimerEvent: {}
+[16.981881] (-) TimerEvent: {}
+[17.082723] (-) TimerEvent: {}
+[17.183543] (-) TimerEvent: {}
+[17.284320] (-) TimerEvent: {}
+[17.386006] (-) TimerEvent: {}
+[17.486712] (-) TimerEvent: {}
+[17.587507] (-) TimerEvent: {}
+[17.688411] (-) TimerEvent: {}
+[17.789250] (-) TimerEvent: {}
+[17.890056] (-) TimerEvent: {}
+[17.990984] (-) TimerEvent: {}
+[18.091771] (-) TimerEvent: {}
+[18.192685] (-) TimerEvent: {}
+[18.293517] (-) TimerEvent: {}
+[18.394288] (-) TimerEvent: {}
+[18.495563] (-) TimerEvent: {}
+[18.596440] (-) TimerEvent: {}
+[18.697283] (-) TimerEvent: {}
+[18.798136] (-) TimerEvent: {}
+[18.898938] (-) TimerEvent: {}
+[18.999787] (-) TimerEvent: {}
+[19.100593] (-) TimerEvent: {}
+[19.201419] (-) TimerEvent: {}
+[19.302252] (-) TimerEvent: {}
+[19.403051] (-) TimerEvent: {}
+[19.503875] (-) TimerEvent: {}
+[19.604681] (-) TimerEvent: {}
+[19.705485] (-) TimerEvent: {}
+[19.806303] (-) TimerEvent: {}
+[19.907017] (-) TimerEvent: {}
+[20.007742] (-) TimerEvent: {}
+[20.109692] (-) TimerEvent: {}
+[20.210449] (-) TimerEvent: {}
+[20.311091] (-) TimerEvent: {}
+[20.411780] (-) TimerEvent: {}
+[20.512560] (-) TimerEvent: {}
+[20.613386] (-) TimerEvent: {}
+[20.714401] (-) TimerEvent: {}
+[20.815159] (-) TimerEvent: {}
+[20.915896] (-) TimerEvent: {}
+[21.016661] (-) TimerEvent: {}
+[21.117460] (-) TimerEvent: {}
+[21.218179] (-) TimerEvent: {}
+[21.318931] (-) TimerEvent: {}
+[21.419768] (-) TimerEvent: {}
+[21.520529] (-) TimerEvent: {}
+[21.621247] (-) TimerEvent: {}
+[21.722073] (-) TimerEvent: {}
+[21.823039] (-) TimerEvent: {}
+[21.923862] (-) TimerEvent: {}
+[22.024946] (-) TimerEvent: {}
+[22.126447] (-) TimerEvent: {}
+[22.227240] (-) TimerEvent: {}
+[22.328048] (-) TimerEvent: {}
+[22.428984] (-) TimerEvent: {}
+[22.529819] (-) TimerEvent: {}
+[22.630565] (-) TimerEvent: {}
+[22.731262] (-) TimerEvent: {}
+[22.832087] (-) TimerEvent: {}
+[22.932813] (-) TimerEvent: {}
+[23.033505] (-) TimerEvent: {}
+[23.134505] (-) TimerEvent: {}
+[23.235229] (-) TimerEvent: {}
+[23.336136] (-) TimerEvent: {}
+[23.436884] (-) TimerEvent: {}
+[23.537592] (-) TimerEvent: {}
+[23.638273] (-) TimerEvent: {}
+[23.738927] (-) TimerEvent: {}
+[23.839580] (-) TimerEvent: {}
+[23.940299] (-) TimerEvent: {}
+[24.040989] (-) TimerEvent: {}
+[24.141672] (-) TimerEvent: {}
+[24.242350] (-) TimerEvent: {}
+[24.343048] (-) TimerEvent: {}
+[24.443760] (-) TimerEvent: {}
+[24.544459] (-) TimerEvent: {}
+[24.645066] (-) TimerEvent: {}
+[24.745704] (-) TimerEvent: {}
+[24.846394] (-) TimerEvent: {}
+[24.947071] (-) TimerEvent: {}
+[25.047752] (-) TimerEvent: {}
+[25.148452] (-) TimerEvent: {}
+[25.249155] (-) TimerEvent: {}
+[25.349792] (-) TimerEvent: {}
+[25.450517] (-) TimerEvent: {}
+[25.551274] (-) TimerEvent: {}
+[25.652008] (-) TimerEvent: {}
+[25.752709] (-) TimerEvent: {}
+[25.853409] (-) TimerEvent: {}
+[25.954101] (-) TimerEvent: {}
+[26.054761] (-) TimerEvent: {}
+[26.155450] (-) TimerEvent: {}
+[26.256139] (-) TimerEvent: {}
+[26.356820] (-) TimerEvent: {}
+[26.457487] (-) TimerEvent: {}
+[26.558280] (-) TimerEvent: {}
+[26.658926] (-) TimerEvent: {}
+[26.759591] (-) TimerEvent: {}
+[26.860292] (-) TimerEvent: {}
+[26.961017] (-) TimerEvent: {}
+[27.061638] (-) TimerEvent: {}
+[27.162318] (-) TimerEvent: {}
+[27.263016] (-) TimerEvent: {}
+[27.363725] (-) TimerEvent: {}
+[27.464427] (-) TimerEvent: {}
+[27.565095] (-) TimerEvent: {}
+[27.665772] (-) TimerEvent: {}
+[27.766566] (-) TimerEvent: {}
+[27.867332] (-) TimerEvent: {}
+[27.968066] (-) TimerEvent: {}
+[28.068819] (-) TimerEvent: {}
+[28.169595] (-) TimerEvent: {}
+[28.270332] (-) TimerEvent: {}
+[28.371068] (-) TimerEvent: {}
+[28.471763] (-) TimerEvent: {}
+[28.572458] (-) TimerEvent: {}
+[28.673186] (-) TimerEvent: {}
+[28.773968] (-) TimerEvent: {}
+[28.874735] (-) TimerEvent: {}
+[28.975482] (-) TimerEvent: {}
+[29.076249] (-) TimerEvent: {}
+[29.177024] (-) TimerEvent: {}
+[29.277757] (-) TimerEvent: {}
+[29.378540] (-) TimerEvent: {}
+[29.479286] (-) TimerEvent: {}
+[29.580073] (-) TimerEvent: {}
+[29.680822] (-) TimerEvent: {}
+[29.781552] (-) TimerEvent: {}
+[29.882270] (-) TimerEvent: {}
+[29.983266] (-) TimerEvent: {}
+[30.083926] (-) TimerEvent: {}
+[30.184623] (-) TimerEvent: {}
+[30.285467] (-) TimerEvent: {}
+[30.386209] (-) TimerEvent: {}
+[30.486969] (-) TimerEvent: {}
+[30.587631] (-) TimerEvent: {}
+[30.688294] (-) TimerEvent: {}
+[30.788919] (-) TimerEvent: {}
+[30.889605] (-) TimerEvent: {}
+[30.990426] (-) TimerEvent: {}
+[31.091121] (-) TimerEvent: {}
+[31.191779] (-) TimerEvent: {}
+[31.292433] (-) TimerEvent: {}
+[31.393090] (-) TimerEvent: {}
+[31.493759] (-) TimerEvent: {}
+[31.594526] (-) TimerEvent: {}
+[31.695231] (-) TimerEvent: {}
+[31.795910] (-) TimerEvent: {}
+[31.896601] (-) TimerEvent: {}
+[31.997290] (-) TimerEvent: {}
+[32.098070] (-) TimerEvent: {}
+[32.198904] (-) TimerEvent: {}
+[32.299784] (-) TimerEvent: {}
+[32.400642] (-) TimerEvent: {}
+[32.501503] (-) TimerEvent: {}
+[32.602388] (-) TimerEvent: {}
+[32.703199] (-) TimerEvent: {}
+[32.803987] (-) TimerEvent: {}
+[32.904821] (-) TimerEvent: {}
+[33.005636] (-) TimerEvent: {}
+[33.106511] (-) TimerEvent: {}
+[33.207367] (-) TimerEvent: {}
+[33.308084] (-) TimerEvent: {}
+[33.408811] (-) TimerEvent: {}
+[33.509555] (-) TimerEvent: {}
+[33.610410] (-) TimerEvent: {}
+[33.711163] (-) TimerEvent: {}
+[33.811794] (-) TimerEvent: {}
+[33.912500] (-) TimerEvent: {}
+[34.013231] (-) TimerEvent: {}
+[34.114107] (-) TimerEvent: {}
+[34.214839] (-) TimerEvent: {}
+[34.315540] (-) TimerEvent: {}
+[34.416247] (-) TimerEvent: {}
+[34.516897] (-) TimerEvent: {}
+[34.617588] (-) TimerEvent: {}
+[34.718354] (-) TimerEvent: {}
+[34.819017] (-) TimerEvent: {}
+[34.919729] (-) TimerEvent: {}
+[35.020416] (-) TimerEvent: {}
+[35.121179] (-) TimerEvent: {}
+[35.221840] (-) TimerEvent: {}
+[35.322551] (-) TimerEvent: {}
+[35.423284] (-) TimerEvent: {}
+[35.523993] (-) TimerEvent: {}
+[35.624710] (-) TimerEvent: {}
+[35.725420] (-) TimerEvent: {}
+[35.826140] (-) TimerEvent: {}
+[35.926842] (-) TimerEvent: {}
+[36.027533] (-) TimerEvent: {}
+[36.128161] (-) TimerEvent: {}
+[36.228789] (-) TimerEvent: {}
+[36.329494] (-) TimerEvent: {}
+[36.430214] (-) TimerEvent: {}
+[36.531058] (-) TimerEvent: {}
+[36.631911] (-) TimerEvent: {}
+[36.732729] (-) TimerEvent: {}
+[36.833682] (-) TimerEvent: {}
+[36.934456] (-) TimerEvent: {}
+[37.035774] (-) TimerEvent: {}
+[37.136667] (-) TimerEvent: {}
+[37.237878] (-) TimerEvent: {}
+[37.338738] (-) TimerEvent: {}
+[37.439632] (-) TimerEvent: {}
+[37.540548] (-) TimerEvent: {}
+[37.641530] (-) TimerEvent: {}
+[37.742363] (-) TimerEvent: {}
+[37.843159] (-) TimerEvent: {}
+[37.943965] (-) TimerEvent: {}
+[38.044777] (-) TimerEvent: {}
+[38.145458] (-) TimerEvent: {}
+[38.246213] (-) TimerEvent: {}
+[38.346922] (-) TimerEvent: {}
+[38.447687] (-) TimerEvent: {}
+[38.548385] (-) TimerEvent: {}
+[38.649073] (-) TimerEvent: {}
+[38.749772] (-) TimerEvent: {}
+[38.850505] (-) TimerEvent: {}
+[38.951127] (-) TimerEvent: {}
+[39.051738] (-) TimerEvent: {}
+[39.152342] (-) TimerEvent: {}
+[39.252999] (-) TimerEvent: {}
+[39.354634] (-) TimerEvent: {}
+[39.455280] (-) TimerEvent: {}
+[39.557220] (-) TimerEvent: {}
+[39.657873] (-) TimerEvent: {}
+[39.758569] (-) TimerEvent: {}
+[39.859236] (-) TimerEvent: {}
+[39.959937] (-) TimerEvent: {}
+[40.060721] (-) TimerEvent: {}
+[40.161508] (-) TimerEvent: {}
+[40.262427] (-) TimerEvent: {}
+[40.363214] (-) TimerEvent: {}
+[40.464125] (-) TimerEvent: {}
+[40.564945] (-) TimerEvent: {}
+[40.665752] (-) TimerEvent: {}
+[40.766634] (-) TimerEvent: {}
+[40.867451] (-) TimerEvent: {}
+[40.968277] (-) TimerEvent: {}
+[41.069141] (-) TimerEvent: {}
+[41.170133] (-) TimerEvent: {}
+[41.271128] (-) TimerEvent: {}
+[41.371976] (-) TimerEvent: {}
+[41.472826] (-) TimerEvent: {}
+[41.573615] (-) TimerEvent: {}
+[41.674551] (-) TimerEvent: {}
+[41.775906] (-) TimerEvent: {}
+[41.876720] (-) TimerEvent: {}
+[41.977786] (-) TimerEvent: {}
+[42.078824] (-) TimerEvent: {}
+[42.179704] (-) TimerEvent: {}
+[42.280559] (-) TimerEvent: {}
+[42.381424] (-) TimerEvent: {}
+[42.482591] (-) TimerEvent: {}
+[42.583430] (-) TimerEvent: {}
+[42.684224] (-) TimerEvent: {}
+[42.785035] (-) TimerEvent: {}
+[42.885816] (-) TimerEvent: {}
+[42.986883] (-) TimerEvent: {}
+[43.087567] (-) TimerEvent: {}
+[43.188445] (-) TimerEvent: {}
+[43.289113] (-) TimerEvent: {}
+[43.389793] (-) TimerEvent: {}
+[43.490471] (-) TimerEvent: {}
+[43.591116] (-) TimerEvent: {}
+[43.691789] (-) TimerEvent: {}
+[43.792538] (-) TimerEvent: {}
+[43.893213] (-) TimerEvent: {}
+[43.993930] (-) TimerEvent: {}
+[44.094696] (-) TimerEvent: {}
+[44.195471] (-) TimerEvent: {}
+[44.296101] (-) TimerEvent: {}
+[44.396803] (-) TimerEvent: {}
+[44.497479] (-) TimerEvent: {}
+[44.598151] (-) TimerEvent: {}
+[44.698832] (-) TimerEvent: {}
+[44.799479] (-) TimerEvent: {}
+[44.900128] (-) TimerEvent: {}
+[45.000807] (-) TimerEvent: {}
+[45.101464] (-) TimerEvent: {}
+[45.202128] (-) TimerEvent: {}
+[45.302752] (-) TimerEvent: {}
+[45.403412] (-) TimerEvent: {}
+[45.504107] (-) TimerEvent: {}
+[45.604785] (-) TimerEvent: {}
+[45.705400] (-) TimerEvent: {}
+[45.806193] (-) TimerEvent: {}
+[45.906859] (-) TimerEvent: {}
+[46.007555] (-) TimerEvent: {}
+[46.108266] (-) TimerEvent: {}
+[46.208946] (-) TimerEvent: {}
+[46.309558] (-) TimerEvent: {}
+[46.410233] (-) TimerEvent: {}
+[46.510880] (-) TimerEvent: {}
+[46.611559] (-) TimerEvent: {}
+[46.712261] (-) TimerEvent: {}
+[46.812893] (-) TimerEvent: {}
+[46.913612] (-) TimerEvent: {}
+[47.014346] (-) TimerEvent: {}
+[47.115022] (-) TimerEvent: {}
+[47.215689] (-) TimerEvent: {}
+[47.316435] (-) TimerEvent: {}
+[47.417104] (-) TimerEvent: {}
+[47.517739] (-) TimerEvent: {}
+[47.618424] (-) TimerEvent: {}
+[47.719084] (-) TimerEvent: {}
+[47.819683] (-) TimerEvent: {}
+[47.920402] (-) TimerEvent: {}
+[48.021193] (-) TimerEvent: {}
+[48.121902] (-) TimerEvent: {}
+[48.222687] (-) TimerEvent: {}
+[48.323419] (-) TimerEvent: {}
+[48.424144] (-) TimerEvent: {}
+[48.524978] (-) TimerEvent: {}
+[48.625772] (-) TimerEvent: {}
+[48.726575] (-) TimerEvent: {}
+[48.827296] (-) TimerEvent: {}
+[48.928068] (-) TimerEvent: {}
+[49.028760] (-) TimerEvent: {}
+[49.129392] (-) TimerEvent: {}
+[49.230118] (-) TimerEvent: {}
+[49.330780] (-) TimerEvent: {}
+[49.431499] (-) TimerEvent: {}
+[49.532235] (-) TimerEvent: {}
+[49.633110] (-) TimerEvent: {}
+[49.734267] (-) TimerEvent: {}
+[49.835123] (-) TimerEvent: {}
+[49.935846] (-) TimerEvent: {}
+[50.036616] (-) TimerEvent: {}
+[50.137630] (-) TimerEvent: {}
+[50.238416] (-) TimerEvent: {}
+[50.339181] (-) TimerEvent: {}
+[50.440072] (-) TimerEvent: {}
+[50.540980] (-) TimerEvent: {}
+[50.641879] (-) TimerEvent: {}
+[50.742923] (-) TimerEvent: {}
+[50.843722] (-) TimerEvent: {}
+[50.944411] (-) TimerEvent: {}
+[51.045079] (-) TimerEvent: {}
+[51.145736] (-) TimerEvent: {}
+[51.246381] (-) TimerEvent: {}
+[51.347037] (-) TimerEvent: {}
+[51.447722] (-) TimerEvent: {}
+[51.548395] (-) TimerEvent: {}
+[51.649020] (-) TimerEvent: {}
+[51.749737] (-) TimerEvent: {}
+[51.850535] (-) TimerEvent: {}
+[51.951336] (-) TimerEvent: {}
+[52.052132] (-) TimerEvent: {}
+[52.152919] (-) TimerEvent: {}
+[52.253812] (-) TimerEvent: {}
+[52.354707] (-) TimerEvent: {}
+[52.455542] (-) TimerEvent: {}
+[52.556334] (-) TimerEvent: {}
+[52.657148] (-) TimerEvent: {}
+[52.757989] (-) TimerEvent: {}
+[52.858787] (-) TimerEvent: {}
+[52.959592] (-) TimerEvent: {}
+[53.060412] (-) TimerEvent: {}
+[53.161282] (-) TimerEvent: {}
+[53.262152] (-) TimerEvent: {}
+[53.363000] (-) TimerEvent: {}
+[53.479797] (-) TimerEvent: {}
+[53.580603] (-) TimerEvent: {}
+[53.681439] (-) TimerEvent: {}
+[53.782319] (-) TimerEvent: {}
+[53.883149] (-) TimerEvent: {}
+[53.983976] (-) TimerEvent: {}
+[54.084881] (-) TimerEvent: {}
+[54.185778] (-) TimerEvent: {}
+[54.286652] (-) TimerEvent: {}
+[54.387495] (-) TimerEvent: {}
+[54.488319] (-) TimerEvent: {}
+[54.589112] (-) TimerEvent: {}
+[54.689930] (-) TimerEvent: {}
+[54.790824] (-) TimerEvent: {}
+[54.891687] (-) TimerEvent: {}
+[54.992500] (-) TimerEvent: {}
+[55.093314] (-) TimerEvent: {}
+[55.194007] (-) TimerEvent: {}
+[55.294708] (-) TimerEvent: {}
+[55.395511] (-) TimerEvent: {}
+[55.496177] (-) TimerEvent: {}
+[55.596837] (-) TimerEvent: {}
+[55.697527] (-) TimerEvent: {}
+[55.798269] (-) TimerEvent: {}
+[55.898973] (-) TimerEvent: {}
+[55.999633] (-) TimerEvent: {}
+[56.100376] (-) TimerEvent: {}
+[56.201333] (-) TimerEvent: {}
+[56.302107] (-) TimerEvent: {}
+[56.402827] (-) TimerEvent: {}
+[56.503493] (-) TimerEvent: {}
+[56.604175] (-) TimerEvent: {}
+[56.704869] (-) TimerEvent: {}
+[56.805564] (-) TimerEvent: {}
+[56.906322] (-) TimerEvent: {}
+[57.007057] (-) TimerEvent: {}
+[57.107851] (-) TimerEvent: {}
+[57.208511] (-) TimerEvent: {}
+[57.309172] (-) TimerEvent: {}
+[57.409835] (-) TimerEvent: {}
+[57.510550] (-) TimerEvent: {}
+[57.611272] (-) TimerEvent: {}
+[57.712213] (-) TimerEvent: {}
+[57.812911] (-) TimerEvent: {}
+[57.913642] (-) TimerEvent: {}
+[58.014353] (-) TimerEvent: {}
+[58.115070] (-) TimerEvent: {}
+[58.215769] (-) TimerEvent: {}
+[58.316533] (-) TimerEvent: {}
+[58.417281] (-) TimerEvent: {}
+[58.518229] (-) TimerEvent: {}
+[58.618939] (-) TimerEvent: {}
+[58.719777] (-) TimerEvent: {}
+[58.821148] (-) TimerEvent: {}
+[58.922006] (-) TimerEvent: {}
+[59.023007] (-) TimerEvent: {}
+[59.123797] (-) TimerEvent: {}
+[59.224446] (-) TimerEvent: {}
+[59.325134] (-) TimerEvent: {}
+[59.425935] (-) TimerEvent: {}
+[59.526644] (-) TimerEvent: {}
+[59.627329] (-) TimerEvent: {}
+[59.727994] (-) TimerEvent: {}
+[59.828662] (-) TimerEvent: {}
+[59.929377] (-) TimerEvent: {}
+[60.030157] (-) TimerEvent: {}
+[60.130901] (-) TimerEvent: {}
+[60.231707] (-) TimerEvent: {}
+[60.332418] (-) TimerEvent: {}
+[60.433088] (-) TimerEvent: {}
+[60.533755] (-) TimerEvent: {}
+[60.634486] (-) TimerEvent: {}
+[60.735162] (-) TimerEvent: {}
+[60.835841] (-) TimerEvent: {}
+[60.936531] (-) TimerEvent: {}
+[61.037228] (-) TimerEvent: {}
+[61.137937] (-) TimerEvent: {}
+[61.238676] (-) TimerEvent: {}
+[61.339300] (-) TimerEvent: {}
+[61.440077] (-) TimerEvent: {}
+[61.541002] (-) TimerEvent: {}
+[61.641849] (-) TimerEvent: {}
+[61.742874] (-) TimerEvent: {}
+[61.843801] (-) TimerEvent: {}
+[61.944754] (-) TimerEvent: {}
+[62.045636] (-) TimerEvent: {}
+[62.146698] (-) TimerEvent: {}
+[62.247602] (-) TimerEvent: {}
+[62.348279] (-) TimerEvent: {}
+[62.448958] (-) TimerEvent: {}
+[62.549660] (-) TimerEvent: {}
+[62.650372] (-) TimerEvent: {}
+[62.751017] (-) TimerEvent: {}
+[62.851726] (-) TimerEvent: {}
+[62.889707] (planner) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable planner_node\x1b[0m\n'}
+[62.951913] (-) TimerEvent: {}
+[63.053026] (-) TimerEvent: {}
+[63.154343] (-) TimerEvent: {}
+[63.255159] (-) TimerEvent: {}
+[63.355945] (-) TimerEvent: {}
+[63.456861] (-) TimerEvent: {}
+[63.557899] (-) TimerEvent: {}
+[63.659144] (-) TimerEvent: {}
+[63.760274] (-) TimerEvent: {}
+[63.861376] (-) TimerEvent: {}
+[63.962236] (-) TimerEvent: {}
+[64.062997] (-) TimerEvent: {}
+[64.163732] (-) TimerEvent: {}
+[64.264436] (-) TimerEvent: {}
+[64.365249] (-) TimerEvent: {}
+[64.466010] (-) TimerEvent: {}
+[64.566802] (-) TimerEvent: {}
+[64.667583] (-) TimerEvent: {}
+[64.768357] (-) TimerEvent: {}
+[64.869205] (-) TimerEvent: {}
+[64.969936] (-) TimerEvent: {}
+[65.070697] (-) TimerEvent: {}
+[65.171438] (-) TimerEvent: {}
+[65.272166] (-) TimerEvent: {}
+[65.372949] (-) TimerEvent: {}
+[65.474009] (-) TimerEvent: {}
+[65.575392] (-) TimerEvent: {}
+[65.676135] (-) TimerEvent: {}
+[65.776834] (-) TimerEvent: {}
+[65.877503] (-) TimerEvent: {}
+[65.978248] (-) TimerEvent: {}
+[66.078968] (-) TimerEvent: {}
+[66.179780] (-) TimerEvent: {}
+[66.280624] (-) TimerEvent: {}
+[66.381381] (-) TimerEvent: {}
+[66.482113] (-) TimerEvent: {}
+[66.582827] (-) TimerEvent: {}
+[66.683618] (-) TimerEvent: {}
+[66.784557] (-) TimerEvent: {}
+[66.885405] (-) TimerEvent: {}
+[66.986237] (-) TimerEvent: {}
+[67.087050] (-) TimerEvent: {}
+[67.187834] (-) TimerEvent: {}
+[67.288637] (-) TimerEvent: {}
+[67.389426] (-) TimerEvent: {}
+[67.490139] (-) TimerEvent: {}
+[67.590893] (-) TimerEvent: {}
+[67.691586] (-) TimerEvent: {}
+[67.792323] (-) TimerEvent: {}
+[67.893065] (-) TimerEvent: {}
+[67.993790] (-) TimerEvent: {}
+[68.094478] (-) TimerEvent: {}
+[68.195130] (-) TimerEvent: {}
+[68.295798] (-) TimerEvent: {}
+[68.396500] (-) TimerEvent: {}
+[68.497195] (-) TimerEvent: {}
+[68.501184] (planner) StdoutLine: {'line': b'[100%] Built target planner_node\n'}
+[68.580079] (planner) CommandEnded: {'returncode': 0}
+[68.582882] (planner) JobProgress: {'identifier': 'planner', 'progress': 'install'}
+[68.584522] (planner) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/mrmnavjet/IRC2026/ircWS/build/planner'], 'cwd': '/home/mrmnavjet/IRC2026/ircWS/build/planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mrmnavjet'), ('SSH_CLIENT', '10.181.216.129 49484 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/home/mrmnavjet/test/ERC2025/install/robot_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/mrmnavjet'), ('OLDPWD', '/home/mrmnavjet/IRC2026/ircWS/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/mrmnavjet/IRC2026/ircWS/install:/home/mrmnavjet/zed_ros_ws/install:/home/mrmnavjet/test/ERC2025/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mrmnavjet'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '26'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mrmnavjet/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/mrmnavjet/IRC2026/ircWS/build/planner'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.181.216.129 49484 10.181.216.151 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mrmnavjet/IRC2026/ircWS/install/yolo/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/gps/lib/python3.10/site-packages:/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/leo_nodes/lib/python3.10/site-packages:/home/mrmnavjet/test/ERC2025/install/robot_interface/local/lib/python3.10/dist-packages:/home/mrmnavjet/test/ERC2025/install/gps/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble')]), 'shell': False}
+[68.597328] (-) TimerEvent: {}
+[68.604865] (planner) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[68.605337] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/libshared_state.a\n'}
+[68.605505] (planner) StdoutLine: {'line': b'-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/planner_node\n'}
+[68.634274] (planner) StdoutLine: {'line': b'-- Set runtime path of "/home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/planner_node" to ""\n'}
+[68.634834] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/relay_node\n'}
+[68.635068] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/imu_conversion_node\n'}
+[68.635427] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/motorcontroller\n'}
+[68.636086] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/local_obstacle_filter_node\n'}
+[68.636317] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner\n'}
+[68.636648] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack\n'}
+[68.636823] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/shared_state.hpp\n'}
+[68.637065] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/irc_planner.hpp\n'}
+[68.637200] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch\n'}
+[68.637329] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch/testing.launch.py\n'}
+[68.637642] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/mode_switch.py\n'}
+[68.637799] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/package_run_dependencies/planner\n'}
+[68.637939] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/parent_prefix_path/planner\n'}
+[68.638129] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/ament_prefix_path.sh\n'}
+[68.638398] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/ament_prefix_path.dsv\n'}
+[68.638581] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/path.sh\n'}
+[68.638709] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/path.dsv\n'}
+[68.638828] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.bash\n'}
+[68.638945] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.sh\n'}
+[68.639058] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.zsh\n'}
+[68.639169] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.dsv\n'}
+[68.639280] (planner) StdoutLine: {'line': b'-- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/package.dsv\n'}
+[68.639389] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/packages/planner\n'}
+[68.639499] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/cmake/plannerConfig.cmake\n'}
+[68.639610] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/cmake/plannerConfig-version.cmake\n'}
+[68.639720] (planner) StdoutLine: {'line': b'-- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/package.xml\n'}
+[68.646124] (planner) CommandEnded: {'returncode': 0}
+[68.697541] (-) TimerEvent: {}
+[68.724556] (planner) JobEnded: {'identifier': 'planner', 'rc': 0}
+[68.728401] (-) EventReactorShutdown: {}

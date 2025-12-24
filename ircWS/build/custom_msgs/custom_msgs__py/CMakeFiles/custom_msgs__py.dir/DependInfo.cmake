@@ -15,10 +15,16 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_c.c" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/__init__.py" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_gps_details.py" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_gps_details_s.c" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_gui_command.py" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_gui_command_s.c" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_imu_data.py" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_imu_data_s.c" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_marker_tag.py" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_marker_tag_s.c" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_planner_status.py" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_planner_status_s.c" "/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

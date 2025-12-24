@@ -1,104 +1,108 @@
-# Only GPS
+#No RTCM, just GPS, publishes /fix and /gps_details
+
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import NavSatFix
+from sensor_msgs.msg import NavSatFix, NavSatStatus
 from serial import Serial, SerialException
 from pyubx2 import UBXReader
-import sys
 import threading
-import time
+import sys
+
+from custom_msgs.msg import GpsDetails
+
 
 class UbxParserNode(Node):
     def __init__(self):
         super().__init__('gps')
 
-        # Declare and get parameters
-        self.declare_parameter('serial_port', '/dev/ttyTHS0')
+        self.declare_parameter('serial_port', '/dev/ttyACM0')
         self.declare_parameter('baud_rate', 38400)
-        self.declare_parameter('topic_name', '/fix')
 
-        serial_port = self.get_parameter('serial_port').get_parameter_value().string_value
-        baud_rate = self.get_parameter('baud_rate').get_parameter_value().integer_value
-        topic_name = self.get_parameter('topic_name').get_parameter_value().string_value
+        port = self.get_parameter('serial_port').value
+        baud = self.get_parameter('baud_rate').value
 
-        # Initialize serial connection
         try:
-            self.stream = Serial(serial_port, baud_rate, timeout=1)
-            self.get_logger().info(f"Connected to GPS on {serial_port}")
+            self.stream = Serial(port, baud, timeout=1)
+            self.get_logger().info(f"Connected to GPS on {port}")
         except SerialException as e:
-            self.get_logger().error(f"Failed to connect to GPS on {serial_port}: {e}")
+            self.get_logger().error(f"GPS serial error: {e}")
             sys.exit(1)
 
-        # Create the GPS publisher
-        self.gps_pub = self.create_publisher(NavSatFix, topic_name, 10)
+        self.fix_pub = self.create_publisher(NavSatFix, '/fix', 10)
+        self.details_pub = self.create_publisher(GpsDetails, '/gps_details', 10)
 
-        # Store last known GPS data
-        self.last_lat = None
-        self.last_lon = None
-        self.last_alt = None
+        self.lat = None
+        self.lon = None
+        self.alt = None
+        self.fix_type = 0
+        self.sats = 0
+        self.hacc = 0.0
+        self.vacc = 0.0
 
-        # Create threads for reading GPS data and publishing it
-        self.reading_thread = threading.Thread(target=self.read_gps_data_thread, daemon=True)
-        self.publishing_thread = threading.Thread(target=self.publish_gps_data_thread, daemon=True)
+        self.reader_thread = threading.Thread(
+            target=self.read_loop, daemon=True)
+        self.reader_thread.start()
 
-        # Start both threads
-        self.reading_thread.start()
-        self.publishing_thread.start()
+        self.timer = self.create_timer(0.25, self.publish_data)
 
-    def read_gps_data_thread(self):
+    def read_loop(self):
         ubr = UBXReader(self.stream)
-        while True:
+        while rclpy.ok():
             try:
-                (raw_data, parsed_data) = ubr.read()
-                if parsed_data.identity == "NAV-PVT":
-                    # Extract GPS data
-                    fix_type = parsed_data.fixType
-                    lat = parsed_data.lat
-                    lon = parsed_data.lon
-                    alt = parsed_data.hMSL
+                _, msg = ubr.read()
+                if msg and msg.identity == "NAV-PVT":
+                    self.lat = msg.lat / 1e7
+                    self.lon = msg.lon / 1e7
+                    self.alt = msg.hMSL / 1000.0
+                    self.fix_type = msg.fixType
+                    self.sats = msg.numSV
+                    self.hacc = msg.hAcc / 1000.0
+                    self.vacc = msg.vAcc / 1000.0
 
-                    # Log the GPS data
-                    self.get_logger().info(f"FixType={fix_type}, Lat={lat}, Lon={lon}, Alt={alt / 1000} m")
+                    self.get_logger().info(
+                        f"FixType={self.fix_type} "
+                        f"Lat={self.lat:.7f} "
+                        f"Lon={self.lon:.7f}",
+                        throttle_duration_sec=2.0
+                    )
+            except Exception:
+                pass
 
-                    # Update the last known GPS data
-                    self.last_lat = lat
-                    self.last_lon = lon
-                    self.last_alt = alt
+    def publish_data(self):
+        if self.lat is None:
+            return
 
-            except Exception as e:
-                self.get_logger().error(f"Error while receiving GPS data: {e}")
+        if self.fix_type >= 3:
+            fix = NavSatFix()
+            fix.header.stamp = self.get_clock().now().to_msg()
+            fix.header.frame_id = "gps_link"
+            fix.status.status = NavSatStatus.STATUS_FIX
+            fix.status.service = NavSatStatus.SERVICE_GPS
+            fix.latitude = self.lat
+            fix.longitude = self.lon
+            fix.altitude = self.alt
+            fix.position_covariance_type = \
+                NavSatFix.COVARIANCE_TYPE_APPROXIMATED
+            self.fix_pub.publish(fix)
 
-            time.sleep(0.1)  # Add a slight delay to avoid overloading CPU
+        details = GpsDetails()
+        details.latitude = self.lat
+        details.longitude = self.lon
+        details.altitude = self.alt
+        details.fix_type = self.fix_type
+        details.satellites = self.sats
+        details.horizontal_accuracy = self.hacc
+        details.vertical_accuracy = self.vacc
+        self.details_pub.publish(details)
 
-    def publish_gps_data_thread(self):
-        while True:
-            # Publish data at 4Hz (0.25 seconds)
-            if self.last_lat is not None and self.last_lon is not None and self.last_alt is not None:
-                msg = NavSatFix()
-                msg.latitude = self.last_lat / 1e7  # Convert to decimal degrees
-                msg.longitude = self.last_lon / 1e7  # Convert to decimal degrees
-                msg.altitude = self.last_alt / 1000  # Convert mm to meters
-                msg.position_covariance_type = NavSatFix.COVARIANCE_TYPE_APPROXIMATED
-                msg.header.frame_id = 'zed_imu_link'
-                self.gps_pub.publish(msg)
-            else:
-                self.get_logger().warn('No valid GPS data to publish')
-
-            time.sleep(0.034)  # 4Hz publishing rate\
 
 def main(args=None):
     rclpy.init(args=args)
-
-    # Create and start the UBX parser node
-    ubx_node = UbxParserNode()
-
-    # Spin the node to keep it alive
-    rclpy.spin(ubx_node)
-
-    # Clean up
-    ubx_node.destroy_node()
+    node = UbxParserNode()
+    rclpy.spin(node)
+    node.destroy_node()
     rclpy.shutdown()
-    sys.exit(0)
+
 
 if __name__ == '__main__':
     main()

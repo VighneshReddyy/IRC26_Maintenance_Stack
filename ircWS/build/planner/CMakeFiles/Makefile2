@@ -64,11 +64,11 @@ CMAKE_BINARY_DIR = /home/mrmnavjet/IRC2026/ircWS/build/planner
 
 # The main recursive "all" target.
 all: CMakeFiles/shared_state.dir/all
-all: CMakeFiles/stack_node.dir/all
+all: CMakeFiles/planner_node.dir/all
 all: CMakeFiles/relay_node.dir/all
 all: CMakeFiles/imu_conversion_node.dir/all
 all: CMakeFiles/motorcontroller.dir/all
-all: CMakeFiles/irc_planner_node.dir/all
+all: CMakeFiles/local_obstacle_filter_node.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -79,11 +79,11 @@ preinstall:
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/planner_uninstall.dir/clean
 clean: CMakeFiles/shared_state.dir/clean
-clean: CMakeFiles/stack_node.dir/clean
+clean: CMakeFiles/planner_node.dir/clean
 clean: CMakeFiles/relay_node.dir/clean
 clean: CMakeFiles/imu_conversion_node.dir/clean
 clean: CMakeFiles/motorcontroller.dir/clean
-clean: CMakeFiles/irc_planner_node.dir/clean
+clean: CMakeFiles/local_obstacle_filter_node.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -145,7 +145,7 @@ CMakeFiles/planner_uninstall.dir/clean:
 CMakeFiles/shared_state.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shared_state.dir/build.make CMakeFiles/shared_state.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shared_state.dir/build.make CMakeFiles/shared_state.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=9,10 "Built target shared_state"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=12,13 "Built target shared_state"
 .PHONY : CMakeFiles/shared_state.dir/all
 
 # Build rule for subdir invocation for target.
@@ -165,30 +165,30 @@ CMakeFiles/shared_state.dir/clean:
 .PHONY : CMakeFiles/shared_state.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/stack_node.dir
+# Target rules for target CMakeFiles/planner_node.dir
 
 # All Build rule for target.
-CMakeFiles/stack_node.dir/all: CMakeFiles/shared_state.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack_node.dir/build.make CMakeFiles/stack_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack_node.dir/build.make CMakeFiles/stack_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=11,12 "Built target stack_node"
-.PHONY : CMakeFiles/stack_node.dir/all
+CMakeFiles/planner_node.dir/all: CMakeFiles/shared_state.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=7,8,9 "Built target planner_node"
+.PHONY : CMakeFiles/planner_node.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/stack_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/stack_node.dir/all
+CMakeFiles/planner_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/planner_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles 0
-.PHONY : CMakeFiles/stack_node.dir/rule
+.PHONY : CMakeFiles/planner_node.dir/rule
 
 # Convenience name for target.
-stack_node: CMakeFiles/stack_node.dir/rule
-.PHONY : stack_node
+planner_node: CMakeFiles/planner_node.dir/rule
+.PHONY : planner_node
 
 # clean rule for target.
-CMakeFiles/stack_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack_node.dir/build.make CMakeFiles/stack_node.dir/clean
-.PHONY : CMakeFiles/stack_node.dir/clean
+CMakeFiles/planner_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/clean
+.PHONY : CMakeFiles/planner_node.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/relay_node.dir
@@ -197,7 +197,7 @@ CMakeFiles/stack_node.dir/clean:
 CMakeFiles/relay_node.dir/all: CMakeFiles/shared_state.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay_node.dir/build.make CMakeFiles/relay_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/relay_node.dir/build.make CMakeFiles/relay_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=7,8 "Built target relay_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=10,11 "Built target relay_node"
 .PHONY : CMakeFiles/relay_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -269,30 +269,30 @@ CMakeFiles/motorcontroller.dir/clean:
 .PHONY : CMakeFiles/motorcontroller.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/irc_planner_node.dir
+# Target rules for target CMakeFiles/local_obstacle_filter_node.dir
 
 # All Build rule for target.
-CMakeFiles/irc_planner_node.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=3,4 "Built target irc_planner_node"
-.PHONY : CMakeFiles/irc_planner_node.dir/all
+CMakeFiles/local_obstacle_filter_node.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=3,4 "Built target local_obstacle_filter_node"
+.PHONY : CMakeFiles/local_obstacle_filter_node.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/irc_planner_node.dir/rule: cmake_check_build_system
+CMakeFiles/local_obstacle_filter_node.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/irc_planner_node.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/local_obstacle_filter_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles 0
-.PHONY : CMakeFiles/irc_planner_node.dir/rule
+.PHONY : CMakeFiles/local_obstacle_filter_node.dir/rule
 
 # Convenience name for target.
-irc_planner_node: CMakeFiles/irc_planner_node.dir/rule
-.PHONY : irc_planner_node
+local_obstacle_filter_node: CMakeFiles/local_obstacle_filter_node.dir/rule
+.PHONY : local_obstacle_filter_node
 
 # clean rule for target.
-CMakeFiles/irc_planner_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_planner_node.dir/build.make CMakeFiles/irc_planner_node.dir/clean
-.PHONY : CMakeFiles/irc_planner_node.dir/clean
+CMakeFiles/local_obstacle_filter_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/clean
+.PHONY : CMakeFiles/local_obstacle_filter_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

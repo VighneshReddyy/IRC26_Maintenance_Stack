@@ -17,9 +17,11 @@ find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(pcl_ros REQUIRED)
+find_package(PCL REQUIRED)
 
 include_directories(
   include
+  ${PCL_INCLUDE_DIRS}
 )
 
 add_library(shared_state src/shared_state.cpp)
@@ -29,8 +31,12 @@ ament_target_dependencies(shared_state
   custom_msgs
 )
 
-add_executable(stack_node src/stack.cpp)
-ament_target_dependencies(stack_node
+add_executable(planner_node
+  src/main.cpp
+  src/irc_planner.cpp
+)
+
+ament_target_dependencies(planner_node
   rclcpp
   std_msgs
   sensor_msgs
@@ -40,8 +46,14 @@ ament_target_dependencies(stack_node
   std_srvs
   tf2
   tf2_geometry_msgs
+  pcl_conversions
+  pcl_ros
 )
-target_link_libraries(stack_node shared_state)
+
+target_link_libraries(planner_node
+  shared_state
+  ${PCL_LIBRARIES}
+)
 
 add_executable(relay_node src/relay_node.cpp)
 ament_target_dependencies(relay_node
@@ -71,25 +83,24 @@ ament_target_dependencies(motorcontroller
 )
 target_link_libraries(motorcontroller shared_state)
 
-add_executable(irc_planner_node src/irc_planner_node.cpp)
-ament_target_dependencies(irc_planner_node
+add_executable(local_obstacle_filter_node src/local_obstacle_filter.cpp)
+ament_target_dependencies(local_obstacle_filter_node
   rclcpp
   sensor_msgs
-  geometry_msgs
-  std_msgs
   pcl_conversions
   pcl_ros
-  custom_msgs
-  std_srvs
+)
+target_link_libraries(local_obstacle_filter_node
+  ${PCL_LIBRARIES}
 )
 
 install(TARGETS
   shared_state
-  stack_node
+  planner_node
   relay_node
   imu_conversion_node
   motorcontroller
-  irc_planner_node
+  local_obstacle_filter_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -2,6 +2,9 @@
   "package_name": "custom_msgs",
   "non_idl_tuples": [
     "/home/mrmnavjet/IRC2026/ircWS/src/custom_msgs:msg/MarkerTag.msg",
-    "/home/mrmnavjet/IRC2026/ircWS/src/custom_msgs:msg/ImuData.msg"
+    "/home/mrmnavjet/IRC2026/ircWS/src/custom_msgs:msg/ImuData.msg",
+    "/home/mrmnavjet/IRC2026/ircWS/src/custom_msgs:msg/GuiCommand.msg",
+    "/home/mrmnavjet/IRC2026/ircWS/src/custom_msgs:msg/PlannerStatus.msg",
+    "/home/mrmnavjet/IRC2026/ircWS/src/custom_msgs:msg/GpsDetails.msg"
   ]
 }

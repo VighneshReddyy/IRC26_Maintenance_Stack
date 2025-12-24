@@ -1,0 +1,7 @@
+[ 15%] Built target shared_state
+[ 30%] Built target local_obstacle_filter_node
+[35m[1mConsolidate compiler generated dependencies of target planner_node[0m
+[ 46%] Built target imu_conversion_node
+[ 61%] Built target relay_node
+[ 76%] Built target motorcontroller
+[ 84%] [32mBuilding CXX object CMakeFiles/planner_node.dir/src/irc_planner.cpp.o[0m

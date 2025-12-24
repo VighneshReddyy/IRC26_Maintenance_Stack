@@ -8,6 +8,9 @@ find_package(geometry_msgs REQUIRED)
 set(msg_files
   "msg/MarkerTag.msg"
   "msg/ImuData.msg"
+  "msg/GuiCommand.msg"
+  "msg/PlannerStatus.msg"
+  "msg/GpsDetails.msg"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}

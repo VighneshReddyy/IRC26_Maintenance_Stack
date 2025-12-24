@@ -1,0 +1,74 @@
+[0.034s] Invoking command in '/home/mrmnavjet/IRC2026/ircWS/build/planner': CMAKE_PREFIX_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble LD_LIBRARY_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/home/mrmnavjet/test/ERC2025/install/robot_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /usr/bin/cmake --build /home/mrmnavjet/IRC2026/ircWS/build/planner -- -j6 -l6
+[0.176s] [ 15%] Built target shared_state
+[0.241s] [35m[1mConsolidate compiler generated dependencies of target planner_node[0m
+[0.248s] [ 30%] Built target local_obstacle_filter_node
+[0.251s] [ 46%] Built target relay_node
+[0.310s] [ 61%] Built target imu_conversion_node
+[0.314s] [ 76%] Built target motorcontroller
+[0.332s] [ 84%] [32mBuilding CXX object CMakeFiles/planner_node.dir/src/irc_planner.cpp.o[0m
+[13.601s] In file included from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:1[m[K:
+[13.601s] [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:[m[K In constructor ‘[01m[Kplanner::SensorCallback::SensorCallback()[m[K’:
+[13.601s] [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:131:10:[m[K [01;35m[Kwarning: [m[K‘[01m[Kplanner::SensorCallback::nav_select_done_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[13.602s]   131 |     bool [01;35m[Knav_select_done_[m[K;
+[13.602s]       |          [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[13.602s] [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:111:11:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kplanner::State planner::SensorCallback::CurrState[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[13.602s]   111 |     State [01;35m[KCurrState[m[K;
+[13.603s]       |           [01;35m[K^~~~~~~~~[m[K
+[13.603s] [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:12:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[13.603s]    12 | [01;35m[KSensorCallback[m[K::SensorCallback()
+[13.603s]       | [01;35m[K^~~~~~~~~~~~~~[m[K
+[13.603s] In file included from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:1[m[K:
+[13.604s] [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:130:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kplanner::SensorCallback::target_cone_id_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[13.604s]   130 |     int [01;35m[Ktarget_cone_id_[m[K;
+[13.604s]       |         [01;35m[K^~~~~~~~~~~~~~~[m[K
+[13.604s] [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:117:10:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kbool planner::SensorCallback::gps_goal_set[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[13.605s]   117 |     bool [01;35m[Kgps_goal_set[m[K;
+[13.605s]       |          [01;35m[K^~~~~~~~~~~~[m[K
+[13.605s] [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:12:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[13.605s]    12 | [01;35m[KSensorCallback[m[K::SensorCallback()
+[13.606s]       | [01;35m[K^~~~~~~~~~~~~~[m[K
+[13.606s] In file included from [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:1[m[K:
+[13.606s] [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:146:18:[m[K [01;35m[Kwarning: [m[K‘[01m[Kplanner::SensorCallback::last_gps_time_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[13.606s]   146 |     rclcpp::Time [01;35m[Klast_gps_time_[m[K;
+[13.607s]       |                  [01;35m[K^~~~~~~~~~~~~~[m[K
+[13.607s] [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/irc_planner.hpp:126:18:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Krclcpp::Time planner::SensorCallback::delivery_start_time_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[13.607s]   126 |     rclcpp::Time [01;35m[Kdelivery_start_time_[m[K;
+[13.607s]       |                  [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[13.607s] [01m[K/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp:12:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[13.608s]    12 | [01;35m[KSensorCallback[m[K::SensorCallback()
+[13.608s]       | [01;35m[K^~~~~~~~~~~~~~[m[K
+[57.039s] [ 92%] [32m[1mLinking CXX executable planner_node[0m
+[62.839s] [100%] Built target planner_node
+[62.868s] Invoked command in '/home/mrmnavjet/IRC2026/ircWS/build/planner' returned '0': CMAKE_PREFIX_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble LD_LIBRARY_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/home/mrmnavjet/test/ERC2025/install/robot_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /usr/bin/cmake --build /home/mrmnavjet/IRC2026/ircWS/build/planner -- -j6 -l6
+[62.873s] Invoking command in '/home/mrmnavjet/IRC2026/ircWS/build/planner': CMAKE_PREFIX_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble LD_LIBRARY_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/home/mrmnavjet/test/ERC2025/install/robot_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /usr/bin/cmake --install /home/mrmnavjet/IRC2026/ircWS/build/planner
+[62.891s] -- Install configuration: ""
+[62.891s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/libshared_state.a
+[62.891s] -- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/planner_node
+[62.922s] -- Set runtime path of "/home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/planner_node" to ""
+[62.923s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/relay_node
+[62.923s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/imu_conversion_node
+[62.923s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/motorcontroller
+[62.923s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/local_obstacle_filter_node
+[62.924s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner
+[62.924s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack
+[62.924s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/shared_state.hpp
+[62.925s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/irc_planner.hpp
+[62.925s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch
+[62.925s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch/testing.launch.py
+[62.926s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/mode_switch.py
+[62.926s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/package_run_dependencies/planner
+[62.926s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/parent_prefix_path/planner
+[62.927s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/ament_prefix_path.sh
+[62.927s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/ament_prefix_path.dsv
+[62.927s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/path.sh
+[62.927s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/environment/path.dsv
+[62.999s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.bash
+[62.999s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.sh
+[63.000s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.zsh
+[63.000s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/local_setup.dsv
+[63.000s] -- Installing: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/package.dsv
+[63.000s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/packages/planner
+[63.001s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/cmake/plannerConfig.cmake
+[63.001s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/cmake/plannerConfig-version.cmake
+[63.001s] -- Up-to-date: /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/package.xml
+[63.001s] Invoked command in '/home/mrmnavjet/IRC2026/ircWS/build/planner' returned '0': CMAKE_PREFIX_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs:/home/mrmnavjet/zed_ros_ws/install/zed_ros2:/home/mrmnavjet/zed_ros_ws/install/zed_wrapper:/home/mrmnavjet/zed_ros_ws/install/zed_components:/home/mrmnavjet/IRC2026/ircWS/install/planner:/home/mrmnavjet/test/ERC2025/install/planner:/home/mrmnavjet/test/ERC2025/install/robot_interface:/home/mrmnavjet/test/ERC2025/install/leo_rover:/home/mrmnavjet/IRC2026/ircWS/install/yolo:/home/mrmnavjet/IRC2026/ircWS/install/gps:/home/mrmnavjet/test/ERC2025/install/leo_nodes:/home/mrmnavjet/test/ERC2025/install/gps:/opt/ros/humble LD_LIBRARY_PATH=/home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib:/home/mrmnavjet/zed_ros_ws/install/zed_components/lib:/home/mrmnavjet/test/ERC2025/install/robot_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /usr/bin/cmake --install /home/mrmnavjet/IRC2026/ircWS/build/planner
