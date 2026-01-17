@@ -1,13 +1,12 @@
-Metadata-Version: 2.4
+Metadata-Version: 2.1
 Name: yolo
 Version: 0.1.0
-Summary: TensorRT YOLOv8 cone detection node for Jetson Orin (ROS 2 Humble)
+Summary: TensorRT YOLOv8 cone detection nodes (single + tiled) with Flask streaming
+Home-page: UNKNOWN
 Maintainer: vighneshreddy
 Maintainer-email: example@email.com
 License: MIT
-Requires-Dist: setuptools
-Dynamic: license
-Dynamic: maintainer
-Dynamic: maintainer-email
-Dynamic: requires-dist
-Dynamic: summary
+Platform: UNKNOWN
+
+UNKNOWN
+

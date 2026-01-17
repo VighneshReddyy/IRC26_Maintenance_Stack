@@ -141,7 +141,7 @@ motorcontroller: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrt
 motorcontroller: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 motorcontroller: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 motorcontroller: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-motorcontroller: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+motorcontroller: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 motorcontroller: /opt/ros/humble/lib/librmw.so
 motorcontroller: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so
 motorcontroller: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so

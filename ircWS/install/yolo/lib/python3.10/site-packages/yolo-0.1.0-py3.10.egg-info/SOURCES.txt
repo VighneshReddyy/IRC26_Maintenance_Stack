@@ -14,10 +14,9 @@ test/test_flake8.py
 test/test_pep257.py
 yolo/__init__.py
 yolo/cone_v1.engine
-yolo/damn.py
-yolo/infer.py
 yolo/inference_engine.py
+yolo/inference_engine_tiled.py
 yolo/inference_node.py
-yolo/ok2.py
 yolo/test.py
-yolo/view.py
+yolo/test2.py
+yolo/test3.py

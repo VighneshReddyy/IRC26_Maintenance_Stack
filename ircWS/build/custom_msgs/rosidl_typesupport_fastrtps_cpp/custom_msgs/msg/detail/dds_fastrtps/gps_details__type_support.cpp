@@ -77,7 +77,7 @@ cdr_deserialize(
   cdr >> ros_message.vertical_accuracy;
 
   return true;
-}
+}  // NOLINT(readability/fn_size)
 
 size_t
 ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_custom_msgs

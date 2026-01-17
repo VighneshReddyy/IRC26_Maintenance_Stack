@@ -4,329 +4,183 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 from custom_msgs.msg import MarkerTag
+
 import numpy as np
 import cv2
 import tensorrt as trt
 import pycuda.driver as cuda
 import pycuda.autoinit
-from flask import Flask, Response
-import threading
-import time
 
-# ---------------- Flask ----------------
+from flask import Flask, Response
+import threading, time
+
+YOLO_CONF_THRESH = 0.60
+ENGINE_PATH = "/home/mrmnavjet/IRC2026/ircWS/src/yolo/yolo/cone_v1.engine"
+
+COLOR_ID = {"red":1,"blue":2,"orange":3,"green":4,"yellow":5}
+BOX_COLORS = {
+    "red":(0,0,255),"blue":(255,0,0),
+    "orange":(0,165,255),"green":(0,255,0),
+    "yellow":(0,255,255)
+}
+
+HSV_RANGES = {
+    "red":[((0,60,50),(10,255,255)),((170,60,50),(179,255,255))],
+    "orange":[((8,80,80),(25,255,255))],
+    "yellow":[((20,70,80),(38,255,255))],
+    "green":[((35,60,60),(85,255,255))],
+    "blue":[((90,60,60),(135,255,255))]
+}
+
 app = Flask(__name__)
 latest_frame = None
+lock = threading.Lock()
 
 @app.route("/video")
 def video():
     def gen():
         global latest_frame
         while True:
-            if latest_frame is None:
-                time.sleep(0.01)
-                continue
-
-            ok, jpg = cv2.imencode(
-                ".jpg",
-                latest_frame,
-                [cv2.IMWRITE_JPEG_QUALITY, 70]
-            )
-            if not ok:
-                continue
-
-            yield (b"--frame\r\n"
-                   b"Content-Type: image/jpeg\r\n\r\n" +
-                   jpg.tobytes() + b"\r\n")
-
-            time.sleep(0.05)  # ~20 FPS stream
+            with lock:
+                f = None if latest_frame is None else latest_frame.copy()
+            if f is None:
+                time.sleep(0.01); continue
+            _, jpg = cv2.imencode(".jpg", f)
+            yield b"--frame\r\nContent-Type: image/jpeg\r\n\r\n"+jpg.tobytes()+b"\r\n"
     return Response(gen(), mimetype="multipart/x-mixed-replace; boundary=frame")
 
 def start_flask():
-    app.run(host="0.0.0.0", port=5001, debug=False, threaded=True)
+    app.run(host="0.0.0.0", port=5001, threaded=True)
 
-# ---------------- TensorRT ----------------
-class TRTInfer:
-    def __init__(self, engine_path):
+class TRT:
+    def __init__(self,path):
         logger = trt.Logger(trt.Logger.WARNING)
-        with open(engine_path, "rb") as f, trt.Runtime(logger) as runtime:
-            self.engine = runtime.deserialize_cuda_engine(f.read())
-
-        self.context = self.engine.create_execution_context()
+        with open(path,"rb") as f, trt.Runtime(logger) as rt:
+            self.engine = rt.deserialize_cuda_engine(f.read())
+        self.ctx = self.engine.create_execution_context()
         self.stream = cuda.Stream()
+        self.in_name = self.engine.get_tensor_name(0)
+        self.out_name = self.engine.get_tensor_name(1)
+        self.din = cuda.mem_alloc(trt.volume(self.engine.get_tensor_shape(self.in_name))*4)
+        self.dout = cuda.mem_alloc(trt.volume(self.engine.get_tensor_shape(self.out_name))*4)
+        self.ctx.set_tensor_address(self.in_name,int(self.din))
+        self.ctx.set_tensor_address(self.out_name,int(self.dout))
+        self.hout = np.empty(self.engine.get_tensor_shape(self.out_name),np.float32)
 
-        self.input_name = self.engine.get_tensor_name(0)
-        self.output_name = self.engine.get_tensor_name(1)
-
-        self.input_shape = self.engine.get_tensor_shape(self.input_name)
-        self.output_shape = self.engine.get_tensor_shape(self.output_name)
-
-        self.d_input = cuda.mem_alloc(
-            trt.volume(self.input_shape) * np.float32().nbytes
-        )
-        self.d_output = cuda.mem_alloc(
-            trt.volume(self.output_shape) * np.float32().nbytes
-        )
-
-        self.context.set_tensor_address(self.input_name, int(self.d_input))
-        self.context.set_tensor_address(self.output_name, int(self.d_output))
-
-        self.h_output = np.empty(self.output_shape, dtype=np.float32)
-
-    def infer(self, img):
-        img = np.ascontiguousarray(img, dtype=np.float32)
-        cuda.memcpy_htod_async(self.d_input, img, self.stream)
-        self.context.execute_async_v3(self.stream.handle)
-        cuda.memcpy_dtoh_async(self.h_output, self.d_output, self.stream)
+    def infer(self,img):
+        cuda.memcpy_htod_async(self.din,img,self.stream)
+        self.ctx.execute_async_v3(self.stream.handle)
+        cuda.memcpy_dtoh_async(self.hout,self.dout,self.stream)
         self.stream.synchronize()
-        return self.h_output
+        return self.hout
 
-# ---------------- ROS Node ----------------
-class InferenceEngine(Node):
+class NodeYOLO(Node):
     def __init__(self):
-        super().__init__("inference_engine")
-
+        super().__init__("yolo_tiled")
         self.bridge = CvBridge()
-        self.trt = TRTInfer(
-            "/home/mrmnavjet/IRC2026/ircWS/src/yolo/yolo/cone_v1.engine"
-        )
+        self.trt = TRT(ENGINE_PATH)
+        self.rgb = None
+        self.depth = None
 
-        self.latest_rgb = None
-        self.latest_depth = None
+        self.input_buf = np.empty((1,3,640,640),np.float32)
 
-        self.COLOR_ID = {
-            "orange": 1,
-            "red": 2,
-            "blue": 3,
-            "green": 4,
-            "yellow": 5
-        }
+        self.fps = 0.0
+        self.last_t = time.time()
 
-        self.sub_rgb = self.create_subscription(
-            Image,
-            "/zed/zed_node/rgb/image_rect_color",
-            self.rgb_cb,
-            10
-        )
-        self.sub_depth = self.create_subscription(
-            Image,
-            "/zed/zed_node/depth/depth_registered",
-            self.depth_cb,
-            10
-        )
+        self.create_subscription(Image,"/zed/zed_node/rgb/color/rect/image",self.cb_rgb,10)
+        self.create_subscription(Image,"/zed/zed_node/depth/depth_registered",self.cb_depth,10)
+        self.pub = self.create_publisher(MarkerTag,"/marker_detect",10)
+        self.create_timer(0.05,self.process)
 
-        self.pub = self.create_publisher(MarkerTag, "/marker_detect", 10)
+        threading.Thread(target=start_flask,daemon=True).start()
 
-        self.timer = self.create_timer(0.033, self.process)
+    def cb_rgb(self,m): self.rgb=m
+    def cb_depth(self,m): self.depth=m
 
-        self.fps_start_time = time.time()
-        self.fps_frame_count = 0
-        self.current_fps = 0.0
-        self.last_log_time = time.time()
+    def detect_color(self,roi):
+        hsv=cv2.cvtColor(roi,cv2.COLOR_BGR2HSV)
+        area=roi.shape[0]*roi.shape[1]
+        best=None; mx=0
+        for c,rs in HSV_RANGES.items():
+            cnt=0
+            for lo,hi in rs:
+                cnt+=cv2.countNonZero(cv2.inRange(hsv,lo,hi))
+            if cnt>mx and cnt>0.10*area:
+                mx=cnt; best=c
+        return best
 
-        threading.Thread(target=start_flask, daemon=True).start()
-        self.get_logger().info(
-            "Inference engine started | Flask: http://0.0.0.0:5001/video"
-        )
+    def run_tiled(self,frame):
+        H,W,_=frame.shape
+        dets=[]
+        for ty in range(2):
+            for tx in range(2):
+                x0,y0=tx*W//2,ty*H//2
+                x1,y1=min(W,x0+W//2),min(H,y0+H//2)
+                tile=frame[y0:y1,x0:x1]
 
-    # ---------------- Callbacks ----------------
-    def rgb_cb(self, msg):
-        self.latest_rgb = msg
+                img=cv2.resize(tile,(640,640))
+                self.input_buf[0]=img.transpose(2,0,1)/255.0
 
-    def depth_cb(self, msg):
-        self.latest_depth = msg
+                out=self.trt.infer(self.input_buf)[0]
+                sx,sy=(x1-x0)/640,(y1-y0)/640
 
-    # ---------------- Depth ----------------
-    def calculate_distance(self, depth, cx, cy):
-        h, w = depth.shape
-        s = 10
-        x1 = max(0, cx - s)
-        x2 = min(w, cx + s)
-        y1 = max(0, cy - s)
-        y2 = min(h, cy + s)
+                for d in out.T:
+                    if d[4]<YOLO_CONF_THRESH: continue
+                    cx=int(d[0]*sx)+x0; cy=int(d[1]*sy)+y0
+                    bw=int(d[2]*sx); bh=int(d[3]*sy)
+                    dets.append((cx-bw//2,cy-bh//2,cx+bw//2,cy+bh//2))
+        return dets
 
-        patch = depth[y1:y2, x1:x2]
-        if patch.size == 0:
-            return None
-
-        patch = patch[np.isfinite(patch)]
-        patch = patch[(patch > 0.1) & (patch < 20.0)]
-        if patch.size == 0:
-            return None
-
-        return float(np.median(patch))
-
-    # ---------------- FAST COLOR ----------------
-    def detect_color_fast(self, frame, cx, cy):
-        h, w, _ = frame.shape
-        s = 6
-
-        x1 = max(0, cx - s)
-        x2 = min(w, cx + s)
-        y1 = max(0, cy - s)
-        y2 = min(h, cy + s)
-
-        patch = frame[y1:y2, x1:x2]
-        if patch.size == 0:
-            return None
-
-        hsv = cv2.cvtColor(patch, cv2.COLOR_BGR2HSV)
-        h_mean, s_mean, v_mean = np.mean(
-            hsv.reshape(-1, 3), axis=0
-        )
-
-        if s_mean < 60 or v_mean < 60:
-            return None
-
-        if 5 <= h_mean <= 20:
-            return "orange"
-        if h_mean <= 10 or h_mean >= 170:
-            return "red"
-        if 90 <= h_mean <= 130:
-            return "blue"
-        if 40 <= h_mean <= 80:
-            return "green"
-        if 22 <= h_mean <= 34:
-            return "yellow"
-
-        return None
-
-    # ---------------- IoU + NMS ----------------
-    def calculate_iou(self, b1, b2):
-        x1 = max(b1[0], b2[0])
-        y1 = max(b1[1], b2[1])
-        x2 = min(b1[2], b2[2])
-        y2 = min(b1[3], b2[3])
-
-        inter = max(0, x2 - x1) * max(0, y2 - y1)
-        a1 = (b1[2] - b1[0]) * (b1[3] - b1[1])
-        a2 = (b2[2] - b2[0]) * (b2[3] - b2[1])
-        u = a1 + a2 - inter
-
-        return 0 if u == 0 else inter / u
-
-    def nms(self, dets, thr=0.5):
-        dets = sorted(dets, key=lambda x: x[4], reverse=True)
-        keep = []
-        while dets:
-            best = dets.pop(0)
-            keep.append(best)
-            dets = [
-                d for d in dets
-                if self.calculate_iou(best[:4], d[:4]) < thr
-            ]
-        return keep
-
-    # ---------------- Main Loop ----------------
     def process(self):
         global latest_frame
+        if self.rgb is None: return
 
-        if self.latest_rgb is None or self.latest_depth is None:
-            return
+        now=time.time()
+        dt=now-self.last_t
+        self.last_t=now
+        if dt>0: self.fps=0.9*self.fps+0.1*(1.0/dt)
 
-        self.fps_frame_count += 1
-        now = time.time()
-        if now - self.fps_start_time > 1.0:
-            self.current_fps = self.fps_frame_count / (now - self.fps_start_time)
-            self.fps_frame_count = 0
-            self.fps_start_time = now
+        frame=self.bridge.imgmsg_to_cv2(self.rgb,"bgr8")
+        dets=self.run_tiled(frame)
 
-        frame = self.bridge.imgmsg_to_cv2(self.latest_rgb, "bgr8")
-        depth = self.bridge.imgmsg_to_cv2(self.latest_depth)
+        depth=None
+        if dets and self.depth:
+            depth=self.bridge.imgmsg_to_cv2(self.depth,"passthrough")
+            if depth.dtype==np.uint16: depth=depth.astype(np.float32)*0.001
 
-        if depth.dtype == np.uint16:
-            depth = depth.astype(np.float32) * 0.001
+        for x1,y1,x2,y2 in dets:
+            roi=frame[y1:y2,x1:x2]
+            if roi.size==0: continue
+            color=self.detect_color(roi)
+            if not color: continue
 
-        img = cv2.resize(frame, (640, 640))
-        img = img.transpose(2, 0, 1)[None] / 255.0
+            cx=(x1+x2)//2; cy=(y1+y2)//2
+            dist=0.0
+            if depth is not None:
+                d=depth[cy-2:cy+2,cx-2:cx+2]
+                v=d[(d>0.1)&(d<20)]
+                if v.size: dist=float(np.median(v))
 
-        output = self.trt.infer(img)[0]
+            cv2.rectangle(frame,(x1,y1),(x2,y2),BOX_COLORS[color],2)
+            cv2.putText(frame,f"{color} {dist:.2f}m",(x1,y1-5),
+                        cv2.FONT_HERSHEY_SIMPLEX,0.6,BOX_COLORS[color],2)
 
-        h, w, _ = frame.shape
-        sx, sy = w / 640.0, h / 640.0
-        img_center = w / 2.0
-
-        # ---- Confidence filter + top-K ----
-        candidates = []
-        for det in output.T:
-            if det[4] < 0.60:
-                continue
-
-            cx = int(det[0] * sx)
-            cy = int(det[1] * sy)
-            bw = int(det[2] * sx)
-            bh = int(det[3] * sy)
-
-            x1 = max(0, cx - bw // 2)
-            y1 = max(0, cy - bh // 2)
-            x2 = min(w, cx + bw // 2)
-            y2 = min(h, cy + bh // 2)
-
-            candidates.append((x1, y1, x2, y2, det[4]))
-
-        candidates.sort(key=lambda x: x[4], reverse=True)
-        candidates = candidates[:2]
-
-        detections = self.nms(candidates)
-
-        published = 0
-        for x1, y1, x2, y2, conf in detections:
-            cx = (x1 + x2) // 2
-            cy = (y1 + y2) // 2
-
-            color = self.detect_color_fast(frame, cx, cy)
-            if color is None:
-                continue
-
-            dist = self.calculate_distance(depth, cx, cy)
-            if dist is None:
-                continue
-
-            y_offset = (cx - img_center) / 558.0
-
-            msg = MarkerTag()
-            msg.is_found = True
-            msg.id = self.COLOR_ID[color]
-            msg.x = dist
-            msg.y = -y_offset
+            msg=MarkerTag()
+            msg.is_found=True
+            msg.id=COLOR_ID[color]
+            msg.x=dist
+            msg.y=0.0
             self.pub.publish(msg)
-            published += 1
 
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 255), 2)
-            cv2.putText(
-                frame,
-                f"{color} {dist:.2f}m",
-                (x1, y1 - 8),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.6,
-                (0, 255, 255),
-                2
-            )
+        cv2.putText(frame,f"FPS: {self.fps:.1f}",(15,30),
+                    cv2.FONT_HERSHEY_SIMPLEX,1.0,(0,255,0),2)
 
-        if now - self.last_log_time > 5.0:
-            self.get_logger().info(
-                f"FPS: {self.current_fps:.1f} | Detections: {published}"
-            )
-            self.last_log_time = now
+        with lock: latest_frame=frame.copy()
 
-        cv2.putText(
-            frame,
-            f"FPS: {self.current_fps:.1f}",
-            (10, 30),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            1.0,
-            (0, 255, 0),
-            2
-        )
-
-        latest_frame = frame
-
-# ---------------- main ----------------
 def main():
     rclpy.init()
-    node = InferenceEngine()
-    rclpy.spin(node)
-    node.destroy_node()
+    rclpy.spin(NodeYOLO())
     rclpy.shutdown()
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()

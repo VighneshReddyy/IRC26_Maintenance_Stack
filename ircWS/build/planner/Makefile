@@ -263,17 +263,41 @@ motorcontroller/fast:
 .PHONY : motorcontroller/fast
 
 #=============================================================================
-# Target rules for targets named local_obstacle_filter_node
+# Target rules for targets named ditch_detector_node
 
 # Build rule for target.
-local_obstacle_filter_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 local_obstacle_filter_node
-.PHONY : local_obstacle_filter_node
+ditch_detector_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ditch_detector_node
+.PHONY : ditch_detector_node
 
 # fast build rule for target.
-local_obstacle_filter_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/build
-.PHONY : local_obstacle_filter_node/fast
+ditch_detector_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/build
+.PHONY : ditch_detector_node/fast
+
+src/ditch_detector.o: src/ditch_detector.cpp.o
+.PHONY : src/ditch_detector.o
+
+# target to build an object file
+src/ditch_detector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/src/ditch_detector.cpp.o
+.PHONY : src/ditch_detector.cpp.o
+
+src/ditch_detector.i: src/ditch_detector.cpp.i
+.PHONY : src/ditch_detector.i
+
+# target to preprocess a source file
+src/ditch_detector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/src/ditch_detector.cpp.i
+.PHONY : src/ditch_detector.cpp.i
+
+src/ditch_detector.s: src/ditch_detector.cpp.s
+.PHONY : src/ditch_detector.s
+
+# target to generate assembly for a file
+src/ditch_detector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/src/ditch_detector.cpp.s
+.PHONY : src/ditch_detector.cpp.s
 
 src/imu_conversion.o: src/imu_conversion.cpp.o
 .PHONY : src/imu_conversion.o
@@ -322,30 +346,6 @@ src/irc_planner.s: src/irc_planner.cpp.s
 src/irc_planner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/src/irc_planner.cpp.s
 .PHONY : src/irc_planner.cpp.s
-
-src/local_obstacle_filter.o: src/local_obstacle_filter.cpp.o
-.PHONY : src/local_obstacle_filter.o
-
-# target to build an object file
-src/local_obstacle_filter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/src/local_obstacle_filter.cpp.o
-.PHONY : src/local_obstacle_filter.cpp.o
-
-src/local_obstacle_filter.i: src/local_obstacle_filter.cpp.i
-.PHONY : src/local_obstacle_filter.i
-
-# target to preprocess a source file
-src/local_obstacle_filter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/src/local_obstacle_filter.cpp.i
-.PHONY : src/local_obstacle_filter.cpp.i
-
-src/local_obstacle_filter.s: src/local_obstacle_filter.cpp.s
-.PHONY : src/local_obstacle_filter.s
-
-# target to generate assembly for a file
-src/local_obstacle_filter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/src/local_obstacle_filter.cpp.s
-.PHONY : src/local_obstacle_filter.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -458,21 +458,21 @@ help:
 	@echo "... test"
 	@echo "... planner_uninstall"
 	@echo "... uninstall"
+	@echo "... ditch_detector_node"
 	@echo "... imu_conversion_node"
-	@echo "... local_obstacle_filter_node"
 	@echo "... motorcontroller"
 	@echo "... planner_node"
 	@echo "... relay_node"
 	@echo "... shared_state"
+	@echo "... src/ditch_detector.o"
+	@echo "... src/ditch_detector.i"
+	@echo "... src/ditch_detector.s"
 	@echo "... src/imu_conversion.o"
 	@echo "... src/imu_conversion.i"
 	@echo "... src/imu_conversion.s"
 	@echo "... src/irc_planner.o"
 	@echo "... src/irc_planner.i"
 	@echo "... src/irc_planner.s"
-	@echo "... src/local_obstacle_filter.o"
-	@echo "... src/local_obstacle_filter.i"
-	@echo "... src/local_obstacle_filter.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

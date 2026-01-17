@@ -1,5 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_msgs__cpp"
+  "rosidl_generator_cpp/custom_msgs/msg/arm_pwm.hpp"
+  "rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__builder.hpp"
+  "rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__struct.hpp"
+  "rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__traits.hpp"
+  "rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__type_support.hpp"
   "rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__builder.hpp"
   "rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__struct.hpp"
   "rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__traits.hpp"

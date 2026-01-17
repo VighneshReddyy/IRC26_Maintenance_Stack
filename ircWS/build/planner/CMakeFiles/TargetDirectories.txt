@@ -5,7 +5,7 @@
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/relay_node.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/imu_conversion_node.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/motorcontroller.dir
-/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/local_obstacle_filter_node.dir
+/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/ditch_detector_node.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/test.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/edit_cache.dir
 /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/rebuild_cache.dir

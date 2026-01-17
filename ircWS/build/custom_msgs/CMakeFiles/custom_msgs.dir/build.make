@@ -71,6 +71,7 @@ CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/ImuDat
 CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/GuiCommand.msg
 CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/PlannerStatus.msg
 CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/GpsDetails.msg
+CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/ArmPwm.msg
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl

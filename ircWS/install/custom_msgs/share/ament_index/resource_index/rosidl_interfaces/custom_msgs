@@ -1,3 +1,5 @@
+msg/ArmPwm.idl
+msg/ArmPwm.msg
 msg/GpsDetails.idl
 msg/GpsDetails.msg
 msg/GuiCommand.idl

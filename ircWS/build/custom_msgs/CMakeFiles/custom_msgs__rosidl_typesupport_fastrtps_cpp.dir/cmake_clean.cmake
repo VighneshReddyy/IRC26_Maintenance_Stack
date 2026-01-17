@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/arm_pwm__type_support.cpp.o"
+  "CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/arm_pwm__type_support.cpp.o.d"
   "CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/gps_details__type_support.cpp.o"
   "CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/gps_details__type_support.cpp.o.d"
   "CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/gui_command__type_support.cpp.o"
@@ -11,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/planner_status__type_support.cpp.o.d"
   "libcustom_msgs__rosidl_typesupport_fastrtps_cpp.pdb"
   "libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so"
+  "rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/arm_pwm__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/arm_pwm__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/gps_details__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/gui_command__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/imu_data__type_support.cpp"

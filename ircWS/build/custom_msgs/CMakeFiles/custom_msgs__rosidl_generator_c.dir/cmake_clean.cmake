@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/arm_pwm__functions.c.o"
+  "CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/arm_pwm__functions.c.o.d"
   "CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/gps_details__functions.c.o"
   "CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/gps_details__functions.c.o.d"
   "CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/gui_command__functions.c.o"
@@ -11,6 +13,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/planner_status__functions.c.o.d"
   "libcustom_msgs__rosidl_generator_c.pdb"
   "libcustom_msgs__rosidl_generator_c.so"
+  "rosidl_generator_c/custom_msgs/msg/arm_pwm.h"
+  "rosidl_generator_c/custom_msgs/msg/detail/arm_pwm__functions.c"
+  "rosidl_generator_c/custom_msgs/msg/detail/arm_pwm__functions.h"
+  "rosidl_generator_c/custom_msgs/msg/detail/arm_pwm__struct.h"
+  "rosidl_generator_c/custom_msgs/msg/detail/arm_pwm__type_support.h"
   "rosidl_generator_c/custom_msgs/msg/detail/gps_details__functions.c"
   "rosidl_generator_c/custom_msgs/msg/detail/gps_details__functions.h"
   "rosidl_generator_c/custom_msgs/msg/detail/gps_details__struct.h"

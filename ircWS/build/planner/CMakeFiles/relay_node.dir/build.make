@@ -149,7 +149,7 @@ relay_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cp
 relay_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 relay_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 relay_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-relay_node: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+relay_node: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 relay_node: /opt/ros/humble/lib/librmw.so
 relay_node: /home/mrmnavjet/IRC2026/ircWS/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so
 relay_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so

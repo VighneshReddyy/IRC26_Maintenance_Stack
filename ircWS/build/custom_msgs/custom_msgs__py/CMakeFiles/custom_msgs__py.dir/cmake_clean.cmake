@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "../rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c"
   "../rosidl_generator_py/custom_msgs/msg/__init__.py"
+  "../rosidl_generator_py/custom_msgs/msg/_arm_pwm.py"
+  "../rosidl_generator_py/custom_msgs/msg/_arm_pwm_s.c"
   "../rosidl_generator_py/custom_msgs/msg/_gps_details.py"
   "../rosidl_generator_py/custom_msgs/msg/_gps_details_s.c"
   "../rosidl_generator_py/custom_msgs/msg/_gui_command.py"

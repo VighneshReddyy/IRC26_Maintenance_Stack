@@ -68,7 +68,7 @@ all: CMakeFiles/planner_node.dir/all
 all: CMakeFiles/relay_node.dir/all
 all: CMakeFiles/imu_conversion_node.dir/all
 all: CMakeFiles/motorcontroller.dir/all
-all: CMakeFiles/local_obstacle_filter_node.dir/all
+all: CMakeFiles/ditch_detector_node.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -83,7 +83,7 @@ clean: CMakeFiles/planner_node.dir/clean
 clean: CMakeFiles/relay_node.dir/clean
 clean: CMakeFiles/imu_conversion_node.dir/clean
 clean: CMakeFiles/motorcontroller.dir/clean
-clean: CMakeFiles/local_obstacle_filter_node.dir/clean
+clean: CMakeFiles/ditch_detector_node.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -223,7 +223,7 @@ CMakeFiles/relay_node.dir/clean:
 CMakeFiles/imu_conversion_node.dir/all: CMakeFiles/shared_state.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_conversion_node.dir/build.make CMakeFiles/imu_conversion_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_conversion_node.dir/build.make CMakeFiles/imu_conversion_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=1,2 "Built target imu_conversion_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=3,4 "Built target imu_conversion_node"
 .PHONY : CMakeFiles/imu_conversion_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -269,30 +269,30 @@ CMakeFiles/motorcontroller.dir/clean:
 .PHONY : CMakeFiles/motorcontroller.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/local_obstacle_filter_node.dir
+# Target rules for target CMakeFiles/ditch_detector_node.dir
 
 # All Build rule for target.
-CMakeFiles/local_obstacle_filter_node.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=3,4 "Built target local_obstacle_filter_node"
-.PHONY : CMakeFiles/local_obstacle_filter_node.dir/all
+CMakeFiles/ditch_detector_node.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=1,2 "Built target ditch_detector_node"
+.PHONY : CMakeFiles/ditch_detector_node.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/local_obstacle_filter_node.dir/rule: cmake_check_build_system
+CMakeFiles/ditch_detector_node.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/local_obstacle_filter_node.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ditch_detector_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles 0
-.PHONY : CMakeFiles/local_obstacle_filter_node.dir/rule
+.PHONY : CMakeFiles/ditch_detector_node.dir/rule
 
 # Convenience name for target.
-local_obstacle_filter_node: CMakeFiles/local_obstacle_filter_node.dir/rule
-.PHONY : local_obstacle_filter_node
+ditch_detector_node: CMakeFiles/ditch_detector_node.dir/rule
+.PHONY : ditch_detector_node
 
 # clean rule for target.
-CMakeFiles/local_obstacle_filter_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/local_obstacle_filter_node.dir/build.make CMakeFiles/local_obstacle_filter_node.dir/clean
-.PHONY : CMakeFiles/local_obstacle_filter_node.dir/clean
+CMakeFiles/ditch_detector_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/clean
+.PHONY : CMakeFiles/ditch_detector_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

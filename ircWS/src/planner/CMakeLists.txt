@@ -5,6 +5,9 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+# =====================
+# Dependencies
+# =====================
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -15,15 +18,23 @@ find_package(nav_msgs REQUIRED)
 find_package(std_srvs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
+
+find_package(PCL REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(pcl_ros REQUIRED)
-find_package(PCL REQUIRED)
+
+find_package(cv_bridge REQUIRED)
+find_package(OpenCV REQUIRED)
 
 include_directories(
   include
   ${PCL_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 
+# =====================
+# Shared library
+# =====================
 add_library(shared_state src/shared_state.cpp)
 ament_target_dependencies(shared_state
   rclcpp
@@ -31,11 +42,13 @@ ament_target_dependencies(shared_state
   custom_msgs
 )
 
+# =====================
+# Main planner
+# =====================
 add_executable(planner_node
   src/main.cpp
   src/irc_planner.cpp
 )
-
 ament_target_dependencies(planner_node
   rclcpp
   std_msgs
@@ -49,12 +62,14 @@ ament_target_dependencies(planner_node
   pcl_conversions
   pcl_ros
 )
-
 target_link_libraries(planner_node
   shared_state
   ${PCL_LIBRARIES}
 )
 
+# =====================
+# Relay node
+# =====================
 add_executable(relay_node src/relay_node.cpp)
 ament_target_dependencies(relay_node
   rclcpp
@@ -64,6 +79,9 @@ ament_target_dependencies(relay_node
 )
 target_link_libraries(relay_node shared_state)
 
+# =====================
+# IMU conversion
+# =====================
 add_executable(imu_conversion_node src/imu_conversion.cpp)
 ament_target_dependencies(imu_conversion_node
   rclcpp
@@ -75,6 +93,9 @@ ament_target_dependencies(imu_conversion_node
 )
 target_link_libraries(imu_conversion_node shared_state)
 
+# =====================
+# Motor controller
+# =====================
 add_executable(motorcontroller src/motorcontroller.cpp)
 ament_target_dependencies(motorcontroller
   rclcpp
@@ -83,24 +104,31 @@ ament_target_dependencies(motorcontroller
 )
 target_link_libraries(motorcontroller shared_state)
 
-add_executable(local_obstacle_filter_node src/local_obstacle_filter.cpp)
-ament_target_dependencies(local_obstacle_filter_node
+# =====================
+# DITCH + SAFETY FUSED NODE (PointCloud-based)
+# =====================
+add_executable(ditch_detector_node src/ditch_detector.cpp)
+ament_target_dependencies(ditch_detector_node
   rclcpp
   sensor_msgs
+  cv_bridge
   pcl_conversions
   pcl_ros
 )
-target_link_libraries(local_obstacle_filter_node
+target_link_libraries(ditch_detector_node
   ${PCL_LIBRARIES}
 )
 
+# =====================
+# Install
+# =====================
 install(TARGETS
   shared_state
   planner_node
   relay_node
   imu_conversion_node
   motorcontroller
-  local_obstacle_filter_node
+  ditch_detector_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

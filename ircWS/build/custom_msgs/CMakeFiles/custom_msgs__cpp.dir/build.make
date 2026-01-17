@@ -91,6 +91,11 @@ CMakeFiles/custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/gps_det
 CMakeFiles/custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__struct.hpp
 CMakeFiles/custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__traits.hpp
 CMakeFiles/custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__type_support.hpp
+CMakeFiles/custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/arm_pwm.hpp
+CMakeFiles/custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__builder.hpp
+CMakeFiles/custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__struct.hpp
+CMakeFiles/custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__traits.hpp
+CMakeFiles/custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__type_support.hpp
 CMakeFiles/custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -113,6 +118,7 @@ rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp: rosidl_adapter/custom_msgs/
 rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp: rosidl_adapter/custom_msgs/msg/GuiCommand.idl
 rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp: rosidl_adapter/custom_msgs/msg/PlannerStatus.idl
 rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp: rosidl_adapter/custom_msgs/msg/GpsDetails.idl
+rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp: rosidl_adapter/custom_msgs/msg/ArmPwm.idl
 rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -250,7 +256,27 @@ rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__traits.hpp: rosidl_gene
 rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__type_support.hpp: rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__type_support.hpp
 
+rosidl_generator_cpp/custom_msgs/msg/arm_pwm.hpp: rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_msgs/msg/arm_pwm.hpp
+
+rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__builder.hpp: rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__builder.hpp
+
+rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__struct.hpp: rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__struct.hpp
+
+rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__traits.hpp: rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__traits.hpp
+
+rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__type_support.hpp: rosidl_generator_cpp/custom_msgs/msg/marker_tag.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__type_support.hpp
+
 custom_msgs__cpp: CMakeFiles/custom_msgs__cpp
+custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/arm_pwm.hpp
+custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__builder.hpp
+custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__struct.hpp
+custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__traits.hpp
+custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/arm_pwm__type_support.hpp
 custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__builder.hpp
 custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__struct.hpp
 custom_msgs__cpp: rosidl_generator_cpp/custom_msgs/msg/detail/gps_details__traits.hpp
