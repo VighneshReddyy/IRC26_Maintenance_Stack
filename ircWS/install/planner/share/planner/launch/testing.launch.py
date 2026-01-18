@@ -4,56 +4,54 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    zed_silent = ExecuteProcess(
+    zed = ExecuteProcess(
         cmd=[
-            'bash', '-c',
-            'ros2 launch zed_wrapper zed_camera.launch.py '
-            'camera_model:=zed2i '
-            'ros_params_override_path:=/home/mrmnavjet/zed_ros_ws/src/zed-ros2-wrapper/zed_wrapper/config/zed_override.yaml '
-            '> /dev/null 2>&1'
-        ]
-    )
-
-    inference_engine = Node(
-        package='yolo',
-        executable='inference_engine',
-        name='inference_engine',
+            'ros2','launch','zed_wrapper','zed.launch.py',
+            '--ros-args','--log-level','warn'
+        ],
         output='screen'
     )
 
-    relay_node = Node(
+    yolo = Node(
+        package='yolo',
+        executable='inference_engine_tiled',
+        name='yolo_node',
+        output='screen'
+    )
+
+    imu_conv = Node(
+        package='planner',
+        executable='imu_conversion_node',
+        name='imu_conversion_node',
+        output='log',              # fully silent on terminal
+        arguments=['--ros-args','--log-level','fatal']
+    )
+
+    relay = Node(
         package='planner',
         executable='relay_node',
         name='relay_node',
         output='screen'
     )
 
-    imu_conversion_silent = ExecuteProcess(
-        cmd=[
-            'bash', '-c',
-            'ros2 run planner imu_conversion_node > /dev/null 2>&1'
-        ]
+    rtab = ExecuteProcess(
+        cmd=['ros2','launch','planner','rtab.launch.py'],
+        output='screen'
     )
 
-     local_obstacle_filter_silent = ExecuteProcess(
-         cmd=[
-             'bash', '-c',
-             'ros2 run planner local_obstacle_filter_node > /dev/null 2>&1'
-         ]
-     )
-
-    gps_rtk_silent = ExecuteProcess(
-        cmd=[
-            'bash', '-c',
-            'ros2 run gps gps_rtk > /dev/null 2>&1'
-        ]
+    gps = Node(
+        package='gps',
+        executable='gps_rtk',
+        name='gps_rtk_node',
+        output='screen',
+        arguments=['--ros-args','--log-level','warn']
     )
 
     return LaunchDescription([
-        zed_silent,
-        inference_engine,
-        relay_node,
-        imu_conversion_silent,
-        local_obstacle_filter_silent,
-        gps_rtk_silent
+        zed,
+        yolo,
+        imu_conv,
+        relay,
+        rtab,
+        gps
     ])

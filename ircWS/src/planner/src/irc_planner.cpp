@@ -709,10 +709,12 @@ void SensorCallback::objectFollowing()
 
     if (abs_y > 0.03)
     {
-        ang = obj_follow_angular[0] * abs_y + obj_follow_angular[1];
+        ang = (1.0 / 1.5) * (obj_follow_angular[0] * abs_y + obj_follow_angular[1]);
         const double dist_scale =
             std::clamp(cone_x / 2.0, 0.3, 1.0);
-        ang *= dist_scale;
+	ang *= dist_scale;
+	ang *= (cone_y > 0.0) ? 1.0 : -1.0;
+
     }
 
     ang = std::clamp(ang, 0.0, kMaxAngularVel);
@@ -724,7 +726,7 @@ void SensorCallback::objectFollowing()
     ang = std::clamp(ang, last_ang - max_delta, last_ang + max_delta);
     last_ang = ang;
 
-    vel.angular.z = ang;
+    vel.angular.z = -ang;
 
     RCLCPP_INFO_THROTTLE(
         this->get_logger(), *this->get_clock(), 300,

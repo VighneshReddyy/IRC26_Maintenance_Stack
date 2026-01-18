@@ -8,7 +8,7 @@
 /home/mrmnavjet/IRC2026/ircWS/install/planner/include/planner/stack/irc_planner.hpp
 /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch/mapping.launch.py
 /home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch/rtab.launch.py
-/home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch/testing.launch.py
+/home/mrmnavjet/IRC2026/ircWS/install/planner/share/planner/launch/bringup.launch.py
 /home/mrmnavjet/IRC2026/ircWS/install/planner/lib/planner/mode_switch.py
 /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/package_run_dependencies/planner
 /home/mrmnavjet/IRC2026/ircWS/install/planner/share/ament_index/resource_index/parent_prefix_path/planner

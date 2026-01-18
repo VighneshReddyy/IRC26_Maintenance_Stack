@@ -44,7 +44,7 @@ def generate_launch_description():
                 'Grid/MapFrameProjection': 'true',           # Project to map frame
 
                 'Grid/NormalK': '15',                         # Normal estimation neighbors
-                'Grid/MaxGroundAngle': '25',                 # Max ground slope
+                'Grid/MaxGroundAngle': '30',                 # Max ground slope
                 'Grid/GroundIsObstacle': 'true',             # Ground drop = obstacle
                 'Grid/MinGroundHeight': '-0.25',             # Min ground height
                 'Grid/MaxObstacleHeight': '2.0',             # Max obstacle height
