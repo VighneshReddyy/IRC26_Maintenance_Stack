@@ -1,5 +1,5 @@
 CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o: \
- /home/mrmnavjet/IRC2026/ircWS/src/planner/src/motorcontroller.cpp \
+ /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/motorcontroller.cpp \
  /usr/include/stdc-predef.h \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/11/csignal \
@@ -644,4 +644,4 @@ CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o: \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__type_support.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
- /home/mrmnavjet/IRC2026/ircWS/src/planner/include/stack/shared_state.hpp
+ /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/include/stack/shared_state.hpp

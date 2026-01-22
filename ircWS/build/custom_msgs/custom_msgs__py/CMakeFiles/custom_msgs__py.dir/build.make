@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs
+CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs
@@ -241,6 +241,6 @@ custom_msgs__py/CMakeFiles/custom_msgs__py.dir/clean:
 .PHONY : custom_msgs__py/CMakeFiles/custom_msgs__py.dir/clean
 
 custom_msgs__py/CMakeFiles/custom_msgs__py.dir/depend:
-	cd /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/custom_msgs__py /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/custom_msgs__py /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/custom_msgs__py/CMakeFiles/custom_msgs__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/custom_msgs__py /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/custom_msgs__py /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/custom_msgs__py/CMakeFiles/custom_msgs__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : custom_msgs__py/CMakeFiles/custom_msgs__py.dir/depend
 

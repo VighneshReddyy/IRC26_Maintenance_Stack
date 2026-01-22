@@ -16,3 +16,7 @@ yolo/__init__.py
 yolo/cone_v1.engine
 yolo/inference_engine.py
 yolo/inference_node.py
+yolo/only_cone_color.py
+yolo/only_cone_color_distance.py
+yolo/only_cone_color_distance_correct.py
+yolo/only_cones.py

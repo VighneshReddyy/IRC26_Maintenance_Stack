@@ -14,9 +14,9 @@ import pycuda.autoinit
 from flask import Flask, Response
 import threading, time
 
-YOLO_CONF_THRESH = 0.45
+YOLO_CONF_THRESH = 0.50
 NMS_IOU_THRESH = 0.45
-ENGINE_PATH = "/home/mrmnavjet/IRC2026/ircWS/src/yolo/yolo/cone_v1.engine"
+ENGINE_PATH = "/home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/yolo/yolo/cone_v1.engine"
 
 FX = 475.26
 
@@ -152,8 +152,7 @@ class NodeYOLO(Node):
         frame=self.bridge.imgmsg_to_cv2(self.rgb,"bgr8")
         H,W,_=frame.shape
 
-        crop=frame[:,W//4:3*W//4]
-        img=cv2.resize(crop,(640,640))
+        img=cv2.resize(frame,(640,640))
         self.input_buf[0]=img.transpose(2,0,1)/255.0
         out=self.trt.infer(self.input_buf)[0]
 
@@ -163,13 +162,17 @@ class NodeYOLO(Node):
             if depth.dtype==np.uint16:
                 depth=depth.astype(np.float32)*0.001
 
-        sx=(W//2)/640.0; sy=H/640.0; xoff=W//4
+        sx=W/640.0
+        sy=H/640.0
+
         dets=[]
 
         for d in out.T:
             if d[4]<YOLO_CONF_THRESH: continue
-            cx=int(d[0]*sx)+xoff; cy=int(d[1]*sy)
-            bw=int(d[2]*sx); bh=int(d[3]*sy)
+            cx=int(d[0]*sx)
+            cy=int(d[1]*sy)
+            bw=int(d[2]*sx)
+            bh=int(d[3]*sy)
             x1,y1,x2,y2=cx-bw//2,cy-bh//2,cx+bw//2,cy+bh//2
             if x1<0 or y1<0 or x2>=W or y2>=H: continue
 
@@ -206,7 +209,8 @@ class NodeYOLO(Node):
         cv2.putText(frame,f"FPS: {self.fps:.1f}",(10,30),
                     cv2.FONT_HERSHEY_SIMPLEX,0.8,(255,255,255),2)
 
-        with lock: latest_frame=frame
+        with lock:
+            latest_frame=frame
 
 def main():
     rclpy.init()

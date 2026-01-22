@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/src/planner
+CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/mrmnavjet/IRC2026/ircWS/build/planner
@@ -82,6 +82,6 @@ CMakeFiles/planner_uninstall.dir/clean:
 .PHONY : CMakeFiles/planner_uninstall.dir/clean
 
 CMakeFiles/planner_uninstall.dir/depend:
-	cd /home/mrmnavjet/IRC2026/ircWS/build/planner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrmnavjet/IRC2026/ircWS/src/planner /home/mrmnavjet/IRC2026/ircWS/src/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/planner_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mrmnavjet/IRC2026/ircWS/build/planner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/planner_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/planner_uninstall.dir/depend
 

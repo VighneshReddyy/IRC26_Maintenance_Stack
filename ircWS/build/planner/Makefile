@@ -57,7 +57,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/src/planner
+CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/mrmnavjet/IRC2026/ircWS/build/planner
@@ -263,41 +263,56 @@ motorcontroller/fast:
 .PHONY : motorcontroller/fast
 
 #=============================================================================
-# Target rules for targets named ditch_detector_node
+# Target rules for targets named wall_node
 
 # Build rule for target.
-ditch_detector_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ditch_detector_node
-.PHONY : ditch_detector_node
+wall_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 wall_node
+.PHONY : wall_node
 
 # fast build rule for target.
-ditch_detector_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/build
-.PHONY : ditch_detector_node/fast
+wall_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wall_node.dir/build.make CMakeFiles/wall_node.dir/build
+.PHONY : wall_node/fast
 
-src/ditch_detector.o: src/ditch_detector.cpp.o
-.PHONY : src/ditch_detector.o
+#=============================================================================
+# Target rules for targets named inject_node
 
-# target to build an object file
-src/ditch_detector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/src/ditch_detector.cpp.o
-.PHONY : src/ditch_detector.cpp.o
+# Build rule for target.
+inject_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inject_node
+.PHONY : inject_node
 
-src/ditch_detector.i: src/ditch_detector.cpp.i
-.PHONY : src/ditch_detector.i
+# fast build rule for target.
+inject_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inject_node.dir/build.make CMakeFiles/inject_node.dir/build
+.PHONY : inject_node/fast
 
-# target to preprocess a source file
-src/ditch_detector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/src/ditch_detector.cpp.i
-.PHONY : src/ditch_detector.cpp.i
+#=============================================================================
+# Target rules for targets named ditch_ransac_node
 
-src/ditch_detector.s: src/ditch_detector.cpp.s
-.PHONY : src/ditch_detector.s
+# Build rule for target.
+ditch_ransac_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ditch_ransac_node
+.PHONY : ditch_ransac_node
 
-# target to generate assembly for a file
-src/ditch_detector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_detector_node.dir/build.make CMakeFiles/ditch_detector_node.dir/src/ditch_detector.cpp.s
-.PHONY : src/ditch_detector.cpp.s
+# fast build rule for target.
+ditch_ransac_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_ransac_node.dir/build.make CMakeFiles/ditch_ransac_node.dir/build
+.PHONY : ditch_ransac_node/fast
+
+#=============================================================================
+# Target rules for targets named obstacle_presence_logger
+
+# Build rule for target.
+obstacle_presence_logger: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 obstacle_presence_logger
+.PHONY : obstacle_presence_logger
+
+# fast build rule for target.
+obstacle_presence_logger/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_presence_logger.dir/build.make CMakeFiles/obstacle_presence_logger.dir/build
+.PHONY : obstacle_presence_logger/fast
 
 src/imu_conversion.o: src/imu_conversion.cpp.o
 .PHONY : src/imu_conversion.o
@@ -322,6 +337,30 @@ src/imu_conversion.s: src/imu_conversion.cpp.s
 src/imu_conversion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_conversion_node.dir/build.make CMakeFiles/imu_conversion_node.dir/src/imu_conversion.cpp.s
 .PHONY : src/imu_conversion.cpp.s
+
+src/inject.o: src/inject.cpp.o
+.PHONY : src/inject.o
+
+# target to build an object file
+src/inject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inject_node.dir/build.make CMakeFiles/inject_node.dir/src/inject.cpp.o
+.PHONY : src/inject.cpp.o
+
+src/inject.i: src/inject.cpp.i
+.PHONY : src/inject.i
+
+# target to preprocess a source file
+src/inject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inject_node.dir/build.make CMakeFiles/inject_node.dir/src/inject.cpp.i
+.PHONY : src/inject.cpp.i
+
+src/inject.s: src/inject.cpp.s
+.PHONY : src/inject.s
+
+# target to generate assembly for a file
+src/inject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inject_node.dir/build.make CMakeFiles/inject_node.dir/src/inject.cpp.s
+.PHONY : src/inject.cpp.s
 
 src/irc_planner.o: src/irc_planner.cpp.o
 .PHONY : src/irc_planner.o
@@ -395,6 +434,54 @@ src/motorcontroller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.s
 .PHONY : src/motorcontroller.cpp.s
 
+src/obstacle_presence_logger.o: src/obstacle_presence_logger.cpp.o
+.PHONY : src/obstacle_presence_logger.o
+
+# target to build an object file
+src/obstacle_presence_logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_presence_logger.dir/build.make CMakeFiles/obstacle_presence_logger.dir/src/obstacle_presence_logger.cpp.o
+.PHONY : src/obstacle_presence_logger.cpp.o
+
+src/obstacle_presence_logger.i: src/obstacle_presence_logger.cpp.i
+.PHONY : src/obstacle_presence_logger.i
+
+# target to preprocess a source file
+src/obstacle_presence_logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_presence_logger.dir/build.make CMakeFiles/obstacle_presence_logger.dir/src/obstacle_presence_logger.cpp.i
+.PHONY : src/obstacle_presence_logger.cpp.i
+
+src/obstacle_presence_logger.s: src/obstacle_presence_logger.cpp.s
+.PHONY : src/obstacle_presence_logger.s
+
+# target to generate assembly for a file
+src/obstacle_presence_logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_presence_logger.dir/build.make CMakeFiles/obstacle_presence_logger.dir/src/obstacle_presence_logger.cpp.s
+.PHONY : src/obstacle_presence_logger.cpp.s
+
+src/ransac.o: src/ransac.cpp.o
+.PHONY : src/ransac.o
+
+# target to build an object file
+src/ransac.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_ransac_node.dir/build.make CMakeFiles/ditch_ransac_node.dir/src/ransac.cpp.o
+.PHONY : src/ransac.cpp.o
+
+src/ransac.i: src/ransac.cpp.i
+.PHONY : src/ransac.i
+
+# target to preprocess a source file
+src/ransac.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_ransac_node.dir/build.make CMakeFiles/ditch_ransac_node.dir/src/ransac.cpp.i
+.PHONY : src/ransac.cpp.i
+
+src/ransac.s: src/ransac.cpp.s
+.PHONY : src/ransac.s
+
+# target to generate assembly for a file
+src/ransac.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ditch_ransac_node.dir/build.make CMakeFiles/ditch_ransac_node.dir/src/ransac.cpp.s
+.PHONY : src/ransac.cpp.s
+
 src/relay_node.o: src/relay_node.cpp.o
 .PHONY : src/relay_node.o
 
@@ -443,6 +530,30 @@ src/shared_state.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shared_state.dir/build.make CMakeFiles/shared_state.dir/src/shared_state.cpp.s
 .PHONY : src/shared_state.cpp.s
 
+src/wall.o: src/wall.cpp.o
+.PHONY : src/wall.o
+
+# target to build an object file
+src/wall.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wall_node.dir/build.make CMakeFiles/wall_node.dir/src/wall.cpp.o
+.PHONY : src/wall.cpp.o
+
+src/wall.i: src/wall.cpp.i
+.PHONY : src/wall.i
+
+# target to preprocess a source file
+src/wall.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wall_node.dir/build.make CMakeFiles/wall_node.dir/src/wall.cpp.i
+.PHONY : src/wall.cpp.i
+
+src/wall.s: src/wall.cpp.s
+.PHONY : src/wall.s
+
+# target to generate assembly for a file
+src/wall.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wall_node.dir/build.make CMakeFiles/wall_node.dir/src/wall.cpp.s
+.PHONY : src/wall.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -458,18 +569,21 @@ help:
 	@echo "... test"
 	@echo "... planner_uninstall"
 	@echo "... uninstall"
-	@echo "... ditch_detector_node"
+	@echo "... ditch_ransac_node"
 	@echo "... imu_conversion_node"
+	@echo "... inject_node"
 	@echo "... motorcontroller"
+	@echo "... obstacle_presence_logger"
 	@echo "... planner_node"
 	@echo "... relay_node"
 	@echo "... shared_state"
-	@echo "... src/ditch_detector.o"
-	@echo "... src/ditch_detector.i"
-	@echo "... src/ditch_detector.s"
+	@echo "... wall_node"
 	@echo "... src/imu_conversion.o"
 	@echo "... src/imu_conversion.i"
 	@echo "... src/imu_conversion.s"
+	@echo "... src/inject.o"
+	@echo "... src/inject.i"
+	@echo "... src/inject.s"
 	@echo "... src/irc_planner.o"
 	@echo "... src/irc_planner.i"
 	@echo "... src/irc_planner.s"
@@ -479,12 +593,21 @@ help:
 	@echo "... src/motorcontroller.o"
 	@echo "... src/motorcontroller.i"
 	@echo "... src/motorcontroller.s"
+	@echo "... src/obstacle_presence_logger.o"
+	@echo "... src/obstacle_presence_logger.i"
+	@echo "... src/obstacle_presence_logger.s"
+	@echo "... src/ransac.o"
+	@echo "... src/ransac.i"
+	@echo "... src/ransac.s"
 	@echo "... src/relay_node.o"
 	@echo "... src/relay_node.i"
 	@echo "... src/relay_node.s"
 	@echo "... src/shared_state.o"
 	@echo "... src/shared_state.i"
 	@echo "... src/shared_state.s"
+	@echo "... src/wall.o"
+	@echo "... src/wall.i"
+	@echo "... src/wall.s"
 .PHONY : help
 
 

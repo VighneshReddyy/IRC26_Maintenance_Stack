@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp" "CMakeFiles/planner_node.dir/src/irc_planner.cpp.o" "gcc" "CMakeFiles/planner_node.dir/src/irc_planner.cpp.o.d"
-  "/home/mrmnavjet/IRC2026/ircWS/src/planner/src/main.cpp" "CMakeFiles/planner_node.dir/src/main.cpp.o" "gcc" "CMakeFiles/planner_node.dir/src/main.cpp.o.d"
+  "/home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/irc_planner.cpp" "CMakeFiles/planner_node.dir/src/irc_planner.cpp.o" "gcc" "CMakeFiles/planner_node.dir/src/irc_planner.cpp.o.d"
+  "/home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/main.cpp" "CMakeFiles/planner_node.dir/src/main.cpp.o" "gcc" "CMakeFiles/planner_node.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.

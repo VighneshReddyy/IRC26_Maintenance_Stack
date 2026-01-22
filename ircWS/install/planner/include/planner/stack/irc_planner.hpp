@@ -10,9 +10,9 @@
 
 #include "sensor_msgs/msg/nav_sat_fix.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
+#include <sensor_msgs/point_cloud2_iterator.hpp>
 #include "geometry_msgs/msg/twist.hpp"
 
-#include "std_msgs/msg/string.hpp"
 #include "std_msgs/msg/bool.hpp"
 #include "std_srvs/srv/trigger.hpp"
 
@@ -20,32 +20,25 @@
 #include "custom_msgs/msg/imu_data.hpp"
 #include "custom_msgs/msg/planner_status.hpp"
 
+#include <sensor_msgs/msg/point_cloud2.hpp>
+#include <pcl_conversions/pcl_conversions.h>
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
-#include <pcl_conversions/pcl_conversions.h>
+#include <pcl/filters/voxel_grid.h>
+#include <pcl/filters/extract_indices.h>
+#include <pcl/segmentation/sac_segmentation.h>
+#include <pcl/segmentation/extract_clusters.h>
+#include <pcl/search/kdtree.h>
 
 namespace planner
 {
-const double kRoverLength  = 1.50;
-const double kRoverBreadth = 1.25;
 
-const double kMaxLinearVel  = 1.0;   
-const double kMinLinearVel  = 0.0;
-const double kMaxAngularVel = 1.5;   
+constexpr double kRoverLength  = 1.50;
+constexpr double kRoverBreadth = 1.25;
 
-// Obstacle thresholds 
-const double kMaxObsThreshold = 1.0;
-const double kMinObsThreshold = 0.5;
-const double kMinYObsThreshold = 0.3;
-
-// Object (cone) following thresholds 
-const double kMaxXObjThreshold = 0.9;   
-const double kMinXObjThreshold = 0.25;  
-
-const double kMaxYObjThreshold = 0.4;  
-const double kMinYObjThreshold = 0.08;  
-const double kStopVel = 0.0;
-const double kDistanceThreshold = 1.0;
+constexpr double kMaxLinearVel  = 1.0;
+constexpr double kMaxAngularVel = 1.5;
+constexpr double kDistanceThreshold = 2.0;
 
 
 enum State
@@ -55,31 +48,32 @@ enum State
     kCoordinateFollowing,
     kSearchPattern,
     kConeFollowing,
-    kObstacleAvoidance,
-    kObjectDelivery
+    kObjectDelivery,
+    kObstacleAvoidance
 };
 
-enum SearchPatternType
+enum SearchPattern
 {
-    kFaceForward,
-    kMoveForward,
-    kTurnRight,
-    kTurnLeft,
-    kOffsetTurn,
+    kTurnA,
+    kTurnB,
+    kTurnC,
+    kMoveForward
 };
 
 enum SearchSkew
 {
-    kNoSkew    = -1,
-    kLeftSkew  = 0,
+    kNoSkew    = 0,
+    kLeftSkew  = -1,
     kRightSkew = 1
 };
+
 
 struct Coordinates
 {
     double latitude;
     double longitude;
 };
+
 
 class SensorCallback : public rclcpp::Node
 {
@@ -88,7 +82,6 @@ public:
 
 private:
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr vel_pub;
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr arm_pub;
     rclcpp::Publisher<custom_msgs::msg::PlannerStatus>::SharedPtr status_pub_;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr deliver_pub_;
 
@@ -104,72 +97,84 @@ private:
     rclcpp::TimerBase::SharedPtr stack_timer_;
 
     State CurrState;
-    State PrevState;
-    SearchPatternType FollowPattern;
-
-    bool gps_goal_set;
-    bool cone_detect;
-    bool gps_goal_reached;
-    bool cone_goal_reached;
-    bool obstacle_detect;
-    bool rover_state;
-    bool last_rover_state;
-    bool gps_aligned_;
-    bool delivery_requested_;
-    bool delivery_done_;
-
-    rclcpp::Time delivery_start_time_;
-    rclcpp::Time last_cone_time_;
-    rclcpp::Time last_gps_time_;
-    rclcpp::Time nowHere;
-    rclcpp::Time nextHere;
+    SearchPattern FollowPattern;
 
     int nav_mode;
     int target_cone_id_;
     bool nav_select_done_;
 
-    double current_orientation;
-    double cone_x;
-    double cone_y;
-    double obs_x;
-    double obs_y;
+    bool rover_state;
+    bool last_rover_state;
 
-    bool search_init_;
-    bool search_timing_;
-    bool search_ref_set_;
-    bool search_aligned_;
-    bool spot_turn_back_;
-
-    rclcpp::Time search_end_time_;
-    double search_base_heading_;
-    double search_offset_deg_;
-    double search_forward_time_;
-    SearchSkew search_skew;
-
+    // GPS Related
+    bool gps_goal_set;
+    bool gps_goal_reached;
+    bool gps_aligned_;
     Coordinates curr_location;
     Coordinates goal_location;
+    rclcpp::Time last_gps_time_;
 
-    double locked_bearing_deg_;
-    bool bearing_locked_;
-    double search_origin_heading_;
-    bool skew_cycle_;
+    // Cone Related
+    bool cone_detect;
+    bool cone_goal_reached;
+    double cone_x;
+    double cone_y;
+    rclcpp::Time last_cone_time_;
+
+    // Obstacle Related
+    bool obstacle_detect;
+    double obs_x;
+    double obs_y;
+    sensor_msgs::msg::PointCloud2::SharedPtr last_obstacle_cloud_;
+
+    // Search Related
+    bool search_ref_set_;
+    bool spot_turn_back_;
+    bool spot_done_;
+    int search_cycle_;
+    rclcpp::Time search_end_time_;
+    double search_forward_time_;
+    SearchSkew search_skew;
+    bool avoiding_obstacle_;
+    State prev_state_;
+    SearchPattern prev_search_pattern_;
 
 
+    // Delivery Related
+    bool delivery_requested_;
+    bool delivery_done_;
+    rclcpp::Time delivery_start_time_;
+
+    // Orientation
     double zed_yaw;
     double bno_yaw;
+    double current_orientation;
 
-    std::vector<double> obs_avoid_linear;
-    std::vector<double> obs_avoid_angular;
     std::vector<double> obj_follow_linear;
     std::vector<double> obj_follow_angular;
 
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud;
-
     std::mutex state_mutex_;
+
+    //idk bro
+    rclcpp::Time last_cloud_time_;
+
+    // Obstacle clearance timing
+    bool obstacle_clear_timing_{false};
+    rclcpp::Time obstacle_clear_since_;
+
+
+    bool bearing_locked_;
+    double locked_bearing_deg_;
+
+    bool search_aligned_;
+    bool search_timing_;
+    double search_offset_deg_;
+
 
     void stackRun();
     void RoverStateClassifier();
 
+    // Callbacks
     void imuCallback(const custom_msgs::msg::ImuData::SharedPtr msg);
     void externalImuCallback(const custom_msgs::msg::ImuData::SharedPtr msg);
     void gpsCallback(const sensor_msgs::msg::NavSatFix::SharedPtr fix);
@@ -178,6 +183,7 @@ private:
     void stateCallback(const std_msgs::msg::Bool::SharedPtr state);
     void deliveredCallback(const std_msgs::msg::Bool::SharedPtr msg);
 
+    // Core States 
     void coordinateFollowing();
     void obstacleAvoidance();
     void objectFollowing();
@@ -185,6 +191,7 @@ private:
     void objectDelivery();
     void navigationModeSelect();
 
+    // Helpers
     void publishVel(const geometry_msgs::msg::Twist& msg);
     void hardStop();
     void disableAutonomous();
@@ -201,6 +208,13 @@ private:
     double gpsAngleFix(double angle);
     double headingError(double target, double current);
     double normalize360(double angle);
+
+    //
+      sensor_msgs::msg::PointCloud2::SharedPtr att_latest_pcl;
+      std::vector<std::vector<double>> obstacleDataType1;
+      bool obstacleIs;
+
+
 };
 
 } // namespace planner

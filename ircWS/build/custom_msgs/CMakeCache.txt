@@ -331,7 +331,7 @@ custom_msgs_BINARY_DIR:STATIC=/home/mrmnavjet/IRC2026/ircWS/build/custom_msgs
 custom_msgs_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-custom_msgs_SOURCE_DIR:STATIC=/home/mrmnavjet/IRC2026/ircWS/src/custom_msgs
+custom_msgs_SOURCE_DIR:STATIC=/home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs
 
 //Dependencies for the target
 custom_msgs__rosidl_generator_c_LIB_DEPENDS:STATIC=general;geometry_msgs::geometry_msgs__rosidl_generator_c;general;std_msgs::std_msgs__rosidl_generator_c;general;rosidl_runtime_c::rosidl_runtime_c;general;rcutils::rcutils;
@@ -523,7 +523,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/mrmnavjet/IRC2026/ircWS/src/custom_msgs
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

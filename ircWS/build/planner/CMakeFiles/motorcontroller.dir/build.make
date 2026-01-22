@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/src/planner
+CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/mrmnavjet/IRC2026/ircWS/build/planner
@@ -70,18 +70,18 @@ include CMakeFiles/motorcontroller.dir/progress.make
 include CMakeFiles/motorcontroller.dir/flags.make
 
 CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o: CMakeFiles/motorcontroller.dir/flags.make
-CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o: /home/mrmnavjet/IRC2026/ircWS/src/planner/src/motorcontroller.cpp
+CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o: /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/motorcontroller.cpp
 CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o: CMakeFiles/motorcontroller.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o -MF CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o.d -o CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o -c /home/mrmnavjet/IRC2026/ircWS/src/planner/src/motorcontroller.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o -MF CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o.d -o CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o -c /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/motorcontroller.cpp
 
 CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mrmnavjet/IRC2026/ircWS/src/planner/src/motorcontroller.cpp > CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/motorcontroller.cpp > CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.i
 
 CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mrmnavjet/IRC2026/ircWS/src/planner/src/motorcontroller.cpp -o CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/motorcontroller.cpp -o CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.s
 
 # Object files for target motorcontroller
 motorcontroller_OBJECTS = \
@@ -184,6 +184,6 @@ CMakeFiles/motorcontroller.dir/clean:
 .PHONY : CMakeFiles/motorcontroller.dir/clean
 
 CMakeFiles/motorcontroller.dir/depend:
-	cd /home/mrmnavjet/IRC2026/ircWS/build/planner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrmnavjet/IRC2026/ircWS/src/planner /home/mrmnavjet/IRC2026/ircWS/src/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/motorcontroller.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mrmnavjet/IRC2026/ircWS/build/planner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/motorcontroller.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/motorcontroller.dir/depend
 

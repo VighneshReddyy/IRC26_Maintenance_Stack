@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/src/planner
+CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/mrmnavjet/IRC2026/ircWS/build/planner
@@ -70,32 +70,32 @@ include CMakeFiles/planner_node.dir/progress.make
 include CMakeFiles/planner_node.dir/flags.make
 
 CMakeFiles/planner_node.dir/src/main.cpp.o: CMakeFiles/planner_node.dir/flags.make
-CMakeFiles/planner_node.dir/src/main.cpp.o: /home/mrmnavjet/IRC2026/ircWS/src/planner/src/main.cpp
+CMakeFiles/planner_node.dir/src/main.cpp.o: /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/main.cpp
 CMakeFiles/planner_node.dir/src/main.cpp.o: CMakeFiles/planner_node.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/planner_node.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/planner_node.dir/src/main.cpp.o -MF CMakeFiles/planner_node.dir/src/main.cpp.o.d -o CMakeFiles/planner_node.dir/src/main.cpp.o -c /home/mrmnavjet/IRC2026/ircWS/src/planner/src/main.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/planner_node.dir/src/main.cpp.o -MF CMakeFiles/planner_node.dir/src/main.cpp.o.d -o CMakeFiles/planner_node.dir/src/main.cpp.o -c /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/main.cpp
 
 CMakeFiles/planner_node.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planner_node.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mrmnavjet/IRC2026/ircWS/src/planner/src/main.cpp > CMakeFiles/planner_node.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/main.cpp > CMakeFiles/planner_node.dir/src/main.cpp.i
 
 CMakeFiles/planner_node.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planner_node.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mrmnavjet/IRC2026/ircWS/src/planner/src/main.cpp -o CMakeFiles/planner_node.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/main.cpp -o CMakeFiles/planner_node.dir/src/main.cpp.s
 
 CMakeFiles/planner_node.dir/src/irc_planner.cpp.o: CMakeFiles/planner_node.dir/flags.make
-CMakeFiles/planner_node.dir/src/irc_planner.cpp.o: /home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp
+CMakeFiles/planner_node.dir/src/irc_planner.cpp.o: /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/irc_planner.cpp
 CMakeFiles/planner_node.dir/src/irc_planner.cpp.o: CMakeFiles/planner_node.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/planner_node.dir/src/irc_planner.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/planner_node.dir/src/irc_planner.cpp.o -MF CMakeFiles/planner_node.dir/src/irc_planner.cpp.o.d -o CMakeFiles/planner_node.dir/src/irc_planner.cpp.o -c /home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/planner_node.dir/src/irc_planner.cpp.o -MF CMakeFiles/planner_node.dir/src/irc_planner.cpp.o.d -o CMakeFiles/planner_node.dir/src/irc_planner.cpp.o -c /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/irc_planner.cpp
 
 CMakeFiles/planner_node.dir/src/irc_planner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/planner_node.dir/src/irc_planner.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp > CMakeFiles/planner_node.dir/src/irc_planner.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/irc_planner.cpp > CMakeFiles/planner_node.dir/src/irc_planner.cpp.i
 
 CMakeFiles/planner_node.dir/src/irc_planner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/planner_node.dir/src/irc_planner.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mrmnavjet/IRC2026/ircWS/src/planner/src/irc_planner.cpp -o CMakeFiles/planner_node.dir/src/irc_planner.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner/src/irc_planner.cpp -o CMakeFiles/planner_node.dir/src/irc_planner.cpp.s
 
 # Object files for target planner_node
 planner_node_OBJECTS = \
@@ -120,8 +120,6 @@ planner_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_fastrtps_cpp.s
 planner_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_introspection_cpp.so
 planner_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_cpp.so
 planner_node: /opt/ros/humble/lib/libstd_srvs__rosidl_generator_py.so
-planner_node: /opt/ros/humble/lib/libpcl_ros_tf.a
-planner_node: /opt/ros/humble/lib/libpcd_to_pointcloud_lib.so
 planner_node: /opt/ros/humble/lib/libmessage_filters.so
 planner_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
 planner_node: /opt/ros/humble/lib/librmw.so
@@ -157,6 +155,7 @@ planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspecti
 planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
 planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
+planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
@@ -166,24 +165,19 @@ planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_
 planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
 planner_node: /usr/lib/aarch64-linux-gnu/libpython3.10.so
-planner_node: /usr/lib/libOpenNI.so
-planner_node: /usr/lib/aarch64-linux-gnu/libOpenNI2.so
-planner_node: /usr/lib/aarch64-linux-gnu/libusb-1.0.so
-planner_node: libshared_state.a
 planner_node: /usr/lib/aarch64-linux-gnu/libpcl_apps.so
 planner_node: /usr/lib/aarch64-linux-gnu/libpcl_outofcore.so
 planner_node: /usr/lib/aarch64-linux-gnu/libpcl_people.so
 planner_node: /usr/lib/libOpenNI.so
-planner_node: /usr/lib/aarch64-linux-gnu/libusb-1.0.so
 planner_node: /usr/lib/aarch64-linux-gnu/libOpenNI2.so
 planner_node: /usr/lib/aarch64-linux-gnu/libusb-1.0.so
 planner_node: /usr/lib/aarch64-linux-gnu/libflann_cpp.so
+planner_node: libshared_state.a
 planner_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_c.so
 planner_node: /opt/ros/humble/lib/libnav_msgs__rosidl_generator_c.so
 planner_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_c.so
 planner_node: /opt/ros/humble/lib/libstd_srvs__rosidl_generator_c.so
 planner_node: /usr/lib/aarch64-linux-gnu/liborocos-kdl.so
-planner_node: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
 planner_node: /opt/ros/humble/lib/libtf2_ros.so
 planner_node: /opt/ros/humble/lib/libtf2.so
 planner_node: /opt/ros/humble/lib/libmessage_filters.so
@@ -213,92 +207,8 @@ planner_node: /opt/ros/humble/lib/libaction_msgs__rosidl_generator_c.so
 planner_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_generator_py.so
 planner_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
 planner_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_generator_c.so
-planner_node: /usr/lib/aarch64-linux-gnu/libpcl_common.so
-planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 planner_node: /opt/ros/humble/lib/libpcl_msgs__rosidl_generator_c.so
 planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
-planner_node: /usr/lib/aarch64-linux-gnu/libqhull_r.so.8.0.2
-planner_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
-planner_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
-planner_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
-planner_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
-planner_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
-planner_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
-planner_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
-planner_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
-planner_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
-planner_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so
-planner_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
-planner_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
-planner_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
-planner_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
-planner_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
-planner_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_py.so
-planner_node: /opt/ros/humble/lib/librcl_yaml_param_parser.so
-planner_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so
-planner_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so
-planner_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so
-planner_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
-planner_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so
-planner_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
-planner_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
-planner_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_py.so
-planner_node: /opt/ros/humble/lib/libtracetools.so
-planner_node: /opt/ros/humble/lib/libmessage_filters.so
-planner_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
-planner_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
-planner_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
-planner_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
-planner_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
-planner_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
-planner_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
-planner_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
-planner_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
-planner_node: /opt/ros/humble/lib/librmw.so
-planner_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-planner_node: /opt/ros/humble/lib/librcutils.so
-planner_node: /opt/ros/humble/lib/librcpputils.so
-planner_node: /opt/ros/humble/lib/librosidl_typesupport_c.so
-planner_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
-planner_node: /opt/ros/humble/lib/librosidl_runtime_c.so
-planner_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
-planner_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
-planner_node: /opt/ros/humble/lib/libpcl_msgs__rosidl_generator_c.so
-planner_node: /opt/ros/humble/lib/libpcl_msgs__rosidl_typesupport_fastrtps_c.so
-planner_node: /opt/ros/humble/lib/libpcl_msgs__rosidl_typesupport_introspection_c.so
-planner_node: /opt/ros/humble/lib/libpcl_msgs__rosidl_typesupport_c.so
-planner_node: /opt/ros/humble/lib/libpcl_msgs__rosidl_typesupport_fastrtps_cpp.so
-planner_node: /opt/ros/humble/lib/libpcl_msgs__rosidl_typesupport_introspection_cpp.so
-planner_node: /opt/ros/humble/lib/libpcl_msgs__rosidl_typesupport_cpp.so
-planner_node: /opt/ros/humble/lib/libpcl_msgs__rosidl_generator_py.so
-planner_node: /opt/ros/humble/lib/librclcpp.so
-planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
-planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
-planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
-planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
-planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
-planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
-planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
-planner_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
-planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
-planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
-planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
-planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
-planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
-planner_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-planner_node: /opt/ros/humble/lib/libcomponent_manager.so
-planner_node: /opt/ros/humble/lib/libclass_loader.so
-planner_node: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.1.0
-planner_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_fastrtps_c.so
-planner_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_introspection_c.so
-planner_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_fastrtps_cpp.so
-planner_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_introspection_cpp.so
-planner_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_cpp.so
-planner_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_generator_py.so
-planner_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_typesupport_c.so
-planner_node: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_generator_c.so
 planner_node: /usr/lib/aarch64-linux-gnu/libpcl_surface.so
 planner_node: /usr/lib/aarch64-linux-gnu/libpcl_keypoints.so
 planner_node: /usr/lib/aarch64-linux-gnu/libpcl_tracking.so
@@ -372,6 +282,7 @@ planner_node: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.74.0
 planner_node: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.74.0
 planner_node: /usr/lib/aarch64-linux-gnu/libboost_iostreams.so.1.74.0
 planner_node: /usr/lib/aarch64-linux-gnu/libboost_serialization.so.1.74.0
+planner_node: /usr/lib/aarch64-linux-gnu/libqhull_r.so.8.0.2
 planner_node: /opt/ros/humble/lib/librclcpp.so
 planner_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 planner_node: /opt/ros/humble/lib/librcl.so
@@ -463,6 +374,6 @@ CMakeFiles/planner_node.dir/clean:
 .PHONY : CMakeFiles/planner_node.dir/clean
 
 CMakeFiles/planner_node.dir/depend:
-	cd /home/mrmnavjet/IRC2026/ircWS/build/planner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrmnavjet/IRC2026/ircWS/src/planner /home/mrmnavjet/IRC2026/ircWS/src/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/planner_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mrmnavjet/IRC2026/ircWS/build/planner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner /home/mrmnavjet/IRC2026/ircWS/build/planner/CMakeFiles/planner_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/planner_node.dir/depend
 

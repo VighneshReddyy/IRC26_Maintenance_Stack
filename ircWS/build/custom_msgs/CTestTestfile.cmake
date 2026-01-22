@@ -1,5 +1,5 @@
 # CMake generated Testfile for 
-# Source directory: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs
+# Source directory: /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs
 # Build directory: /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs
 # 
 # This file includes the relevant testing commands required for 

@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs
+CMAKE_SOURCE_DIR = /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs
@@ -66,12 +66,12 @@ include CMakeFiles/custom_msgs.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/custom_msgs.dir/progress.make
 
-CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/MarkerTag.msg
-CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/ImuData.msg
-CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/GuiCommand.msg
-CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/PlannerStatus.msg
-CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/GpsDetails.msg
-CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs/msg/ArmPwm.msg
+CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs/msg/MarkerTag.msg
+CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs/msg/ImuData.msg
+CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs/msg/GuiCommand.msg
+CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs/msg/PlannerStatus.msg
+CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs/msg/GpsDetails.msg
+CMakeFiles/custom_msgs: /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs/msg/ArmPwm.msg
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -118,6 +118,6 @@ CMakeFiles/custom_msgs.dir/clean:
 .PHONY : CMakeFiles/custom_msgs.dir/clean
 
 CMakeFiles/custom_msgs.dir/depend:
-	cd /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs /home/mrmnavjet/IRC2026/ircWS/src/custom_msgs /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/CMakeFiles/custom_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs /home/mrmnavjet/IRC2026/ircWS/mrm_irc_2026/custom_msgs /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs /home/mrmnavjet/IRC2026/ircWS/build/custom_msgs/CMakeFiles/custom_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/custom_msgs.dir/depend
 
